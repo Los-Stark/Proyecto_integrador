@@ -14,8 +14,11 @@
 
 <body>
     <header>
+
         <nav class="navbar navbar-expand-sm bg-body-emphasis">
             <div class="container-fluid">  
+                <!--Logo del encabezado-->
+            
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li>
@@ -23,36 +26,46 @@
                                 <img class ="logo" src="./assets/logo lateral.png" alt="logo tienda anime odyssey">
                                 </a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <img src="https://i.ibb.co/cDgSr2y/menu-1.png" alt="menu-1">Categorias
-                            </a>
+                    
+                            <!--Dropdown-->
+                        
+                        <li style="list-style: none;" class="nav-item dropdown">
+                            <div id="dropdown">
+                                
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: white;"
+                                    aria-expanded="false">
+                                <img src="https://i.ibb.co/cDgSr2y/menu-1.png" alt="menu-1">Categorias</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Playeras Caballero</a></li>
                                 <li><a class="dropdown-item" href="#">Playeras Dama</a></li>
                                 <li><a class="dropdown-item" href="#">Sudaderas</a></li>
-                            </ul>
+                            </ul>   
+                            </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
-                                <img>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#"><img
+            </div>
+                        
+                        <li style="list-style: none;" class="nav-item">
+                            <button class="btn btn-primary">
+                            <a class="nav-link active" id="carrito" href="#"><img
                                     src="https://i.ibb.co/KVzgHdh/carro-de-la-compra.png" alt="carro-de-la-compra"></a>
+                            </button>
                         </li>
-                        <li class="nav-item">
+                    
+
+                        <li style="list-style: none;" class="nav-item">
+                            <button class="btn btn-primary">
                             <a class="nav-link active" href="#"><img src="https://i.ibb.co/ZcShBKX/usuario.png"
                                     alt="usuario"></a>
+                            </button>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Contactenos</a>
+                        
+                        <li style="list-style: none;" class="nav-item">
+                            <button class="btn btn-primary">
+                            <a class="nav-link active" href="#">Contactanos</a>
+                            </button>
                         </li>
+                        
                     </ul>
-                </div>
-            </div>
         </nav>
     </header>
 
@@ -73,7 +86,7 @@
                     obcaecati
                     rem ratione, dolorem unde.</p>
                 <div class="col-md-6 offset-md-3"><h3>Mision</h3></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nisi voluptatem velit, est repellat, optio tenetur fugiat natus rerum, aperiam deserunt! Corrupti, molestias omnis! Quam tempore distinctio sed error consequuntur.
+                <p class="bg-danger p-2 text-dark bg-opacity-25">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nisi voluptatem velit, est repellat, optio tenetur fugiat natus rerum, aperiam deserunt! Corrupti, molestias omnis! Quam tempore distinctio sed error consequuntur.
                 Possimus, dolorem cum. Quidem quasi velit at adipisci mollitia. Temporibus ducimus, non amet omnis et blanditiis rerum neque odit. Quidem natus blanditiis laudantium non accusamus. Laudantium dolore maiores quam impedit.</p>
             <div class=" col-md-6 offset-md-3">
                     <h3>Vision</h3>
@@ -88,37 +101,97 @@
                     sapiente voluptatibus?</p>
             </div>
         </div>
-        <div class="container">
-            <div class="row justify-content-center">
-
-                <div class="col-5">
+        
+        <div class="container text-center">
+                <div class="row">
+                    <div class="col-4 col-md-3">
                     <img class="avatares" src="https://i.ibb.co/7QV6MtS/perfil-karen.jpg" alt="perfil-karen">
+                    </div>
+                    <div class="col-8 col-md-3">
                     <p class="bg-danger p-2 text-dark bg-opacity-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia magni, quod repudiandae enim
                         quam
                         unde tempore adipisci culpa assumenda, doloribus est at non aperiam voluptas laboriosam
                         quibusdam.
                         Fugit, eligendi voluptas?</p>
-                </div>
-                <div class="col-5">
+                    </div>
 
-                </div>
-
-                <div class="col-5">
-
-                </div>
-                <div class="col-5">
-
-                </div>
-                <div class="col-5">
-
-                </div>
-                <div class="col-5">
-
-                </div>
-                <div class="col-5">
-
+                    <div class="col-4 col-md-3">
+                        <img class="avatares" src="https://media.licdn.com/dms/image/C5603AQEZbZxn4Uqmsg/profile-displayphoto-shrink_200_200/0/1631018416774?e=1680134400&v=beta&t=BsDRgsKmzUJs4P3GGzJv-O9sgIcb5WalRRYN7rrNoa0" alt="perfil-karen">
+                        </div>
+                        <div class="col-8 col-md-3">
+                        <p class="bg-danger p-2 text-dark bg-opacity-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia magni, quod repudiandae enim
+                            quam
+                            unde tempore adipisci culpa assumenda, doloribus est at non aperiam voluptas laboriosam
+                            quibusdam.
+                            Fugit, eligendi voluptas?</p>
+                        </div>
                 </div>
             </div>
+
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-4 col-md-3">
+                    <img class="avatares" src="https://media.licdn.com/dms/image/C5603AQEZbZxn4Uqmsg/profile-displayphoto-shrink_200_200/0/1631018416774?e=1680134400&v=beta&t=BsDRgsKmzUJs4P3GGzJv-O9sgIcb5WalRRYN7rrNoa0" alt="perfil-karen">
+                    </div>
+                    <div class="col-8 col-md-3">
+                    <p class="bg-danger p-2 text-dark bg-opacity-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia magni, quod repudiandae enim
+                        quam
+                        unde tempore adipisci culpa assumenda, doloribus est at non aperiam voluptas laboriosam
+                        quibusdam.
+                        Fugit, eligendi voluptas?</p>
+                    </div>
+
+                    <div class="col-4 col-md-3">
+                        <img class="avatares" src="https://i.ibb.co/7QV6MtS/perfil-karen.jpg" alt="perfil-karen">
+                        </div>
+                        <div class="col-8 col-md-3">
+                        <p class="bg-danger p-2 text-dark bg-opacity-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia magni, quod repudiandae enim
+                            quam
+                            unde tempore adipisci culpa assumenda, doloribus est at non aperiam voluptas laboriosam
+                            quibusdam.
+                            Fugit, eligendi voluptas?</p>
+                        </div>
+                </div>
+            </div>
+
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-4 col-md-3">
+                    <img class="avatares" src="https://i.ibb.co/7QV6MtS/perfil-karen.jpg" alt="perfil-karen">
+                    </div>
+                    <div class="col-8 col-md-3">
+                    <p class="bg-danger p-2 text-dark bg-opacity-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia magni, quod repudiandae enim
+                        quam
+                        unde tempore adipisci culpa assumenda, doloribus est at non aperiam voluptas laboriosam
+                        quibusdam.
+                        Fugit, eligendi voluptas?</p>
+                    </div>
+
+                    <div class="col-4 col-md-3">
+                        <img class="avatares" src="https://i.ibb.co/7QV6MtS/perfil-karen.jpg" alt="perfil-karen">
+                        </div>
+                        <div class="col-8 col-md-3">
+                        <p class="bg-danger p-2 text-dark bg-opacity-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia magni, quod repudiandae enim
+                            quam
+                            unde tempore adipisci culpa assumenda, doloribus est at non aperiam voluptas laboriosam
+                            quibusdam.
+                            Fugit, eligendi voluptas?</p>
+                        </div>
+                </div>
+            </div>
+
+            <div class="container text">
+                <div class="row">
+                    <div class="col-4 col-md-3">
+                    <img class="avatares" src="https://i.ibb.co/7QV6MtS/perfil-karen.jpg" alt="perfil-karen">
+                    </div>
+                    <div class="col-8 col-md-3">
+                    <p class="bg-danger p-2 text-dark bg-opacity-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia magni, quod repudiandae enim
+                        quam
+                        unde tempore adipisci culpa assumenda, doloribus est at non aperiam voluptas laboriosam
+                        quibusdam.
+                        Fugit, eligendi voluptas?</p>
+                    </div>
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
