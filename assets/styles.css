@@ -1,0 +1,19 @@
+#logo{
+width: 200px;
+height: auto;
+
+}
+
+.avatares{
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+header{
+    background: #6F6CB8;
+}
+
+body{
+    background: image();
+}
