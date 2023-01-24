@@ -1,8 +1,24 @@
-#logo{
+html{
+    background: white;
+} 
+
+header{
+    background: #6F6CB8;
+    padding: 3px;
+}
+
+
+body{
+    background: url(./Fondo\ nubes.svg)
+ }
+
+.logo{
 width: 200px;
 height: auto;
 
 }
+
+
 
 .avatares{
     width: 100px;
@@ -10,11 +26,3 @@ height: auto;
     border-radius: 50%;
 }
 
-header{
-    background: #6F6CB8;
-    padding: 10px;
-}
-
-body{
-    background: image();
-}
