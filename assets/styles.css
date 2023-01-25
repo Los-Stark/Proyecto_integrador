@@ -82,6 +82,7 @@ height: auto;
 .nosotros:hover{
     border: 1px solid black;
 }
+<<<<<<< HEAD
 .colaboradores{
 width: 1019px;
 height: 594px;
@@ -100,4 +101,85 @@ border-radius: 20px;
     width: 200px;
     height: auto;
     text-align: center;
+=======
+
+
+footer{
+    width: 100%;
+    background: #6F6CB8;
+    color: white;
+    text-align: center;
+    z-index: 90;
+    height: 150px;
+    position: fixed;
+    bottom: -140px;
+    transition-duration: 0.4s;
+}
+footer:hover{
+    bottom: 0px;
+}
+footer:after{
+    content: "\ea42";
+    font-family: 'icomoon';
+    position: absolute;
+    top: 0px;
+    width: 100px;
+    margin-left: -40px;
+    margin-top: -45px;
+    border-radius: 50%;
+    background: #E61050;
+    color: white;
+    transform: rotate(-90deg);
+    font-size: 4.3em;
+    transition-duration: 0.4s;
+}
+footer:hover:after{
+    transform: rotate(90deg);
+    background:  white;
+    color:  #E61050;
+
+}
+
+
+footer .rrss a{
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    bottom: -45px;
+    margin: 20px;
+    position: relative;
+    display: inline-block;
+}
+footer .rrss a:before{
+    color: white;
+    border: 1px solid white;
+    background-color: #E61050;
+    position: absolute;
+    border-radius: 50%;
+    font-size: 2.5em;
+    height: 60px;
+    width: 60px;
+
+    text-align: center;
+    font-family: 'icomoon';
+}
+footer .rrss a:nth-child(1):before{
+    content: "\e901";
+}
+footer .rrss a:nth-child(2):before{
+    content: "\e900";
+}
+footer .rrss a:nth-child(3):before{
+    content: "\e902";
+}
+footer .rrss a:nth-child(4):before{
+    content: "\ea92";
+}
+footer p{
+    font-size: 0.9em;
+    font-weight: lighter;
+    font-family: 'Arvo';
+    text-align: center;
+    margin: 42px;
+>>>>>>> b452a277488c9178eca687c708af9914225af4fb
 }
