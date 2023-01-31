@@ -16,7 +16,7 @@ const changeDropdown = () => {
     <a class="nav-link " href="#"><button class="btn">Playeras de Caballero</button></a>
     <a class="nav-link " href="#"><button class="btn">Playeras de dama</button></a>
     <a class="nav-link " href="#"><button class="btn">Sudaderas</button></a>
-    </div>`;
+    `;
     let ventana = window.innerWidth;
     ventana<768? dropdown.innerHTML = buttonsCategories:dropdown.innerHTML = dropdownCategories;
     window.addEventListener('resize', () => {  
