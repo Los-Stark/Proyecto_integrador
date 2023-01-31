@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .contact-title {
     text-align: center;
     font-size: 1.5em;
@@ -68,3 +69,78 @@ textarea.input1 {
 }
 
 
+=======
+.contact-title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.input1 {
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.5;
+    background: #f2caf2;
+    font-family: 'Montserrat', sans-serif;
+    height: 35px;
+    width: auto;
+    border-radius: 25px;
+    padding: 0px 30px;
+    border: 10px;
+    margin:  5px;
+
+}
+
+
+textarea.input1 {
+    height: 200px;
+    width: 500px;
+    border-radius: 25px;
+    padding: 12px 30px;
+    border: 10px;
+    margin:  5px;
+}
+
+.container-contact1 {
+    width: 1163px;
+    background: #eef2f6;
+    border-radius: 20px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 80px 88px 90px;
+    margin:  100px 60px 80px 90px;
+}
+
+.container-contact1-form-btn {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact1-form-btn {
+    font-family: 'Montserrat', sans-serif;
+    background: #E61050;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 1em;
+    height: 50px;
+    width: 110px;
+
+}
+
+.img-fluid {
+    border-radius: 20px;
+    margin: 25px;
+}
+>>>>>>> 9ff22deac75efd0663581af6174ee280ab0091b4
