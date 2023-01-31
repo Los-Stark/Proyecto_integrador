@@ -1,3 +1,11 @@
+html{
+    background: none;
+}
+
+body{
+    background: url(./assets/Fondo\ nubes.svg)
+ }
+
 .col{
     background: #F2CAC8;
     width: 230px;
@@ -50,3 +58,26 @@
     position: relative;
     left: 4em;
 }
+
+#contenedorProductoMasVendido .align-items-left{
+background: black;
+font-size: 23px;
+color: white;
+border: 1px solid white;  
+border-radius: 15px;
+transition: 0.5s;  
+
+}
+
+
+#contenedorProductoMasVendido .align-items-left:active{
+    transform: scale(0.8);
+}
+
+#contenedorProductoMasVendido p, .col-8{
+    font-size: 25px;
+}
+
+
+
+
