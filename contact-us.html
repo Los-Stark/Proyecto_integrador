@@ -77,45 +77,48 @@
     <div class="container-contact1">
         <div class="row">
             <div class="col my-3">
-                <form class="row g-3" id="registro" action="https://formsubmit.co/rubenmickj@gmail.com" method="post">
+                  <form class="row g-3" id="registro"  action="https://formsubmit.co/rubenmickj@gmail.com" method="post" onsubmit="return false">
+
                     <span class="contact-title">Contáctanos</span>
                     <div class="wrap-input1">
-                        <input class="input1" type="text" name="name" placeholder="Nombre" required>
+                        <input class="input1" type="text" name="name" placeholder="Nombre" id="name" required>
                         <span class="shadow-input1"></span>
                     </div>
                     <div class="wrap-input1">
-                        <input class="input1" type="text" name="email" placeholder="Email" required>
+                        <input class="input1" type="email" name="email" placeholder="Email" id="email" required>
                         <span class="shadow-input1"></span>
                     </div>
                     <div class="wrap-input1">
-                        <input class="input1" type="text" name="subject" placeholder="Teléfono" required>
+                        <input class="input1" type="tel" name="phone" placeholder="Teléfono" id="phone" required>
                         <span class="shadow-input1"></span>
                     </div>
                     <div class="wrap-input1">
-                        <textarea class="input1" name="message" placeholder="Mensaje" required></textarea>
+                        <textarea class="input1" type="text" min="20" name="message" placeholder="Mensaje" id="message" required></textarea>
                         <span class="shadow-input1"></span>
                     </div>
 
                     <div class="container-contact1-form-btn">
-                        <button type="submit" class="contact1-form-btn" onclick="validateForm()">
+                        <button class="contact1-form-btn" onclick="validateForm();">
                             <span>
                                 Enviar Email
-                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                <i class="fa fa-long-arrow-right" aria-hidden="false"></i>
                             </span>
+                            <input type="hidden" name="_next" value="http://127.0.0.1:5503/contact-us.html">
+                            <input type="hidden" name="_captcha" value="false">  
                         </button>
                     </div>
 
-                </form>
+                  </form>
                 <!-- Imagen de contactanos  -->
-            </div>
+            
             <div class="col">
                 <div class="col d-non d-sm-block">
                     <a href="https://ibb.co/WV5T1dj"><img class="img-fluid" src="https://i.ibb.co/y4P3JM7/contact.jpg"
-                            alt="contact-anime" /></a>
+                            alt="contact-anime" / ></a>
                 </div>
             </div>
+        
         </div>
-
     </div>
     <!-- Script de funcion java script -->
 
@@ -147,63 +150,3 @@
 </html>
 
 
-
-
-    <!-- Inicia la seccion de formulario -->
-
-    <div class="contact1">
-        <div class="row">
-            <div class="container-contact1">
-                <div class="col d-non d-sm-block">
-                    <a href="https://ibb.co/WV5T1dj"><img class="img-fluid" src="https://i.ibb.co/y4P3JM7/contact.jpg"
-                            alt="contact-us" border="0" /></a>
-                </div>
-
-
-                <div class="col my-3">
-                    <form class="row g-3" id="registro" action="https://formsubmit.co/rubenmickj@gmail.com" method="post">
-                        <span class="contact-title">
-                            Contáctanos
-                        </span>
-
-                        <div class="wrap-input1">
-                            <input class="input1" type="text" name="name" placeholder="Nombre" id="name" required>
-                            <span class="shadow-input1"></span>
-                        </div>
-                        <div class="wrap-input1">
-                            <input class="input1" type="email" name="email" placeholder="Email" id="email" required>
-                            <span class="shadow-input1"></span>
-                        </div>
-                        <div class="wrap-input1">
-                            <input class="input1" type="text" name="subject" placeholder="Teléfono" id="phone" required>
-                            <span class="shadow-input1"></span>
-                        </div>
-
-                        <div class="wrap-input1">
-                            <textarea class="input1" name="message" placeholder="Mensaje" id="message" required></textarea>
-                            <span class="shadow-input1"></span>
-                        </div>
-
-                        <div class="container-contact1-form-btn">
-                            <button type="submit" class="contact1-form-btn" onclick="validateForm()">
-                                <span>
-                                    Enviar Email
-                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                                </span>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-
-                <script src="contact-us.js"></script>
-                <!-- scrip de bootstrap -->
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-                    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-                    crossorigin="anonymous"></script>
-
-                <!-- Inicio de Footer -->
-                </footer>
-                <!-- Final de footer -->
-</body>
-
-</html>
