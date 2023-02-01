@@ -1,56 +1,93 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 html{
-    background: white;
-} 
+=======
+* {
+    font-family: 'Montserrat';
+}
 
+html {
+>>>>>>> 4d1456af64d070dd8d97cef629987d55ef31c8fe
+    background: white;
+}
+
+<<<<<<< HEAD
 .escritorio{
+=======
+header {
+>>>>>>> 4d1456af64d070dd8d97cef629987d55ef31c8fe
     background: #6F6CB8;
     width: 100%;
-    height: 90px;
+    height: auto;
+
     border-radius: 0px 0px 10px 10px;
 }
 
-body{
-    background: url(./Fondo\ nubes.svg)
- }
-
-.logo{
-width: 250px;
-height: auto;
+body {
+    background: url(./images/Fondo\ nubes.svg)
 }
 
-.btn{
-    margin: 8px;
+.logo {
+    width: 250px;
+    height: auto;
+}
+
+.aboutUs {
+    background-color: #EEF2F6 !important;
+    border-radius: 10px;
+}
+
+.descripcion {
+    border-radius: 10px !important;
+}
+
+.btn {
+    margin: 1px;
     background: #E61050;
     border-radius: 5px;
     transition: 0.5s;
+    color: white;
 }
 
 .btn:hover{
-    background-color: rgb(211, 38, 185);   
+    background-color: rgb(211, 38, 185);
+    color: white;
 }
 
+<<<<<<< HEAD
 .avatares{
     display: block;
     margin: auto;
     width: 200px;
     height: 200px;
     border-radius: 50%;
-}
-
-#dropdown{
-    margin: 16px 35px;
+=======
+.dropdown-menu,
+.dropdown-toggle {
     background-color: #E61050;
-    border-radius: 5px;
-    background-size: 20px;
-    
 }
-#dropdown:hover{
-    background-color: rgb(211, 38, 185);
+.dropdown-item {
+    color: white;
+>>>>>>> 4d1456af64d070dd8d97cef629987d55ef31c8fe
 }
 
+.dropdown-item:hover {
+    background-color: #E61050;
+}
 
-footer{
+.liststyle{
+    color:white;
+}
+
+.avatars {
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+footer {
     width: 100%;
     background: #6F6CB8;
     color: white;
@@ -61,10 +98,12 @@ footer{
     bottom: -140px;
     transition-duration: 0.4s;
 }
-footer:hover{
+
+footer:hover {
     bottom: 0px;
 }
-footer:after{
+
+footer:after {
     content: "\ea42";
     font-family: 'icomoon';
     position: absolute;
@@ -79,15 +118,16 @@ footer:after{
     font-size: 4.3em;
     transition-duration: 0.4s;
 }
-footer:hover:after{
+
+footer:hover:after {
     transform: rotate(90deg);
-    background:  white;
-    color:  #E61050;
+    background: white;
+    color: #E61050;
 
 }
 
 
-footer .rrss a{
+footer .rrss a {
     text-align: center;
     width: 40px;
     height: 40px;
@@ -96,7 +136,8 @@ footer .rrss a{
     position: relative;
     display: inline-block;
 }
-footer .rrss a:before{
+
+footer .rrss a:before {
     color: white;
     border: 1px solid white;
     background-color: #E61050;
@@ -109,22 +150,26 @@ footer .rrss a:before{
     text-align: center;
     font-family: 'icomoon';
 }
-footer .rrss a:nth-child(1):before{
+
+footer .rrss a:nth-child(1):before {
     content: "\e901";
 }
-footer .rrss a:nth-child(2):before{
+
+footer .rrss a:nth-child(2):before {
     content: "\e900";
 }
-footer .rrss a:nth-child(3):before{
+
+footer .rrss a:nth-child(3):before {
     content: "\e902";
 }
-footer .rrss a:nth-child(4):before{
+
+footer .rrss a:nth-child(4):before {
     content: "\ea92";
 }
-footer p{
+
+footer p {
     font-size: 0.9em;
     font-weight: lighter;
-    font-family: 'Arvo';
     text-align: center;
     margin: 42px;
 =======
