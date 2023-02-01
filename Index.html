@@ -1,129 +1,274 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="style-paginaprincipal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
+    <title>Document</title>
 </head>
-
+<header>
+    <!-- menu dropdown -->
+    <div class="dropdown ">
+        <img class="logo" src="assets/logo later img-fluidal.png" alt="/assets/pexels-lisa-fotios-1921336.jpg">
+        <button class="btn btn-secondary dropdown-toggle   btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="assets/microsoft.svg" alt="/as img-fluidsets/pexels-lisa-fotios-1921336.jpg">
+          categorias
+        </button>
+        <ul class="dropdown-menu drop">
+            
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+        <button class="btn btn-secondary text-right" style="float: right;"><em style="font-style: italic;"> Contactanos</em></button>
+        <button class="btn btn-primary text-right" style="float: right; " type="submit" >
+            <img src="assets/person.svg" alt="/asset img-fluids/pexels-lisa-fotios-1921336.jpg">
+        </button>
+        <button class="btn btn-primary text-right" style="float: right;" type="submit">
+            <img src="assets/cart2.svg" alt="/assets img-fluid/pexels-lisa-fotios-1921336.jpg">
+        </button>
+    </div>
+   
+    <!-- termina menu -->
+</header>
 <body>
-    <header>
-        <img class ="logo" src="./assets/logo lateral.png" alt="logo tienda anime odyssey">
-            <nav class="navbar ">
-                <div class="container">
-                    
-                   
-                    <div class="collapse navbar-collapse  " id="navbarSupportedContent">
-                        <ul  class="navbar-nav ">
-                            
-                            <li>
-                                <a class="navbar-brand" href="#"></a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <img src="https://i.ibb.co/cDgSr2y/menu-1.png" alt="menu-1">Categorias
-                                </a>
-                                <ul class="dropdown-menu ">
-                                    <li><a class="dropdown-item" href="#">Playeras Caballero</a></li>
-                                    <li><a class="dropdown-item" href="#">Playeras Dama</a></li>
-                                    <li><a class="dropdown-item" href="#">Sudaderas</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">
-                                    <img>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#"><img
-                                        src="https://i.ibb.co/KVzgHdh/carro-de-la-compra.png" alt="carro-de-la-compra"></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#"><img src="https://i.ibb.co/ZcShBKX/usuario.png"
-                                        alt="usuario"></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">Contactenos</a>
-                            </li>
-                        </ul>
+    <main >
+        <!-- Carousel -->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
+        <span></span>
+      </button>
+  
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2">
+        <span></span>
+      </button>
+  
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3">
+        <span></span>
+      </button>
+    </div>
+    <!--Imágenes del carousel-->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./assets/image1.png" class="d- img-fluidblock w-100" alt="Banner de prenda">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/image2.png" class="d- img-fluidblock w-100" alt="Banner de prenda">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/image3.png" class="d- img-fluidblock w-100" alt="Banner de prenda">
+      </div>
+    </div>
+    <!--Controles del carousel-->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="container my-3">
+
+    <div class="container my-5 ">
+
+    </div>
+    <h1 style="text-align: center;">Mas vendidos</h1>
+
+    <div id="contenedorProductoMasVendido" class="container text-center  ">
+        <div class="row acercanosotros align-items-center d-flex justify-content-center">
+
+            <div id="masVendido1"
+                class="col-6 col-md-3 bg-danger p-2 bg-opacity-25 descripcion ">
+                <img id="imgMasVendido1" class="avatares img-fluid" src="/assets/pexels-lisa-fotios-1921336.jpg" alt="Imagen Producto">
+                <p id="nombreMasVendido1">Nombre Producto</p>
+                <div class="row align-items-center d-flex justify-content-center">
+                    <Button
+                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
+                      >
+                        -
+                    </Button>
+                    <Button
+                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
+                       >
+                        +
+                    </Button>
+                    <div id="precioMasVendido1"
+                        class=" col-8 col-md-4 bg-primary p-2 bg-opacity-25 descripcion ">
+                        00$
                     </div>
                 </div>
-            </nav>
-    </header>
-
-    <main>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-6 offset-md-3">
-                    <h3>¿Quienes somos?</h3>
-                </div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus architecto expedita soluta,
-                    dignissimos velit debitis ad, laboriosam placeat sunt voluptatum odio tempore nesciunt? Distinctio
-                    reiciendis excepturi recusandae, rerum expedita ab.
-                    Labore veniam aperiam recusandae reiciendis iusto explicabo laboriosam. Vel sed illo animi iusto
-                    labore
-                    repellat dolores dolore voluptatum asperiores quibusdam rerum maxime commodi fugit assumenda
-                    obcaecati
-                    rem ratione, dolorem unde.</p>
-                <div class="col-md-6 offset-md-3 justify-content-around,"><h3>Mision</h3></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nisi voluptatem velit, est repellat, optio tenetur fugiat natus rerum, aperiam deserunt! Corrupti, molestias omnis! Quam tempore distinctio sed error consequuntur.
-                Possimus, dolorem cum. Quidem quasi velit at adipisci mollitia. Temporibus ducimus, non amet omnis et blanditiis rerum neque odit. Quidem natus blanditiis laudantium non accusamus. Laudantium dolore maiores quam impedit.</p>
-            <div class=" col-md-6 offset-md-3">
-                    <h3>Vision</h3>
-                </div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam eius ipsa fugiat sit aperiam itaque
-                    nesciunt praesentium. Iure, laboriosam ut accusantium dolor, quos iste vel veritatis nobis earum
-                    voluptatum quae!
-                    Id, pariatur hic recusandae laborum ducimus, voluptate, totam dolores expedita sint amet explicabo
-                    nam.
-                    Et expedita, ducimus optio quaerat modi quisquam inventore doloremque libero, rerum hic distinctio?
-                    Quo,
-                    sapiente voluptatibus?</p>
             </div>
-        </div>
-        <div class="container">
-            <div class="row justify-content-center">
-
-                <div class="col-5">
-                    <img class="avatares" src="https://i.ibb.co/7QV6MtS/perfil-karen.jpg" alt="perfil-karen">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia magni, quod repudiandae enim
-                        quam
-                        unde tempore adipisci culpa assumenda, doloribus est at non aperiam voluptas laboriosam
-                        quibusdam.
-                        Fugit, eligendi voluptas?</p>
-                </div>
-                <div class="col-5">
-
-                </div>
-
-                <div class="col-5">
-
-                </div>
-                <div class="col-5">
-
-                </div>
-                <div class="col-5">
-
-                </div>
-                <div class="col-5">
-
-                </div>
-                <div class="col-5">
-
+            <div id="masVendido2"
+                class="col-6 col-md-3 bg-danger p-2 bg-opacity-25 descripcion ">
+                <img id="imgMasVendido1" class="avatares img-fluid" src="/assets/pexels-lisa-fotios-1921336.jpg" alt="Imagen Producto">
+                <p id="nombreMasVendido1">Nombre Producto</p>
+                <div class="row align-items-center d-flex justify-content-center">
+                    <Button
+                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
+                        >
+                        -
+                    </Button>
+                    <Button
+                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
+                        >
+                        +
+                    </Button>
+                    <div id="precioMasVendido1"
+                        class=" col-8 col-md-4 bg-primary p-2 bg-opacity-25 descripcion ">
+                        00$
+                    </div>
                 </div>
             </div>
+            <div id="masVendido3"
+                class="col-6 col-md-3 bg-danger p-2 bg-opacity-25 descripcion ">
+                <img id="imgMasVendido1" class="avatares img-fluid" src="/assets/pexels-lisa-fotios-1921336.jpg" alt="Imagen Producto">
+                <p id="nombreMasVendido1">Nombre Producto</p>
+                <div class="row align-items-center d-flex justify-content-center">
+                    <Button
+                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
+                        >
+                        -
+                    </Button>
+                    <Button
+                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
+                        >
+                        +
+                    </Button>
+                    <div id="precioMasVendido1"
+                        class=" col-8 col-md-4 bg-primary p-2 bg-opacity-25 descripcion ">
+                        00$
+                    </div>
+                </div>
+            </div>
+            <div id="masVendido4"
+                class="col-6 col-md-3 bg-danger p-2 bg-opacity-25 descripcion ">
+                <img id="imgMasVendido1" class="avatares img-fluid" src="/assets/pexels-lisa-fotios-1921336.jpg" alt="Imagen Producto">
+                <p id="nombreMasVendido1">Nombre Producto</p>
+                <div class="row align-items-center d-flex justify-content-center">
+                    <Button
+                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
+                        >
+                        -
+                    </Button>
+                    <Button
+                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
+                       >
+                        +
+                    </Button>
+                    <div id="precioMasVendido1"
+                        class=" col-8 col-md-4 bg-primary p-2 bg-opacity-25 descripcion ">
+                        00$
+                    </div>
+                </div>
+            </div>
+
+            <div id="masVendido1"
+                class="col-6 col-md-3 bg-danger p-2 bg-opacity-25 descripcion ">
+                <img id="imgMasVendido1" class="avatares img-fluid" src="/assets/pexels-lisa-fotios-1921336.jpg" alt="Imagen Producto">
+                <p id="nombreMasVendido1">Nombre Producto</p>
+                <div class="row align-items-center d-flex justify-content-center">
+                    <Button
+                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
+                       >
+                        -
+                    </Button>
+                    <Button
+                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
+                       >
+                        +
+                    </Button>
+                    <div id="precioMasVendido1"
+                        class=" col-8 col-md-4 bg-primary p-2 bg-opacity-25 descripcion ">
+                        00$
+                    </div>
+                </div>
+            </div>
+            <div id="masVendido2"
+                class="col-6 col-md-3 bg-danger p-2 bg-opacity-25 descripcion ">
+                <img id="imgMasVendido1" class="avatares img-fluid" src="/assets/pexels-lisa-fotios-1921336.jpg" alt="Imagen Producto">
+                <p id="nombreMasVendido1">Nombre Producto</p>
+                <div class="row align-items-center d-flex justify-content-center">
+                    <Button
+                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
+                        >
+                        -
+                    </Button>
+                    <Button
+                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
+                        >
+                        +
+                    </Button>
+                    <div id="precioMasVendido1"
+                        class=" col-8 col-md-4 bg-primary p-2 bg-opacity-25 descripcion ">
+                        00$
+                    </div>
+                </div>
+            </div>
+            <div id="masVendido3"
+                class="col-6 col-md-3 bg-danger p-2 bg-opacity-25 descripcion ">
+                <img id="imgMasVendido1" class="avatares img-fluid" src="/assets/pexels-lisa-fotios-1921336.jpg" alt="Imagen Producto">
+                <p id="nombreMasVendido1">Nombre Producto</p>
+                <div class="row align-items-center d-flex justify-content-center">
+                    <Button
+                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
+                        >
+                        -
+                    </Button>
+                    <Button
+                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
+                     >
+                        +
+                    </Button>
+                    <div id="precioMasVendido1"
+                        class=" col-8 col-md-4 bg-primary p-2 bg-opacity-25 descripcion ">
+                        00$
+                    </div>
+                </div>
+            </div>
+            <div id="masVendido4"
+                class="col-6 col-md-3 bg-danger p-2 bg-opacity-25 descripcion ">
+                <img id="imgMasVendido1" class="avatares img-fluid" src="/assets/pexels-lisa-fotios-1921336.jpg" alt="Imagen Producto">
+                <p id="nombreMasVendido1">Nombre Producto</p>
+                <div class="row align-items-center d-flex justify-content-center">
+                    <Button
+                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
+                       >
+                        -
+                    </Button>
+                    <Button
+                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
+                        >
+                        +
+                    </Button>
+                    <div id="precioMasVendido1"
+                        class=" col-8 col-md-4 bg-primary p-2 bg-opacity-25 descripcion ">
+                        00$
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
+    </div>
+  
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
+
+    <footer style="text-align: center" >
+        <img  class="logoFooter" src="assets/log img-fluido lateral.png" alt="/assets/pexels-lisa-fotios-1921336.jpg">
+    </footer>
+    
+    <script src="alex.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 
 </html>
