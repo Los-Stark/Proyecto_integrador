@@ -20,11 +20,7 @@ const changeDropdown = () => {
     <a class="nav-link " href="#"><button class="btn"> Acceder</button></a>
     <a class="nav-link " href="#"><button class="btn">Contáctanos</button></a>
     <a class="nav-link " href="#"><button class="btn">Conócenos</button></a>
-    <a class="nav-link nav-item active" href="#">
-    <button class="btn ">
-        <img src="assets/images/cart2.svg" alt="carro-de-la-compra">
-    </button>
-    </a>`;
+    `;
     const listStyle= `
     <a class="nav-link liststyle" href="#">Inicio</a>
     <a class="nav-link liststyle" href="#">Playeras de Caballero</a>
@@ -33,9 +29,6 @@ const changeDropdown = () => {
     <a class="nav-link liststyle" href="#">Acceder</a>
     <a class="nav-link liststyle" href="#">Contáctanos</a>
     <a class="nav-link liststyle" href="#">Conócenos</a>
-    <a class="nav-link nav-item active" href="#">
-        <img src="assets/images/cart2.svg" alt="carro-de-la-compra">
-    </a>
     `;
 
     let ventana = window.innerWidth;
