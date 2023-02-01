@@ -53,15 +53,14 @@ body {
     color: white;
 }
 
+.dropdown-item:hover {
+    background-color: #E61050;
+}
+
 .liststyle{
     color:white;
 }
 
-/* #carrito-de-compras{
-    position: fixed;
-    top: 1rem;
-    right: 2rem;
-} */
 .avatars {
     display: block;
     margin: auto;
