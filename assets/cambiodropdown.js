@@ -3,7 +3,7 @@ const changeDropdown = () => {
 
     const navstyle = document.getElementById("navbarScroll");
     const buttonstyle = `                        
-    <a class="nav-link active" href="#"><button class="btn">Inicio</button></a>
+    <a class="nav-link active" href="/index.html"><button class="btn">Inicio</button></a>
     <div class="nav-item dropdown" id="Dropdowncategories">
         <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
             aria-expanded="false">
@@ -19,16 +19,16 @@ const changeDropdown = () => {
 
     <a class="nav-link " href="#"><button class="btn"> Acceder</button></a>
     <a class="nav-link " href="#"><button class="btn">Contáctanos</button></a>
-    <a class="nav-link " href="#"><button class="btn">Conócenos</button></a>
+    <a class="nav-link " href="/aboutUs.html"><button class="btn">Conócenos</button></a>
     `;
     const listStyle= `
-    <a class="nav-link liststyle" href="#">Inicio</a>
+    <a class="nav-link liststyle" href="/index.html">Inicio</a>
     <a class="nav-link liststyle" href="#">Playeras de Caballero</a>
     <a class="nav-link liststyle" href="#">Playeras de dama</a>
     <a class="nav-link liststyle" href="#">Sudaderas</a>
     <a class="nav-link liststyle" href="#">Acceder</a>
     <a class="nav-link liststyle" href="#">Contáctanos</a>
-    <a class="nav-link liststyle" href="#">Conócenos</a>
+    <a class="nav-link liststyle" href="/aboutUs.html">Conócenos</a>
     `;
 
     let ventana = window.innerWidth;
