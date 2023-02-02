@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/reset.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-   
-    <link rel="stylesheet" href="style-paginaprincipal.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="./assets/icomoon.css">
+
 </head>
+
+<body>
     <header>
         <nav class="navbar navbar-expand-md ">
             <div class="container-fluid">
@@ -37,238 +39,130 @@
             </div>
         </nav>
     </header>
-<body>
-    <main >
-        <!-- Carousel -->
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
-        <span></span>
-      </button>
-  
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2">
-        <span></span>
-      </button>
-  
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3">
-        <span></span>
-      </button>
-    </div>
-    <!--Imágenes del carousel-->
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="./assets/image1.png" class="d- img-fluidblock w-100" alt="Banner de prenda">
-      </div>
-      <div class="carousel-item">
-        <img src="./assets/image2.png" class="d- img-fluidblock w-100" alt="Banner de prenda">
-      </div>
-      <div class="carousel-item">
-        <img src="./assets/image3.png" class="d- img-fluidblock w-100" alt="Banner de prenda">
-      </div>
-    </div>
-    <!--Controles del carousel-->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  <div class="container my-3">
 
-    <div class="container my-5 ">
+    <main>
+        <div class="container my-5 ">
+            <div class="row p-2 aboutUs text-center">
+                <div class="col-12">
+                    <h3>¿Quienes somos?</h3>
+                </div>
+                <p class="bg-danger p-2 text-dark bg-opacity-25 ">Empresa mexicana que busca la calidad integral
+                    de nuestros productos,
+                    de acuerdo con las actuales exigencias y tendencias del mercado.
+                    La innovación y creatividad son nuestra prioridad con el fin
+                    de llevar a nuestros clientes los más recientes diseños y colores para lograr distinción
+                    en cada pieza.
+                </p>
+                <div class="col-12">
+                    <h3>Mision</h3>
+                </div>
+                <p class="bg-danger p-2 text-dark bg-opacity-25"> Acercamos a la actualidad, la calidad que
+                    tenían los productos del pasado manteniendo un enfoque en el presente, para satisfacer a
+                    aquellos interesados y conocedores del medio a través de la comercialización de productos de
+                    nicho para agrupaciones con gustos específicos. </p>
 
-    </div>
-    <h1 style="text-align: center;">Mas vendidos</h1>
-
-    <div id="contenedorProductoMasVendido" class="container text-center  ">
-        <div class="row acercanosotros align-items-center d-flex justify-content-center">
-
-            <div id="masVendido1"
-                class="col-6 col-md-3 bg-danger p-2 bg-opacity-25 descripcion ">
-                <img id="imgMasVendido1" class="avatares img-fluid" src="/assets/pexels-lisa-fotios-1921336.jpg" alt="Imagen Producto">
-                <p id="nombreMasVendido1">Nombre Producto</p>
-                <div class="row align-items-center d-flex justify-content-center">
-                    <Button
-                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
-                      >
-                        -
-                    </Button>
-                    <Button
-                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
-                       >
-                        +
-                    </Button>
-                    <div id="precioMasVendido1"
-                        class=" col-8 col-md-4 bg-primary p-2 bg-opacity-25 descripcion ">
-                        00$
-                    </div>
+                <div class=" col-12">
+                    <h3>Vision</h3>
                 </div>
+                <p class="bg-danger p-2 text-dark bg-opacity-25"> Ser una plataforma de ropa referente, original
+                    y vanguardista del anime, para lograr tener un alcance de posicionamiento en la industria
+                    textil y así ofrecer productos de alta calidad. </p>
             </div>
-            <div id="masVendido2"
-                class="col-6 col-md-3 bg-danger p-2 bg-opacity-25 descripcion ">
-                <img id="imgMasVendido1" class="avatares img-fluid" src="/assets/pexels-lisa-fotios-1921336.jpg" alt="Imagen Producto">
-                <p id="nombreMasVendido1">Nombre Producto</p>
-                <div class="row align-items-center d-flex justify-content-center">
-                    <Button
-                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
-                        >
-                        -
-                    </Button>
-                    <Button
-                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
-                        >
-                        +
-                    </Button>
-                    <div id="precioMasVendido1"
-                        class=" col-8 col-md-4 bg-primary p-2 bg-opacity-25 descripcion ">
-                        00$
-                    </div>
-                </div>
-            </div>
-            <div id="masVendido3"
-                class="col-6 col-md-3 bg-danger p-2 bg-opacity-25 descripcion ">
-                <img id="imgMasVendido1" class="avatares img-fluid" src="/assets/pexels-lisa-fotios-1921336.jpg" alt="Imagen Producto">
-                <p id="nombreMasVendido1">Nombre Producto</p>
-                <div class="row align-items-center d-flex justify-content-center">
-                    <Button
-                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
-                        >
-                        -
-                    </Button>
-                    <Button
-                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
-                        >
-                        +
-                    </Button>
-                    <div id="precioMasVendido1"
-                        class=" col-8 col-md-4 bg-primary p-2 bg-opacity-25 descripcion ">
-                        00$
-                    </div>
-                </div>
-            </div>
-            <div id="masVendido4"
-                class="col-6 col-md-3 bg-danger p-2 bg-opacity-25 descripcion ">
-                <img id="imgMasVendido1" class="avatares img-fluid" src="/assets/pexels-lisa-fotios-1921336.jpg" alt="Imagen Producto">
-                <p id="nombreMasVendido1">Nombre Producto</p>
-                <div class="row align-items-center d-flex justify-content-center">
-                    <Button
-                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
-                        >
-                        -
-                    </Button>
-                    <Button
-                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
-                       >
-                        +
-                    </Button>
-                    <div id="precioMasVendido1"
-                        class=" col-8 col-md-4 bg-primary p-2 bg-opacity-25 descripcion ">
-                        00$
-                    </div>
-                </div>
-            </div>
-
-            <div id="masVendido1"
-                class="col-6 col-md-3 bg-danger p-2 bg-opacity-25 descripcion ">
-                <img id="imgMasVendido1" class="avatares img-fluid" src="/assets/pexels-lisa-fotios-1921336.jpg" alt="Imagen Producto">
-                <p id="nombreMasVendido1">Nombre Producto</p>
-                <div class="row align-items-center d-flex justify-content-center">
-                    <Button
-                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
-                       >
-                        -
-                    </Button>
-                    <Button
-                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
-                       >
-                        +
-                    </Button>
-                    <div id="precioMasVendido1"
-                        class=" col-8 col-md-4 bg-primary p-2 bg-opacity-25 descripcion ">
-                        00$
-                    </div>
-                </div>
-            </div>
-            <div id="masVendido2"
-                class="col-6 col-md-3 bg-danger p-2 bg-opacity-25 descripcion ">
-                <img id="imgMasVendido1" class="avatares img-fluid" src="/assets/pexels-lisa-fotios-1921336.jpg" alt="Imagen Producto">
-                <p id="nombreMasVendido1">Nombre Producto</p>
-                <div class="row align-items-center d-flex justify-content-center">
-                    <Button
-                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
-                        >
-                        -
-                    </Button>
-                    <Button
-                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
-                        >
-                        +
-                    </Button>
-                    <div id="precioMasVendido1"
-                        class=" col-8 col-md-4 bg-primary p-2 bg-opacity-25 descripcion ">
-                        00$
-                    </div>
-                </div>
-            </div>
-            <div id="masVendido3"
-                class="col-6 col-md-3 bg-danger p-2 bg-opacity-25 descripcion ">
-                <img id="imgMasVendido1" class="avatares img-fluid" src="/assets/pexels-lisa-fotios-1921336.jpg" alt="Imagen Producto">
-                <p id="nombreMasVendido1">Nombre Producto</p>
-                <div class="row align-items-center d-flex justify-content-center">
-                    <Button
-                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
-                        >
-                        -
-                    </Button>
-                    <Button
-                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
-                     >
-                        +
-                    </Button>
-                    <div id="precioMasVendido1"
-                        class=" col-8 col-md-4 bg-primary p-2 bg-opacity-25 descripcion ">
-                        00$
-                    </div>
-                </div>
-            </div>
-            <div id="masVendido4"
-                class="col-6 col-md-3 bg-danger p-2 bg-opacity-25 descripcion ">
-                <img id="imgMasVendido1" class="avatares img-fluid" src="/assets/pexels-lisa-fotios-1921336.jpg" alt="Imagen Producto">
-                <p id="nombreMasVendido1">Nombre Producto</p>
-                <div class="row align-items-center d-flex justify-content-center">
-                    <Button
-                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
-                       >
-                        -
-                    </Button>
-                    <Button
-                        class="align-items-left col-4 col-md-2 p-2 bg-opacity-25 descripcion "
-                        >
-                        +
-                    </Button>
-                    <div id="precioMasVendido1"
-                        class=" col-8 col-md-4 bg-primary p-2 bg-opacity-25 descripcion ">
-                        00$
-                    </div>
-                </div>
-            </div>
-
-
-
         </div>
-    </div>
-  
+
+        <div class="container text-center">
+            <div class="row aboutUs align-items-center">
+                <div class="col-12 col-sm-4 col-md-2">
+                    <img class="avatars"
+                        src="https://media.licdn.com/dms/image/C5603AQEZbZxn4Uqmsg/profile-displayphoto-shrink_200_200/0/1631018416774?e=1680134400&v=beta&t=BsDRgsKmzUJs4P3GGzJv-O9sgIcb5WalRRYN7rrNoa0"
+                        alt="perfil-Juan">
+                </div>
+                <div class="col-12 col-sm-8 col-md-4 ">
+                    <p class="bg-danger p-2 text-dark bg-opacity-25 descripcion">
+                        Soy Juan Marcos una persona con mucho interés por aprender y de transmitir a otras personas
+                        mi
+                        conocimiento.
+                    </p>
+                </div>
+                <div class="col-12 col-sm-4 col-md-2">
+                    <img class="avatars" src="https://i.ibb.co/GWQ0pg5/Foto-Fer-Rosales.jpg" alt="perfil-Fer">
+                </div>
+                <div class="col-12 col-sm-8 col-md-4 ">
+                    <p class="bg-danger p-2 text-dark bg-opacity-25 descripcion"> Hola soy Fernanda, tengo como
+                        objetivo poder
+                        desarrollarme en el área de programación mediante el aprendizaje de diversos lenguajes. </p>
+                </div>
+
+                <div class="col-12 col-sm-4 col-md-2">
+                    <img class="avatars" src="https://i.ibb.co/PZ9cygC/ruben.jpg" alt="perfil-Ruben">
+                </div>
+                <div class="col-12 col-sm-8 col-md-4 ">
+                    <p class="bg-danger p-2 text-dark bg-opacity-25 descripcion"> Soy una persona dedicada y
+                        perseverante, con gusto por nuevos aprendizajes.
+                        Durante los últimos 8 meses me he dedicado en aprender programación en cursos para enfocarme
+                        de lleno en el desarrollo web.
+                    </p>
+                </div>
+
+                <div class="col-12 col-sm-4 col-md-2">
+                    <img class="avatars" src="https://i.ibb.co/RY4v098/imagen-fabio.jpg" alt="perfil-Fabio">
+                </div>
+                <div class="col-12 col-sm-8 col-md-4 ">
+                    <p class="bg-danger p-2 text-dark bg-opacity-25 descripcion"> Hola soy Fabio, proactivo,
+                        amigable y perseverante, me apasiona el mundo de la tecnología concretamente la
+                        programación, y trasmitirlo de la mejor manera. </p>
+                </div>
+                <div class="col-12 col-sm-4 col-md-2">
+                    <img class="avatars" src="https://i.ibb.co/Y0vHzd3/1661913221711.jpg" alt="perfil-Alex">
+                </div>
+                <div class="col-12 col-sm-8 col-md-4 ">
+                    <p class="bg-danger p-2 text-dark bg-opacity-25 descripcion"> Mi nombre es Alejandro Morales,
+                        trabaje durante 8 años en el área de tecnologías. Soy amante de la programación y del
+                        aprendizaje.
+
+                    </p>
+                </div>
+
+                <div class="col-12 col-sm-4 col-md-2">
+                    <img class="avatars" src="https://i.ibb.co/7QV6MtS/perfil-karen.jpg" alt="perfil-karen">
+                </div>
+                <div class="col-12 col-sm-8 col-md-4 ">
+                    <p class="bg-danger p-2 text-dark bg-opacity-25 descripcion"> Tengo una gran pasión por
+                        aprender, soy
+                        creativa y entusiasta, así que el encaminarme a la programación me
+                        ha permitido tener una oportunidad para desarrollar mi imaginación, ya que no hay
+                        fronteras
+                        en el mundo tecnológico, con el conocimiento necesario, disciplina
+                        y creatividad, todo es posible. </p>
+                </div>
+                <div class="col-12 col-sm-4 col-md-2">
+                    <img class="avatars" src="https://i.ibb.co/PxTQyyy/rafael-Raygoza.jpg" alt="rafael-Raygoza" />
+                </div>
+                <div class="col-12 col-sm-8 col-md-4 ">
+                    <p class="bg-danger p-2 text-dark bg-opacity-25 descripcion">Soy Rafael estoy interesado por la
+                        tecnología y por el
+                        aprendizaje, procuro enfocarme en la resolución de los desafíos presentados ante mi
+                        durante mi desarrollo.</p>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer style="text-align: center" >
-        <img  class="logoFooter" src="assets/log img-fluido lateral.png" alt="/assets/pexels-lisa-fotios-1921336.jpg">
+    <footer>
+        <div class="rrss">
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+
+            <p>© 2023 All rights reserved |
+                Privacity Policy Los Stark</p>
+        </div>
     </footer>
-    
-    <script src="alex.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="./assets/cambiodropdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
