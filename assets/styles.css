@@ -14,6 +14,10 @@ header {
     border-radius: 0px 0px 10px 10px;
 }
 
+logo{
+    width: 45px;
+}
+
 body {
     background: url(./images/Fondo\ nubes.svg)
 }

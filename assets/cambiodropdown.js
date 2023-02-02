@@ -41,3 +41,14 @@ const changeDropdown = () => {
 
 
 changeDropdown();
+
+let mostrarCarrito= true;
+function ocultarCarrito(){
+    if(mostrarCarrito){
+    document.getElementById("carrito-compras").innerHTML =''
+    mostrarCarrito=false}
+    else{
+        document.getElementById("carrito-compras").innerHTML ='<a class="nav-link" href="#" id="carrito-compras"><button class="btn "><img src="assets/images/cart2.svg" alt="carro-de-la-compra"></button></a>'
+        mostrarCarrito=true;
+    }
+}
