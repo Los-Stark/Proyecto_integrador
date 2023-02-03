@@ -41,10 +41,7 @@ function validateForm() {
 
 // Enviar formulario
 
-//if(email.match(emailPattern) && phone.length == 10 && message.length > 20 && name == true){
-//document.getElementById("registro").setAttribute("onsubmit", "retun true");
 return document.getElementById("registro").setAttribute("onsubmit", "retun true"); 
+alert()
 }
-
-//document.getElementById("registro").setAttribute("onsubmit", "retun true");
 
