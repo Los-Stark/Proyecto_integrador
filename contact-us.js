@@ -40,5 +40,7 @@ function validateForm() {
     }
 
 // Enviar formulario
+
+
 return document.getElementById("registro").setAttribute("onsubmit", "retun true"); 
 }
