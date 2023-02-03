@@ -8,6 +8,7 @@
     <title>Contact-us</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="./assets/icomoon.css">
     <link rel="stylesheet" href="./assets/contact.css">
@@ -40,55 +41,58 @@
     </header>
 
     <!-- Inicia el formulario -->
-    <div class="container-contact1">
-        <div class="row">
-            <div class="col my-3">
+    <section class="container-fluid container-contact1">
+        <div class="row g-6">
+            <div class="col">
                 <form class="row g-3" id="registro" action="https://formsubmit.co/animeodyssey5@gmail.com" method="post" onsubmit="return false">
                     <span class="contact-title">Contáctanos</span>
-                    <div class="wrap-input1 container-sm">
-                        <input class="input1" type="text" name="name" id="name" placeholder="Nombre"  required>
-                        <span class="shadow-input1"></span>
-                    </div>
-                    <div class="wrap-input1">
-                        <input class="input1" type="text" name="email" id="email" placeholder="Email" required>
-                        <span class="shadow-input1"></span>
-                    </div>
-                    <div class="wrap-input1">
-                        <input class="input1" type="text" name="phone" id="phone"placeholder="Teléfono" required>
-                        <span class="shadow-input1"></span>
-                    </div>
-                    <div class="wrap-input1">
-                        <textarea class="input1" name="message" id="message" placeholder="Mensaje" required></textarea>
+
+                    <div class="col-8 wrap-input1">
+                        <input class="input1" type="text" name="name" id="name" placeholder="Nombre" required>
                         <span class="shadow-input1"></span>
                     </div>
 
+                    <div class="col-8 wrap-input1">
+                        <input class="input1" type="text" name="email" id="email" placeholder="Email" required>
+                        <span class="shadow-input1"></span>
+                    </div>
+
+                    <div class="col-8 wrap-input1">
+                        <input class="input1" type="text" name="phone" id="phone" placeholder="Teléfono" required>
+                        <span class="shadow-input1"></span>
+                    </div>
+
+                   
+                    <div class="col-8">
+                        <textarea  class="input1-message" name="message" id="message" placeholder="Mensaje" required></textarea>
+                        <span class="shadow-input1"></span>
+                    </div>
+                  
+
                     <div class="container-contact1-form-btn">
-                        <button  class="contact1-form-btn" onclick="validateForm();">
+                        <button class=" contact1-form-btn" onclick="validateForm();">
                             <span>
                                 Enviar Email
                                 <i class="fa fa-long-arrow-right" aria-hidden="false"></i>
                             </span>
-                            <input type="hidden" name="_next" value="http://127.0.0.1:5503/contact-us.html">
+                            <input type="hidden" name="_next" value="http://127.0.0.1:5500/contact-us.html">
                             <input type="hidden" name="_captcha" value="false">
                         </button>
                     </div>
 
                 </form>
-                <!-- Imagen de contactanos  -->
+
             </div>
-            <div class="col">
-                <div class="col d-non d-sm-block">
-                    <a href="https://ibb.co/WV5T1dj"><img class="img-fluid" src="https://i.ibb.co/y4P3JM7/contact.jpg"
-                            alt="contact-anime" /></a>
-                </div>
+            <!-- Imagen -->
+
+            <div class=" col d-none d-lg-block">
+                <a href="https://ibb.co/WV5T1dj"><img class="img-fluid" src="https://i.ibb.co/y4P3JM7/contact.jpg"
+                        alt="contact-anime" /></a>
             </div>
+
         </div>
+    </section>
 
-    </div>
-    <!-- Script de funcion java script -->
-
-    
-    
     <!-- Inicio del footer -->
     <footer>
         <div class="rrss">
