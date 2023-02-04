@@ -69,6 +69,11 @@ transition: 0.5s;
 
 }
 
+#contenedorProductoMasVendido .col-6{
+    background-color: #F2CAC8;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
 
 #contenedorProductoMasVendido .align-items-left:active{
     transform: scale(0.8);
