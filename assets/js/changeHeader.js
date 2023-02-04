@@ -1,6 +1,6 @@
 
 const changeDropdown = () => {
-
+    /* Estilo de HTML cuando la pantalla es mas grande de 768 pixelex (Botones) */
     const navstyle = document.getElementById("navbarScroll");
     const buttonstyle = `                        
     <a class="nav-link active" href="/index.html"><button class="btn">Inicio</button></a>
@@ -19,23 +19,22 @@ const changeDropdown = () => {
 
     <a class="nav-link " href="#"><button class="btn"> Acceder</button></a>
     <a class="nav-link " href="/contact-us.html"><button class="btn">Contáctanos</button></a>
-    <a class="nav-link " href="/aboutUs.html"><button class="btn">Conócenos</button></a>
+    <a class="nav-link " href="/about-us.html"><button class="btn">Conócenos</button></a>
     `;
-    const listStyle= `
+    /* Estilo de HTML cuando la pantalla es menor de 768 pixelex (Lista) */
+    const listStyle = `
     <a class="nav-link liststyle" href="/index.html">Inicio</a>
     <a class="nav-link liststyle" href="#">Playeras de Caballero</a>
     <a class="nav-link liststyle" href="#">Playeras de dama</a>
     <a class="nav-link liststyle" href="#">Sudaderas</a>
     <a class="nav-link liststyle" href="#">Acceder</a>
     <a class="nav-link liststyle" href="/contact-us.html">Contáctanos</a>
-    <a class="nav-link liststyle" href="/aboutUs.html">Conócenos</a>
+    <a class="nav-link liststyle" href="/about-us.html">Conócenos</a>
     `;
-
-    let ventana = window.innerWidth;
-    ventana<768? navstyle.innerHTML = listStyle:navstyle.innerHTML = buttonstyle;
-    window.addEventListener('resize', () => {  
-        ventana = window.innerWidth;
-        ventana<768? navstyle.innerHTML = listStyle:navstyle.innerHTML = buttonstyle;
+    /* Evaluacion de tamaño de pantalla */
+    window.innerWidth < 768 ? navstyle.innerHTML = listStyle : navstyle.innerHTML = buttonstyle;
+    window.addEventListener('resize', () => {
+        window.innerWidth < 768 ? navstyle.innerHTML = listStyle : navstyle.innerHTML = buttonstyle;
     });
 }
 
@@ -44,34 +43,37 @@ changeDropdown();
 
 
 
-/* bloque para ocultar el carrito al apretar el boton en version celular y mostrar al presionar de nuevo
-se uso el metodo settimeout */
-let mostrarCarrito= true;
-function ocultarCarrito(){
-    if(mostrarCarrito){
-    document.getElementById("carrito-compras").innerHTML =''
-    mostrarCarrito=false}
- 
-    else{
-        setTimeout(carrito,350)
+/* bloque para ocultar el carrito al apretar el boton en version celular y mostrar 
+al presionar de nuevo se uso el metodo settimeout */
+let showShoppingCar = true;
+function hideShoppingCart() {
+    if (showShoppingCar) {
+        document.getElementById("shoppingCart").innerHTML = '';
+        showShoppingCar = false;
     }
 
-    };
+    else {
+        setTimeout(car, 350)
+    }
 
-    
-    function carrito(){
-        document.getElementById("carrito-compras").innerHTML ='<a class="nav-link" href="#" id="carrito-compras"><button class="btn "><img src="assets/images/cart2.svg" alt="carro-de-la-compra"></button></a>'
-        mostrarCarrito=true;
-     }
-    
+}
 
-     function orientacionCambiada()
-     {
-        let rotacion = window.orientation;
-        console.log(rotacion)
-        
-        if (rotacion=90){
-        document.getElementById("carrito-compras").innerHTML ='<a class="nav-link" href="#" id="carrito-compras"><button class="btn "><img src="assets/images/cart2.svg" alt="carro-de-la-compra"></button></a>'}
-     }
-     
-     window.addEventListener("orientationchange", orientacionCambiada);
+
+function car() {
+    document.getElementById("shoppingCart").innerHTML = `<a class="nav-link" href="#" id="shoppingCart">
+        <button class="btn "><img src="assets/images/cart2.svg" alt="carro-de-la-compra"></button></a>`;
+    showShoppingCar = true;
+}
+
+
+function chengingOrientation() {
+    let rotation = window.orientation;
+    console.log(rotation)
+
+    if (rotation = 90) {
+        document.getElementById("shoppingCart").innerHTML = `<a class="nav-link" href="#" id="shoppingCart">
+        <button class="btn "><img src="assets/images/cart2.svg" alt="carro-de-la-compra"></button></a>`;
+    }
+}
+
+window.addEventListener("orientationchange", chengingOrientation);

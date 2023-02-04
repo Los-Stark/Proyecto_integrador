@@ -72,10 +72,11 @@
 
 }
 
-.img-fluid {
+/* Este style hacia raro el header en contact us */
+/* .img-fluid {
     border-radius: 25px;
     place-content: center;
     margin: 25px;
     object-fit: cover;
     object-position: bottom;
-}
+} */
