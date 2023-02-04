@@ -18,7 +18,7 @@ const changeDropdown = () => {
     </div>
 
     <a class="nav-link " href="#"><button class="btn"> Acceder</button></a>
-    <a class="nav-link " href="#"><button class="btn">Contáctanos</button></a>
+    <a class="nav-link " href="/contact-us.html"><button class="btn">Contáctanos</button></a>
     <a class="nav-link " href="/aboutUs.html"><button class="btn">Conócenos</button></a>
     `;
     const listStyle= `
@@ -27,7 +27,7 @@ const changeDropdown = () => {
     <a class="nav-link liststyle" href="#">Playeras de dama</a>
     <a class="nav-link liststyle" href="#">Sudaderas</a>
     <a class="nav-link liststyle" href="#">Acceder</a>
-    <a class="nav-link liststyle" href="#">Contáctanos</a>
+    <a class="nav-link liststyle" href="/contact-us.html">Contáctanos</a>
     <a class="nav-link liststyle" href="/aboutUs.html">Conócenos</a>
     `;
 
