@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5a8403e02040cc9d4a3de9202eecf430bd6fbe8b
 @font-face {
     font-family: 'icomoon';
     src:  url('fonts/icomoon.eot?8nm2lr');
@@ -336,6 +339,7 @@
   .icon-file-pdf:before {
     content: "\eadf";
   }
+<<<<<<< HEAD
 =======
 @font-face {
     font-family: 'icomoon';
@@ -675,4 +679,6 @@
     content: "\eadf";
   }
 >>>>>>> 2df351015f486e2d99e7e6f53517c635fafa0d0a
+=======
+>>>>>>> 5a8403e02040cc9d4a3de9202eecf430bd6fbe8b
   

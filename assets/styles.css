@@ -1,12 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 html{
 =======
+=======
+>>>>>>> 5a8403e02040cc9d4a3de9202eecf430bd6fbe8b
 * {
     font-family: 'Montserrat';
 }
 
 html {
+<<<<<<< HEAD
 >>>>>>> 4d1456af64d070dd8d97cef629987d55ef31c8fe
     background: white;
 }
@@ -16,11 +20,24 @@ html {
 =======
 header {
 >>>>>>> 4d1456af64d070dd8d97cef629987d55ef31c8fe
+=======
+    background: white;
+}
+
+header {
+>>>>>>> 5a8403e02040cc9d4a3de9202eecf430bd6fbe8b
     background: #6F6CB8;
     width: 100%;
     height: auto;
 
     border-radius: 0px 0px 10px 10px;
+<<<<<<< HEAD
+=======
+}
+
+logo{
+    width: 45px;
+>>>>>>> 5a8403e02040cc9d4a3de9202eecf430bd6fbe8b
 }
 
 body {
@@ -37,9 +54,15 @@ body {
     border-radius: 10px;
 }
 
+<<<<<<< HEAD
 .descripcion {
     border-radius: 10px !important;
 }
+=======
+/* .descripcion {
+    border-radius: 10px !important;
+} */
+>>>>>>> 5a8403e02040cc9d4a3de9202eecf430bd6fbe8b
 
 .btn {
     margin: 1px;
@@ -55,6 +78,7 @@ body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .avatares{
     display: block;
     margin: auto;
@@ -62,13 +86,18 @@ body {
     height: 200px;
     border-radius: 50%;
 =======
+=======
+>>>>>>> 5a8403e02040cc9d4a3de9202eecf430bd6fbe8b
 .dropdown-menu,
 .dropdown-toggle {
     background-color: #E61050;
 }
 .dropdown-item {
     color: white;
+<<<<<<< HEAD
 >>>>>>> 4d1456af64d070dd8d97cef629987d55ef31c8fe
+=======
+>>>>>>> 5a8403e02040cc9d4a3de9202eecf430bd6fbe8b
 }
 
 .dropdown-item:hover {
@@ -84,6 +113,7 @@ body {
     margin: auto;
     width: 100px;
     height: 100px;
+<<<<<<< HEAD
     border-radius: 50%;
 }
 
@@ -111,6 +141,8 @@ footer:after {
     width: 100px;
     margin-left: -40px;
     margin-top: -45px;
+=======
+>>>>>>> 5a8403e02040cc9d4a3de9202eecf430bd6fbe8b
     border-radius: 50%;
     background: #E61050;
     color: white;
@@ -119,6 +151,7 @@ footer:after {
     transition-duration: 0.4s;
 }
 
+<<<<<<< HEAD
 footer:hover:after {
     transform: rotate(90deg);
     background: white;
@@ -218,12 +251,81 @@ height: auto;
     border-radius: 5px;
     background-size: 20px;
     
+=======
+footer {
+    width: 100%;
+    background: #6F6CB8;
+    color: white;
+    text-align: center;
+    z-index: 90;
+    height: 150px;
+    position: fixed;
+    bottom: -140px;
+    transition-duration: 0.4s;
+}
+
+footer:hover {
+    bottom: 0px;
+}
+
+footer:after {
+    content: "\ea42";
+    font-family: 'icomoon';
+    position: absolute;
+    top: 0px;
+    width: 100px;
+    margin-left: -40px;
+    margin-top: -45px;
+    border-radius: 50%;
+    background: #E61050;
+    color: white;
+    transform: rotate(-90deg);
+    font-size: 4.3em;
+    transition-duration: 0.4s;
+}
+
+footer:hover:after {
+    transform: rotate(90deg);
+    background: white;
+    color: #E61050;
+
+}
+
+
+footer .rrss a {
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    bottom: -45px;
+    margin: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+footer .rrss a:before {
+    color: white;
+    border: 1px solid white;
+    background-color: #E61050;
+    position: absolute;
+    border-radius: 50%;
+    font-size: 2.5em;
+    height: 60px;
+    width: 60px;
+
+    text-align: center;
+    font-family: 'icomoon';
+}
+
+footer .rrss a:nth-child(1):before {
+    content: "\e901";
+>>>>>>> 5a8403e02040cc9d4a3de9202eecf430bd6fbe8b
 }
 #dropdown:hover{
     background-color: rgb(211, 38, 185);
 }
 
 
+<<<<<<< HEAD
 footer{
     width: 100%;
     background: #6F6CB8;
@@ -237,6 +339,14 @@ footer{
 }
 footer:hover{
     bottom: 0px;
+=======
+footer .rrss a:nth-child(2):before {
+    content: "\e900";
+}
+
+footer .rrss a:nth-child(3):before {
+    content: "\e902";
+>>>>>>> 5a8403e02040cc9d4a3de9202eecf430bd6fbe8b
 }
 footer:after{
     content: "\ea42";
@@ -261,6 +371,7 @@ footer:hover:after{
 }
 
 
+<<<<<<< HEAD
 footer .rrss a{
     text-align: center;
     width: 40px;
@@ -269,6 +380,10 @@ footer .rrss a{
     margin: 20px;
     position: relative;
     display: inline-block;
+=======
+footer .rrss a:nth-child(4):before {
+    content: "\ea92";
+>>>>>>> 5a8403e02040cc9d4a3de9202eecf430bd6fbe8b
 }
 footer .rrss a:before{
     color: white;
@@ -280,6 +395,7 @@ footer .rrss a:before{
     height: 60px;
     width: 60px;
 
+<<<<<<< HEAD
     text-align: center;
     font-family: 'icomoon';
 }
@@ -302,4 +418,11 @@ footer p{
     text-align: center;
     margin: 42px;
 >>>>>>> 2df351015f486e2d99e7e6f53517c635fafa0d0a
+=======
+footer p {
+    font-size: 0.9em;
+    font-weight: lighter;
+    text-align: center;
+    margin: 42px;
+>>>>>>> 5a8403e02040cc9d4a3de9202eecf430bd6fbe8b
 }
