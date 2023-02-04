@@ -15,7 +15,6 @@ function validateForm() {
     return false;
 }
 
-
 // Validar correo electrónico
 
     if (!email.match(emailPattern)) {
@@ -36,7 +35,6 @@ function validateForm() {
     }
 
 // Enviar formulario
-
 
 return document.getElementById("registration").setAttribute("onsubmit", "retun true"); 
 }
