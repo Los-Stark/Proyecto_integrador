@@ -1,7 +1,3 @@
-console.log("Hola!!...");
-
-
-
 function validateForm() {
 
 // Obtener valores de los campos de formulario
@@ -42,5 +38,5 @@ function validateForm() {
 // Enviar formulario
 
 
-return document.getElementById("registro").setAttribute("onsubmit", "retun true"); 
+return document.getElementById("registration").setAttribute("onsubmit", "retun true"); 
 }
