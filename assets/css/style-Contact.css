@@ -1,0 +1,82 @@
+
+.contact-title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.input1 {
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.5;
+    background: #f2caf2;
+    font-family: 'Montserrat', sans-serif;
+    height: 30px;
+    width: 200px;
+    border-radius: 25px;
+    padding: 0px 30px;
+    border: 10px;
+    margin:  5px;
+
+}
+
+.input1-message {
+    text-align: left;
+    height: 150px;
+    width: 400px;
+    font-size: 15px;
+    line-height: 1.5;
+    background: #f2caf2;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 25px;
+    padding: 0px 30px;
+    border: 10px;
+    margin:  5px;
+    display: block;
+    flex-shrink: 0;
+
+}
+
+
+.container-contact1 {
+    background: #eef2f6;
+    border-radius: 60px;
+    overflow: hidden;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    padding: 40px 80px 88px 90px;
+    margin:  100px 60px 80px 90px;
+}
+
+.container-contact1-form-btn {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.contact1-form-btn {
+    font-family: 'Montserrat', sans-serif;
+    background: #E61050;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 1em;
+    height: 50px;
+    width: 110px;
+
+}
+
+/* Este style hacia raro el header en contact us */
+/* .img-fluid {
+    border-radius: 25px;
+    place-content: center;
+    margin: 25px;
+    object-fit: cover;
+    object-position: bottom;
+} */
