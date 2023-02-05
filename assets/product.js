@@ -14,17 +14,17 @@ function addItem(item) {
     itemsContainer.innerHTML += itemTemplate;
   }
 
-  addItem({'name':'Tayto',
+  addItem({'name':'El proximo rey de los piratas',
     'img':'https://i.ibb.co/28jHTYH/luffy-pld-mar.jpg',
     'price':'40'})
   
-    addItem({'name':'Tayto',
+    addItem({'name':'El proximo rey de los piratas',
     'img':'https://i.ibb.co/M5NvsKv/luffi-pl-neg.jpg',
     'price':'40'})
-    addItem({'name':'Tayto',
+    addItem({'name':'ALll Might, Plus Ultra, Se tambien un heroe',
     'img':'https://i.ibb.co/JmcQ3Xb/deku-pld-neg.jpg',
     'price':'40'})
-    addItem({'name':'Tayto',
+    addItem({'name':'anime',
     'img':'https://i.ibb.co/5LR2LWs/tanjiro-pld-neg.jpg',
     'price':'40'})
     addItem({'name':'Tayto',
