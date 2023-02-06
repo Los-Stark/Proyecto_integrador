@@ -3,7 +3,7 @@ function addItem(item) {
     const itemTemplate = `
     <div id="masVendido1"class="col-6 col-md-3  p-2  descripcion ">
     <img id="imgMasVendido1" class="avatares img-fluid" src="${item.img}" alt="image">
-    <p id="nombreMasVendido1">${item.name}</p>
+    <p class="text-wrap" id="nombreMasVendido1">${item.name}</p>
     <div class="row align-items-center d-flex justify-content-center">
     <div id="precioMasVendido1"class=" col-8 col-md-4 bg-primary p-2  descripcion ">${item.price}$</div>
         </div>
