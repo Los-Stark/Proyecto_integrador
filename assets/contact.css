@@ -1,7 +1,7 @@
 
 .contact-title {
     text-align: center;
-    font-size: 2em;
+    font-size: calc((1em + 1vw));
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     
@@ -9,14 +9,14 @@
 
 .input1 {
     text-align: left;
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: calc((.4em + .3vw));
     background: #f2caf2;
     font-family: 'Montserrat', sans-serif;
-    height: 30px;
-    width: 200px;
-    border-radius: 25px;
-    padding: 0px 30px;
+    height: 110%;
+    width: 40%;
+    border-radius: 15px;
+    padding: .8em;
+    margin: .8em;
     border: 10px;
     margin:  5px;
 
@@ -24,25 +24,25 @@
 
 .input1-message {
     text-align: left;
-    height: 150px;
-    width: 400px;
-    font-size: 15px;
+    height: 130px;
+    width: 90%;
+    font-size: calc((.45em + .45vw));
     line-height: 1.5;
     background: #f2caf2;
     font-family: 'Montserrat', sans-serif;
-    border-radius: 25px;
-    padding: 0px 30px;
+    border-radius: 15px;
+    padding: .8em;
+    margin: .8em;
     border: 10px;
-    margin:  5px;
     display: block;
-    flex-shrink: 0;
+    align-content: center;
 
 }
 
 
 .container-contact1 {
     background: #eef2f6;
-    border-radius: 60px;
+    border-radius: 15px;
     overflow: hidden;
     display: block;
     justify-content: space-between;
