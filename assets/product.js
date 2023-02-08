@@ -14,7 +14,7 @@ function addItem(item) {
     itemsContainer.innerHTML += itemTemplate;
   }
 
-  addItem({'name':'El proximo rey',
+    addItem({'name':'El proximo rey',
     'img':'https://i.ibb.co/28jHTYH/luffy-pld-mar.jpg',
     'price':'40'})
   
@@ -28,15 +28,15 @@ function addItem(item) {
     'img':'https://i.ibb.co/5LR2LWs/tanjiro-pld-neg.jpg',
     'price':'40'})
     addItem({'name':'Tayto',
-    'img':'https://www.irishtimes.com/polopoly_fs/1.4078148!/image/image.jpg',
+    'img':'https://i.ibb.co/5LR2LWs/tanjiro-pld-neg.jpg',
     'price':'40'})
     addItem({'name':'Tayto',
-    'img':'https://www.irishtimes.com/polopoly_fs/1.4078148!/image/image.jpg',
+    'img':'https://i.ibb.co/5LR2LWs/tanjiro-pld-neg.jpg',
     'price':'40'})
     addItem({'name':'Tayto',
-    'img':'https://www.irishtimes.com/polopoly_fs/1.4078148!/image/image.jpg',
+    'img':'https://i.ibb.co/5LR2LWs/tanjiro-pld-neg.jpg',
     'price':'40'})
     addItem({'name':'Tayto',
-    'img':'https://www.irishtimes.com/polopoly_fs/1.4078148!/image/image.jpg',
+    'img':'https://i.ibb.co/5LR2LWs/tanjiro-pld-neg.jpg',
     'price':'40'})
   
