@@ -1,22 +1,26 @@
 function addItem(item) {
 
     const itemTemplate = `
-    <div id="masVendido1"class="col-6 col-md-3 col-sm-4 p-2  descripcion ">
-    <img class="avatares img-fluid" src="${item.img}" alt="image">
-    <p id="nombreMasVendido1">${item.name}</p>
-    <div class="row align-items-center d-flex justify-content-center">
-    <div id="precioMasVendido1"class=" col-8 col-md-4 bg-primary p-2  descripcion ">${item.price}$</div>
+    <div id="masVendido1"class=" col-6 col-md-3 col-sm-4 p-2  descripcion ">
+        <img class=" img-fluid " src="${item.img}" style="width: 400px; height: 350px; object-fit: cover;" alt="image">
+        <p id="nombreMasVendido1">${item.name}</p>
+        <div class="row align-items-center d-flex justify-content-center">
+          <div id="precioMasVendido1"class=" col-8 col-md-4  p-2  descripcion ">$${item.price}</div>
         </div>
-      </div>
+    </div>
     `;
 
     const itemsContainer = document.getElementById("section");
     itemsContainer.innerHTML += itemTemplate;
   }
 
-    addItem({'name':'Chainsaw man',
+    addItem({'id':'',
+    'name':'Chainsaw man',
+    'tipo':0,
+    'description':'',
     'img':'./assets/images/sweatshirt/denji-sud-neg.png',
-    'price':'40'})
+    'price':'40.00'
+    })
     addItem({'name':'Izuku Midoriya',
     'img':'./assets/images/women-t-shirts/deku-pld-mar.png',
     'price':'40'})
