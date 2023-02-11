@@ -1,5 +1,10 @@
+@font-face {
+    font-family: "aAsianNinja";
+    src:url("./fonts/aAsianNinja.ttf");
+}
+
 * {
-    font-family: 'Montserrat';
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 html {
@@ -10,16 +15,11 @@ header {
     background: #6F6CB8;
     width: 100%;
     height: auto;
-
     border-radius: 0px 0px 10px 10px;
 }
 
-logo{
-    width: 45px;
-}
-
 body {
-    background: url(./images/Fondo\ nubes.svg)
+    background: url(../images/Fondo\ nubes.svg)
 }
 
 .logo {
@@ -31,10 +31,6 @@ body {
     background-color: #EEF2F6 !important;
     border-radius: 10px;
 }
-
-/* .descripcion {
-    border-radius: 10px !important;
-} */
 
 .btn {
     margin: 1px;
@@ -71,6 +67,18 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+   
+}
+
+#precioMasVendido1{
+color: black;
+font-weight: bolder;
+-webkit-text-stroke: 0.5px black;
+}
+
+
+.description{
+    border-radius: 8px;
 }
 
 footer {

@@ -1,0 +1,47 @@
+.container-addProduct {
+    background: #eef2f6;
+    border-radius: 60px;
+    overflow: hidden;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    padding: 40px 80px 88px 90px;
+    margin:  100px 60px 80px 90px;
+}
+
+.new-product{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.url-image {
+    display: inline-block;
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.5;
+    background: #f2caf2;
+    font-family: 'Montserrat', sans-serif;
+    height: 30px;
+    width: 200px;
+    border-radius: 25px;
+    padding: 0px 30px;
+    border: 10px;
+    margin:  5px;
+
+}
+
+.container-image {
+    background: #f2caf2;
+    border-radius: 60px;
+    overflow: hidden;
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    padding: auto;
+    margin: auto;
+}
