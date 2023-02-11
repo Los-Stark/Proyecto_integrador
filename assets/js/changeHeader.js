@@ -66,7 +66,7 @@ function car() {
 }
 
 
-function chengingOrientation() {
+function changingOrientation() {
     let rotation = window.orientation;
     console.log(rotation)
 
@@ -76,4 +76,4 @@ function chengingOrientation() {
     }
 }
 
-window.addEventListener("orientationchange", chengingOrientation);
+window.addEventListener("orientationchange", changingOrientation);

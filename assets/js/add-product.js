@@ -1,18 +1,22 @@
 
+/**
+ * Clase para creacion de objetos y guardarlos en memoria local
+ */
 class Item {
-
+    //Creacion de id
     constructor(startId = 0) {
         this.products = [];
         this.startId = startId;
     }
-
-    addProduct(name, description, src, price) {
+    //Funcion para instanciar objetos, agregarlos al array y guardarlos
+    addProduct(name, description, src, price,type) {
         const product = {
             id: this.startId++,
             name: name,
             description: description,
             src: src,
-            price: price
+            price: price,
+            type: type
 
         };
 
@@ -22,34 +26,33 @@ class Item {
     }
 }
 
-
-const urlImage = document.getElementById("url");
+//Previsualizacion de imagen
+const urlImage = document.getElementById("url-image");
 urlImage.addEventListener('input',  ()=>
 document.getElementById("preImageProduct")
 .setAttribute("src", urlImage.value));
-
+//Constructor
+const item = new Item(0);
 
 function validateForm() {
-    const url = document.getElementById("url").value;
-    const item = new Item(0);
-    const name = document.getElementById("name-product").value;
-    const description = document.getElementById("description-product").value;
-    const price = document.getElementById("price-product").value;
-    const typeOfProduct = document.getElementsByName("typeProduct");
-
+    let url = document.getElementById("url-image").value;
+    let name = document.getElementById("name-product").value;
+    let description = document.getElementById("description-product").value;
+    let price = document.getElementById("price-product").value;
+    let typeOfProduct = document.getElementsByName("typeProduct");
     let type;
+    //Obtencion de valor en radio button
     for (i = 0; i < typeOfProduct.length; i++) {
         if (typeOfProduct[i].checked)
             type = typeOfProduct[i].value;
     }
+    if(name.length>0 && description.length>15 && price>100 && url && type)
+    {
+    console.log(name, description,url, price, type);
+    item.addProduct(name, description, url, price,type);
+    //Simulacion visual de actualizacion y se ponne los inputs a 0
+    document.getElementById('productForm').reset();
+    }
 
-
-    console.log(name, description, price, url, type);
-
-    let image = document.getElementById("preImageProduct");
-
-    image.setAttribute("src", url);
-
-    item.addProduct(name, description, url, price);
-
+    //Validaciones y alerts:
 }
