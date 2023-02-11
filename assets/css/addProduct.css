@@ -1,13 +1,12 @@
 .container-addProduct {
     background: #eef2f6;
-    border-radius: 60px;
+    border-radius: 15px;
     overflow: hidden;
     display: block;
     justify-content: space-between;
     align-items: center;
     width: auto;
-    padding: 40px 80px 88px 90px;
-    margin:  100px 60px 80px 90px;
+    margin:  60px 45px 60px 45px;
 }
 
 .new-product{
@@ -18,30 +17,84 @@
     
 }
 
-.url-image {
-    display: inline-block;
+#url-image {
     text-align: left;
-    font-size: 15px;
+    height: 40px;
+    width: 90%;
+    font-size: calc((.45em + .45vw));
     line-height: 1.5;
     background: #f2caf2;
     font-family: 'Montserrat', sans-serif;
-    height: 30px;
-    width: 200px;
-    border-radius: 25px;
-    padding: 0px 30px;
+    border-radius: 10px;
+    padding: .8em;
+    margin: .8em;
     border: 10px;
-    margin:  5px;
+    display: block;
+    align-content: center;
 
 }
 
-.container-image {
+#name-product {
+    text-align: left;
+    height: 40%;
+    width: 60%;
+    font-size: calc((.45em + .45vw));
+    line-height: 1.5;
     background: #f2caf2;
-    border-radius: 60px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px;
+    padding: .8em;
+    margin: .8em;
+    border: 10px;
+    display: block;
+    align-content: center;
+
+}
+
+#description-product {
+    text-align: left;
+    height: 120%;
+    width: 90%;
+    font-size: calc((.45em + .45vw));
+    line-height: 1.5;
+    background: #f2caf2;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px;
+    padding: 4em;
+    margin: 1em;
+    border: 10px;
+    display: block;
+    align-content: center;
+}
+
+#price-product {
+    text-align: left;
+    height: 40%;
+    width: 30%;
+    font-size: calc((.45em + .45vw));
+    line-height: 1.5;
+    background: #f2caf2;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px;
+    padding: .8em;
+    margin: .8em;
+    border: 10px;
+    display: block;
+    align-content: center;
+}
+
+.container-image {
+    background: #eef2f6;
+    border-radius: 15px;
     overflow: hidden;
-    display: inline-block;
-    justify-content: space-between;
+    display: block;
+    justify-content: center;
     align-items: center;
     width: auto;
-    padding: auto;
-    margin: auto;
+    margin:  60px 45px 60px 45px;
+}
+
+.category {
+    text-align: center;
+    font-weight: bold;
 }
