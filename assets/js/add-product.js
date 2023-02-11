@@ -1,5 +1,5 @@
 
-class Item{
+class Item {
 
     constructor(startId = 0) {
         this.products = [];
@@ -18,29 +18,38 @@ class Item{
 
         this.products.push(product);
 
-        localStorage.setItem("Products",JSON.stringify(this.products));
+        localStorage.setItem("Products", JSON.stringify(this.products));
     }
 }
 
-const item = new Item(0);
-function validateForm(){
-    
+
+const urlImage = document.getElementById("url");
+urlImage.addEventListener('input',  ()=>
+document.getElementById("preImageProduct")
+.setAttribute("src", urlImage.value));
+
+
+function validateForm() {
+    const url = document.getElementById("url").value;
+    const item = new Item(0);
     const name = document.getElementById("name-product").value;
     const description = document.getElementById("description-product").value;
-    const  price = document.getElementById("price-product").value;
-    const url = document.getElementById("url").value;
+    const price = document.getElementById("price-product").value;
     const typeOfProduct = document.getElementsByName("typeProduct");
-        for(i = 0; i < typeOfProduct.length; i++) {
-            if(typeOfProduct[i].checked)console.log(typeOfProduct[i].value);
-        }
-    
 
-    console.log(name, description, price, url,typeOfProduct);
+    let type;
+    for (i = 0; i < typeOfProduct.length; i++) {
+        if (typeOfProduct[i].checked)
+            type = typeOfProduct[i].value;
+    }
+
+
+    console.log(name, description, price, url, type);
 
     let image = document.getElementById("preImageProduct");
 
-    image.setAttribute("src",url);
-    
-    item.addProduct(name,description,url,price);
+    image.setAttribute("src", url);
+
+    item.addProduct(name, description, url, price);
 
 }
