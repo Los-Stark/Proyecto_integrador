@@ -19,7 +19,7 @@ function addItem(item) {
     'tipo':0,
     'description':'',
     'img':'./assets/images/sweatshirt/denji-sud-neg.png',
-    'price':'40.00'
+    'price':'40'
     })
     addItem({'name':'Izuku Midoriya',
     'img':'./assets/images/women-t-shirts/deku-pld-mar.png',
