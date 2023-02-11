@@ -8,11 +8,11 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="assets/styles.css">
-        <link rel="stylesheet" href="./assets/icomoon.css">
-        <link rel="stylesheet" href="./assets/contact.css">
+        <link rel="stylesheet" href="./assets/css/styles.css">
+        <link rel="stylesheet" href="./assets/css/icomoon.css">
+        <link rel="stylesheet" href="./assets/css/style-Contact.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="stylesheet" href="./assets/addProduct.css">
+        <link rel="stylesheet" href="./assets/css/addProduct.css">
     </head>
 <body>
     <header>
@@ -51,7 +51,7 @@
                 </div>
                 <!-- Tiene que cargar el url de la imagen que se inserte -->
                 <div class="container-fluid conteiner-image">
-                    <a href="https://ibb.co/WV5T1dj"><img class="img-fluid" src="https://i.ibb.co/y4P3JM7/contact.jpg"
+                    <a href="https://ibb.co/WV5T1dj"><img class="img-fluid" id="preImageProduct"src="https://i.ibb.co/y4P3JM7/contact.jpg"
                         alt="image-new-product" /></a>
                 </div>
             </div>
@@ -61,25 +61,25 @@
                 <div class="col">
                     <span class="link-image">Nombre del producto</span>
                     <br>
-                    <input class="url-image" type="text" name="name-product" id="name-product" placeholder=" " required>
+                    <input class="url-image" type="text" id="name-product" placeholder=" " required>
                 </div>
                 <div class="col">
                     <span class="link-image">Descripción del producto</span>
                     <br>
-                    <input class="url-image" type="text" name="description-product" id="description-product" placeholder=" " required>
+                    <input class="url-image" type="text" id="description-product" placeholder=" " required>
                 </div>
                 <div class="col">
                     <span class="link-image">Precio del producto</span>
                     <br>
-                    <input class="url-image" type="text" name="description-product" id="description-product" placeholder=" " required>
+                    <input class="url-image" type="text" id="price-product" placeholder=" " required>
                 </div>
 
 
                 <!-- Opciones de seleccion de categoria del producto -->
                 <p>
-                    <label> <input type="radio" value="category">Playera H</label>
-                    <label> <input type="radio" value="category">Playera M</label>
-                    <label> <input type="radio" value="category">Sudaderas</label>
+                    <label> <input type="radio" value="0" name="typeProduct">Playera H</label>
+                    <label> <input type="radio" value="1" name="typeProduct">Playera M</label>
+                    <label> <input type="radio" value="2" name="typeProduct">Sudaderas</label>
                 </p>
                 
             
@@ -115,7 +115,8 @@
     <!-- Final del footer -->
 
     <!-- scrip de bootstrap -->
-    <script src="./assets/cambiodropdown.js"></script>
+    <script src = "./assets/js/add-product.js"></script>
+    <script src="./assets/js/changeHeader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
