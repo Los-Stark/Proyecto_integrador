@@ -55,4 +55,36 @@ function validateForm() {
     }
 
     //Validaciones y alerts:
+
+   //Condicional para verificar si se han llenado los campos de texto
+let textFieldsFilled = true;
+const textFields = document.querySelectorAll("input[type='text'], textarea");
+for (let i = 0; i < textFields.length; i++) {
+    if (textFields[i].value.trim() === "") {
+        textFieldsFilled = false;
+        break;
+    }
 }
+if (!textFieldsFilled) {
+    alert("Por favor llene todos los campos correctamente.");
+    return;
+}
+
+//Condicional para verificar si se ha seleccionado algún botón de radio
+let radioSelected = false;
+const radioButtons = document.querySelectorAll("input[type='radio']");
+for (let i = 0; i < radioButtons.length; i++) {
+    if (radioButtons[i].checked) {
+        radioSelected = true;
+        break;
+    }
+}
+if (!radioSelected) {
+    alert("Por favor seleccione un tipo de producto.");
+    return;
+}
+
+
+
+}
+
