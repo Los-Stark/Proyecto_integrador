@@ -17,6 +17,8 @@
     
 }
 
+#preImageProduct{max-height: 280px}
+
 #url-image {
     text-align: left;
     height: 40px;
@@ -93,6 +95,7 @@
     width: auto;
     margin:  60px 45px 60px 45px;
 } 
+
 
 .category {
     text-align: center;
