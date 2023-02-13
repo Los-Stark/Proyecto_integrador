@@ -46,34 +46,30 @@ changeDropdown();
 /* bloque para ocultar el carrito al apretar el boton en version celular y mostrar 
 al presionar de nuevo se uso el metodo settimeout */
 let showShoppingCar = true;
+const shopCart = `<a class="nav-link" href="#" id="shoppingCart">
+<button class="btn "><img src="assets/images/cart2.svg" alt="carro-de-la-compra"></button></a>`;
 function hideShoppingCart() {
     if (showShoppingCar) {
         document.getElementById("shoppingCart").innerHTML = '';
         showShoppingCar = false;
+
     }
 
     else {
         setTimeout(car, 350)
     }
-
 }
 
-
 function car() {
-    document.getElementById("shoppingCart").innerHTML = `<a class="nav-link" href="#" id="shoppingCart">
-        <button class="btn "><img src="assets/images/cart2.svg" alt="carro-de-la-compra"></button></a>`;
+    document.getElementById("shoppingCart").innerHTML = shopCart;
     showShoppingCar = true;
 }
 
-
-function changingOrientation() {
+window.addEventListener("orientationchange", () => {
     let rotation = window.orientation;
     console.log(rotation)
 
     if (rotation = 90) {
-        document.getElementById("shoppingCart").innerHTML = `<a class="nav-link" href="#" id="shoppingCart">
-        <button class="btn "><img src="assets/images/cart2.svg" alt="carro-de-la-compra"></button></a>`;
+        document.getElementById("shoppingCart").innerHTML = shopCart;
     }
-}
-
-window.addEventListener("orientationchange", changingOrientation);
+});
