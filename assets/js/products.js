@@ -14,28 +14,27 @@ function addItem(item) {
     itemsContainer.innerHTML += itemTemplate;
   }
 
-    addItem({'name':'El proximo rey',
-    'img':'https://i.ibb.co/28jHTYH/luffy-pld-mar.jpg',
+    addItem({'name':'Chainsaw man',
+    'img':'./assets/images/sweatshirt/denji-sud-neg.png',
     'price':'40'})
-  
-    addItem({'name':'El proximo rey',
-    'img':'https://i.ibb.co/M5NvsKv/luffi-pl-neg.jpg',
+    addItem({'name':'Izuku Midoriya',
+    'img':'./assets/images/women-t-shirts/deku-pld-mar.png',
     'price':'40'})
-    addItem({'name':'Se tambien un heroe',
-    'img':'https://i.ibb.co/JmcQ3Xb/deku-pld-neg.jpg',
+    addItem({'name':'Luffy',
+    'img':'./assets/images/men-t-shirts/luffi-pl-neg.png',
     'price':'40'})
-    addItem({'name':'anime dfgdfghdfgg',
-    'img':'https://i.ibb.co/5LR2LWs/tanjiro-pld-neg.jpg',
+    addItem({'name':'Luffy',
+    'img':'./assets/images/sweatshirt/luffy-sud-gris.png',
     'price':'40'})
-    addItem({'name':'Tayto',
-    'img':'https://i.ibb.co/5LR2LWs/tanjiro-pld-neg.jpg',
+    addItem({'name':'Chainsaw man',
+    'img':'./assets/images/men-t-shirts/denji-pl-gris.png',
     'price':'40'})
-    addItem({'name':'Tayto',
-    'img':'https://i.ibb.co/5LR2LWs/tanjiro-pld-neg.jpg',
+    addItem({'name':'Izuku Midoriya',
+    'img':'./assets/images/men-t-shirts/deku-pl-neg.png',
     'price':'40'})
-    addItem({'name':'Tayto',
-    'img':'https://i.ibb.co/5LR2LWs/tanjiro-pld-neg.jpg',
+    addItem({'name':'Tanjiro Kamado',
+    'img':'./assets/images/women-t-shirts/tanjiro-pld-mar.png',
     'price':'40'})
-    addItem({'name':'Tayto',
-    'img':'https://i.ibb.co/5LR2LWs/tanjiro-pld-neg.jpg',
+    addItem({'name':'Tanjiro Kamado',
+    'img':'./assets/images/sweatshirt/tanjiro-sud-neg.png',
     'price':'40'})
