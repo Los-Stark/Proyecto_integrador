@@ -15,26 +15,26 @@ function addItem(item) {
   }
 
     addItem({'name':'Chainsaw man',
-    'img':'./assets/images/sweatshirt/denji-sud-neg.png',
+    'img':'./assets/images/hoodie/denji-sud-neg.png',
     'price':'300'})
     addItem({'name':'Izuku Midoriya',
-    'img':'./assets/images/women-t-shirts/deku-pld-mar.png',
+    'img':'./assets/images/woman-t-shirt/deku-pld-mar.png',
     'price':'150'})
     addItem({'name':'Luffy',
-    'img':'./assets/images/men-t-shirts/luffi-pl-neg.png',
+    'img':'./assets/images/man-t-shirt/luffi-pl-neg.png',
     'price':'150'})
     addItem({'name':'Luffy',
-    'img':'./assets/images/sweatshirt/luffy-sud-gris.png',
+    'img':'./assets/images/hoodie/luffy-sud-gris.png',
     'price':'300'})
     addItem({'name':'Chainsaw man',
-    'img':'./assets/images/men-t-shirts/denji-pl-gris.png',
+    'img':'./assets/images/man-t-shirt/denji-pl-gris.png',
     'price':'150'})
     addItem({'name':'Izuku Midoriya',
-    'img':'./assets/images/men-t-shirts/deku-pl-neg.png',
+    'img':'./assets/images/man-t-shirt/deku-pl-neg.png',
     'price':'150'})
     addItem({'name':'Tanjiro Kamado',
-    'img':'./assets/images/women-t-shirts/tanjiro-pld-mar.png',
+    'img':'./assets/images/woman-t-shirt/tanjiro-pld-mar.png',
     'price':'150'})
     addItem({'name':'Tanjiro Kamado',
-    'img':'./assets/images/sweatshirt/tanjiro-sud-neg.png',
+    'img':'./assets/images/hoodie/tanjiro-sud-neg.png',
     'price':'300'})
