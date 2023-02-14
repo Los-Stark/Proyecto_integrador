@@ -41,20 +41,7 @@ function validateForm() {
     let price = document.getElementById("price-product").value;
     let typeOfProduct = document.getElementsByName("typeProduct");
     let type;
-    //Obtencion de valor en radio button
-    for (i = 0; i < typeOfProduct.length; i++) {
-        if (typeOfProduct[i].checked)
-            type = typeOfProduct[i].value;
-    }
-    if (name.length > 0 && description.length > 0 && price > 0 && url && type) {
-        console.log(name, description, url, price, type);
-        item.addProduct(name, description, url, price, type);
-        //Simulacion visual de actualizacion y se ponne los inputs a 0
-        document.getElementById('productForm').reset();
-    }
-
     //Validaciones y alerts:
-
     //Condicional para verificar si se han llenado los campos de texto
     let textFieldsFilled = true;
     const textFields = document.querySelectorAll("input[type='text'], textarea");
@@ -82,8 +69,20 @@ function validateForm() {
         alert("Por favor seleccione un tipo de producto.");
         return;
     }
-
-
-
+    
+    //Obtencion de valor en radio button
+    for (i = 0; i < typeOfProduct.length; i++) {
+        if (typeOfProduct[i].checked)
+            type = typeOfProduct[i].value;
+    }
+    if (name.length > 0 && description.length > 0 && price > 0 && url && type) {
+        console.log(name, description, url, price, type);
+        item.addProduct(name, description, url, price, type);
+        //Simulacion visual de actualizacion y se ponne los inputs a 0
+        document.getElementById("url-image").value="";
+        document.getElementById("name-product").value="";
+        document.getElementById("description-product").value="";
+        document.getElementById("price-product").value="";
+    }
 }
 

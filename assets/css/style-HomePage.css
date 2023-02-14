@@ -43,6 +43,7 @@ transition: 0.5s;
 .productsImage{
     max-height: 200px;
     max-width: auto;
+    border-radius: 10px;
  }
 /* !important; */
 /* Estos estilos no se estan sando */
