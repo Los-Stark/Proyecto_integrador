@@ -42,7 +42,7 @@ function validateForm() {
     let typeOfProduct = document.getElementsByName("typeProduct");
     let type;
     //Validaciones y alerts:
-    //Condicional para verificar si se han llenado los campos de texto
+    //Condicional para verificar si se han llenado los campos de texto correctamente
     let textFieldsFilled = true;
     const textFields = document.querySelectorAll("input[type='text'], textarea");
     for (let i = 0; i < textFields.length; i++) {
