@@ -64,12 +64,13 @@ body {
 .avatars {
     display: block;
     margin: auto;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
 }
 .description{
     border-radius: 8px;
+    margin-bottom: 5px;
 }
 
 footer {
