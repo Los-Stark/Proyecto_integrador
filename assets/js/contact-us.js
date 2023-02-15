@@ -8,6 +8,14 @@ function validateForm() {
     let message = document.getElementById("message").value;
     let emailPattern = /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/;
 
+
+    // Enviar formulario
+
+    /**
+     *      Corregir alerts 
+     * 
+     */
+
     //código para personalizar el mensaje del required
 
     let selectname = document.getElementById('name');
@@ -23,55 +31,82 @@ function validateForm() {
 
     // Validar correo electrónico
 
+    /*     if (!email.match(emailPattern)) { */
+    let selectemail = document.getElementById('email');
+    selectemail.addEventListener('change', function (evt) {
+        this.setCustomValidity('');
+    });
+    selectemail.addEventListener('invalid', function (evt) {
+        // Required
+        if (this.validity.valueMissing) {
+            this.setCustomValidity('Introducir un email válido');
+        }
+    });
+    /*         return false;
+        } */
+
+    // Validar telefono
+
+    /*     if (phone.length != 10) { */
+    let selectphone = document.getElementById('phone');
+    selectphone.addEventListener('change', function (evt) {
+        this.setCustomValidity('');
+    });
+    selectphone.addEventListener('invalid', function (evt) {
+        // Required
+        if (this.validity.valueMissing) {
+            this.setCustomValidity('El número debe tener 10 dígitos');
+        }
+    });
+    /*         return false;
+        } */
+
+
+    // Validar mensaje
+    /*     if (message.length <= 20) { */
+    let selectmessage = document.getElementById('message');
+    selectmessage.addEventListener('change', function (evt) {
+        this.setCustomValidity('');
+    });
+    selectmessage.addEventListener('invalid', function (evt) {
+        // Required
+        if (this.validity.valueMissing) {
+            this.setCustomValidity('El mensaje debe contener mínimo 20 caracteres');
+        }
+
+    });
+    /*         return false;
+        }
+     */
+    // Validar tipos de entrada
+
+    if (!name || !email || !phone || !message) {
+        alert("Todos los campos son obligatorios");
+        return false;
+    }
+
+    // Validar correo electrónico
+
     if (!email.match(emailPattern)) {
-        let selectemail = document.getElementById('email');
-        selectemail.addEventListener('change', function (evt) {
-            this.setCustomValidity('');
-        });
-        selectemail.addEventListener('invalid', function (evt) {
-            // Required
-            if (this.validity.valueMissing) {
-                this.setCustomValidity('Introducir un email válido');
-            }
-        });
+        alert("El correo electrónico no es válido");
         return false;
     }
 
     // Validar telefono
-
     if (phone.length != 10) {
-        let selectphone = document.getElementById('phone');
-        selectphone.addEventListener('change', function (evt) {
-            this.setCustomValidity('');
-        });
-        selectphone.addEventListener('invalid', function (evt) {
-            // Required
-            if (this.validity.valueMissing) {
-                this.setCustomValidity('El número debe tener 10 dígitos');
-            }
-        });
+        alert("El numero telefonico debe tener al menos 10 digitos");
         return false;
     }
-
 
     // Validar mensaje
     if (message.length <= 20) {
-        let selectmessage = document.getElementById('message');
-        selectmessage.addEventListener('change', function (evt) {
-            this.setCustomValidity('');
-        });
-        selectmessage.addEventListener('invalid', function (evt) {
-            // Required
-            if (this.validity.valueMissing) {
-                this.setCustomValidity('El mensaje debe contener mínimo 20 caracteres');
-            }
-
-        });
+        alert("El mensaje debe ser mayor a 20 caracteres");
         return false;
     }
+
 
     // Enviar formulario
 
     return document.getElementById("registration").setAttribute("onsubmit", "retun true"),
-    alert("Enviado correctamente");
+        alert("Enviado correctamente");
 }
