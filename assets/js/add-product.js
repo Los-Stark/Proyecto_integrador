@@ -39,14 +39,14 @@ function validateForm() {
     let name = document.getElementById("name-product").value;
     let description = document.getElementById("description-product").value;
     let price = document.getElementById("price-product").value;
-    //let typeOfProduct = document.getElementsByName("typeProduct");
+    let typeOfProduct = document.getElementsByName("typeProduct");
     let type;
 
     let radioSelected = false;
-    const radioButtons = document.querySelectorAll("input[type='radio']");
-    for (let i = 0; i < radioButtons.length; i++) {
-        if (radioButtons[i].checked) {
+    for (let i = 0; i < typeOfProduct.length; i++) {
+        if (typeOfProduct[i].checked) {
             radioSelected = true;
+            type = typeOfProduct[i].value;
             break;
         }
     }
@@ -59,7 +59,7 @@ function validateForm() {
     return item.addProduct(name, description, url, price, type),
     document.getElementById("productForm").reset(),
     document.getElementById("preImageProduct"). src="./assets/images/previsual.png",
-    alert("El archivo se subio correctamente.");;
+    alert("El archivo se subio correctamente.");
     
 }
 
