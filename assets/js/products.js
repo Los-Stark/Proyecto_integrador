@@ -20,10 +20,10 @@ function addItem(item) {
     addItem({'name':'Izuku Midoriya',
     'img':'./assets/images/woman-t-shirt/deku-pld-mar.png',
     'price':'150'})
-    addItem({'name':'Luffy',
+    addItem({'name':'Monkey D. Luffy',
     'img':'./assets/images/man-t-shirt/luffi-pl-neg.png',
     'price':'150'})
-    addItem({'name':'Luffy',
+    addItem({'name':'Monkey D. Luffy',
     'img':'./assets/images/hoodie/luffy-sud-gris.png',
     'price':'300'})
     addItem({'name':'Chainsaw man',

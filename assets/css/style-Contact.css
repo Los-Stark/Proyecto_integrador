@@ -6,10 +6,9 @@
     font-family: 'DomoAregato', sans-serif;
 }
 
-.title-label{
-    font-size: calc((.48em + .48vw));
+.title-label{/* 
+    font-size: calc((.48em + .48vw)); */
     font-family: 'Montserrat', sans-serif;
-    font-weight: bolder;
 } 
 
 .input1 {
@@ -17,7 +16,7 @@
     font-size: calc((.48em + .48vw));
     background: #f2caf2;
     font-family: 'Montserrat', sans-serif;
-    height: 60%;
+    height: 40%;
     width: 35%;
     border-radius: 5px;
     padding: .8em;
@@ -25,6 +24,11 @@
     border: 10px;
     display: block;
     align-content: center;
+
+}
+
+.wrap-input1{
+    margin-top: 0px;
 
 }
 

@@ -6,7 +6,7 @@ function addItem(item) {
     <p id="playeras-de-dama">${item.name}</p>
 
     <div class="row align-items-center d-flex justify-content-center">
-    <div id="playeras-dama"class=" col-8 col-md-4 p-2  ">$${item.price}</div>
+    <div id="precioMasVendido1"class=" col-8 col-md-4 p-2  ">$${item.price}</div>
         </div>
       </div>
     `;
