@@ -5,75 +5,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AddProduct</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./assets/images/cara-anime.jpg">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/style-Contact.css">
     <link rel="stylesheet" href="./assets/css//icomoon.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="./assets/css/addProduct.css">
+    <title>AddProduct</title>
 
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-md ">
-            <div class="container-fluid">
-                <button onclick="hideShoppingCart()" class="navbar-toggler btn" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarScroll" aria-controls="navbarScroll" id="buttonMenu">
-                    <img src="assets//images/menu-icon.png" alt="menu">
-                </button>
-                <a class="navbar-brand" href="index.html">
-                    <img class="img-fluid logo" src="./assets/images/logo lateral.png" alt="Logo tienda anime odyssey">
-                </a>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
-                    <!-- El codigo que va dentro de este div se encuentra en changeHeader.js -->
-                </div>
-                <a class="nav-link" href="#" id="shoppingCart">
-                    <button class="btn ">
-                        <img src="assets/images/cart2.svg" alt="carro-de-la-compra">
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md">
+                <div class="container-fluid">
+                    <button onclick="hideShoppingCart()" class="navbar-toggler btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" id="buttonMenu">
+                        <img src="assets/images/menu-icon.png" alt="menu">
                     </button>
-                </a>
-            </div>
-        </nav>
-    </header>
-
-    <section class="container-fluid container-addProduct">
-        <form class="row" id = "productForm" onsubmit="return false" >
-            <span class="new-product">Nuevo Producto</span>
-            <!-- Columna para visualizacion imagen -->
-            <div class="col">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="img-fluid logo" src="./assets/images/logo lateral.png" alt="Logo tienda anime odyssey">
+                    </a>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
+                        <!-- El código que va dentro de este div se encuentra en changeHeader.js -->
+                        
+                    </div>
+                    <a class="nav-link" href="#" id="shoppingCart">
+                        <button class="btn">
+                            <img src="assets/images/cart2.svg" alt="carro-de-la-compra">
+                        </button>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <section class="container-fluid container-addProduct">
+            <form class="row" id="productForm" onsubmit="return false">
+                <span class="new-product">NUEVO PRODUCTO</span>
                 <div class="col">
-                    <span class="link-image">Enlace de la imagen del producto</span>
-                    <br>
-                    <input class="url-image" type="text" id="url-image"
-                     placeholder="Inserte URL de la imagen" >
+                    <div class="col">
+                        <span class="link-image">Enlace de la imagen del producto</span><br>
+                        <input class="url-image" type="text" id="url-image" placeholder="Inserte URL de la imagen" required>
+                    </div>
+                    <div class="container-fluid conteiner-image text-center">
+                        <img class="img-fluid" id="preImageProduct" src="./assets/images/previsual.png" alt="image-new-product" />
+                    </div>
                 </div>
-
-                <div class="container-fluid conteiner-image text-center">
-                    <img class="img-fluid" id="preImageProduct" src="./assets/images/previsual.png"
-                        alt="image-new-product" />
-                </div>
-            </div>
-
-            <!-- Columna para agregar datos -->
-            <div class="col-12 col-m-6 col-lg-8 product-information">
-                <div class="col">
-                    <span class="link-image">Nombre del producto</span>
-                    <br>
-                    <input class="url-image" type="text" id="name-product" placeholder=" " >
-                </div>
-                <div class="col">
-                    <span class="link-image">Descripción del producto</span>
-                    <br>
-                    <input class="description-product" type="text" id="description-product" placeholder=" " >
-                </div>
-                <div class="col">
-                    <span class="link-image">Precio del producto</span>
-                    <br>
-                    <input class="url-image" type="number" min="0" id="price-product" placeholder=" " >
-                </div>
+    
+                <div class="col-12 col-m-6 col-lg-8 product-information">
+                    <div class="col">
+                        <span class="link-image">Nombre del producto</span><br>
+                        <input class="url-image" type="text" id="name-product" placeholder="" required>
+                    </div>
+                    <div class="col">
+                        <span class="link-image">Descripción del producto</span><br>
+                        <input class="description-product" type="text" id="description-product" placeholder="" required>
+                    </div>
+                    <div class="col">
+                        <span class="link-image">Precio del producto</span><br>
+                        <input class="url-image" type ="text" id="price-product" placeholder="" required>
 
 
                 <!-- Opciones de seleccion de categoria del producto -->

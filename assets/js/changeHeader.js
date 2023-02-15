@@ -11,9 +11,9 @@ const changeDropdown = () => {
             Categorias
         </button>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Playeras Caballero</a></li>
-            <li><a class="dropdown-item" href="#">Playeras Dama</a></li>
-            <li><a class="dropdown-item" href="#">Sudaderas</a></li>
+            <li><a class="dropdown-item" href="/man-t-shirt.html">Playeras Caballero</a></li>
+            <li><a class="dropdown-item" href="/woman-t-shirt.html">Playeras Dama</a></li>
+            <li><a class="dropdown-item" href="/hoodie.html">Sudaderas</a></li>
         </ul>
     </div>
 
@@ -24,9 +24,9 @@ const changeDropdown = () => {
     /* Estilo de HTML cuando la pantalla es menor de 768 pixelex (Lista) */
     const listStyle = `
     <a class="nav-link liststyle" href="/index.html">Inicio</a>
-    <a class="nav-link liststyle" href="#">Playeras de Caballero</a>
-    <a class="nav-link liststyle" href="#">Playeras de dama</a>
-    <a class="nav-link liststyle" href="#">Sudaderas</a>
+    <a class="nav-link liststyle" href="/man-t-shirt.html">Playeras de Caballero</a>
+    <a class="nav-link liststyle" href="/woman-t-shirt.html">Playeras de dama</a>
+    <a class="nav-link liststyle" href="/hoodie.html">Sudaderas</a>
     <a class="nav-link liststyle" href="/AddProduct.html">Acceder</a>
     <a class="nav-link liststyle" href="/contact-us.html">Contáctanos</a>
     <a class="nav-link liststyle" href="/about-us.html">Conócenos</a>
