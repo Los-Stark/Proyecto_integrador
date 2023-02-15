@@ -3,31 +3,38 @@
     text-align: center;
     font-size: calc((1em + 1vw));
     font-weight: bold;
-    font-family: "aAsianNinja";
+    font-family: 'Montserrat', sans-serif;
 }
+
+.title-label{
+    font-size: calc((.48em + .48vw));
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+} 
 
 .input1 {
     text-align: left;
-    font-size: calc((.4em + .3vw));
+    font-size: calc((.48em + .48vw));
     background: #f2caf2;
     font-family: 'Montserrat', sans-serif;
-    height: 110%;
-    width: 40%;
-    border-radius: 15px;
+    height: 60%;
+    width: 35%;
+    border-radius: 5px;
     padding: .8em;
     margin: .8em;
     border: 10px;
+
 }
 
 .input1-message {
     text-align: left;
     height: 130px;
     width: 90%;
-    font-size: calc((.45em + .45vw));
+    font-size: calc((.5em + .5vw));
     line-height: 1.5;
     background: #f2caf2;
     font-family: 'Montserrat', sans-serif;
-    border-radius: 15px;
+    border-radius: 5px;
     padding: .8em;
     margin: .8em;
     border: 10px;
