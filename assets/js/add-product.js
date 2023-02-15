@@ -27,7 +27,7 @@ class Item {
 }
 
 //Previsualizacion de imagen
-const urlImage = document.getElementById("url-image");
+let urlImage = document.getElementById("url-image");
 urlImage.addEventListener('input', () =>
     document.getElementById("preImageProduct")
         .setAttribute("src", urlImage.value));
@@ -41,9 +41,33 @@ function validateForm() {
     let price = document.getElementById("price-product").value;
     let typeOfProduct = document.getElementsByName("typeProduct");
     let type;
+
+    let radioSelected = false;
+    for (let i = 0; i < typeOfProduct.length; i++) {
+        if (typeOfProduct[i].checked) {
+            radioSelected = true;
+            type = typeOfProduct[i].value;
+            break;
+        }
+    }
+
+    if (!url || !name || !description || !price || !radioSelected) {
+        alert("No puede haber campos vacios");   
+        return false
+    }
+
+    return item.addProduct(name, description, url, price, type),
+    document.getElementById("productForm").reset(),
+    document.getElementById("preImageProduct"). src="./assets/images/previsual.png",
+    alert("El archivo se subio correctamente.");
+    
+}
+
+    //document.getElementById("productForm").setAttribute("onsubmit", "return true");
+
     //Validaciones y alerts:
     //Condicional para verificar si se han llenado los campos de texto
-    let textFieldsFilled = true;
+    /*let textFieldsFilled = true;
     const textFields = document.querySelectorAll("input[type='text'], textarea");
     for (let i = 0; i < textFields.length; i++) {
         if (textFields[i].value.trim() === "") {
@@ -79,10 +103,10 @@ function validateForm() {
         console.log(name, description, url, price, type);
         item.addProduct(name, description, url, price, type);
         //Simulacion visual de actualizacion y se ponne los inputs a 0
+        
         document.getElementById("url-image").value="";
         document.getElementById("name-product").value="";
         document.getElementById("description-product").value="";
         document.getElementById("price-product").value="";
-    }
-}
+    }*/
 

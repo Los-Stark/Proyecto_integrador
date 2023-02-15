@@ -1,9 +1,9 @@
 
 .contact-title {
     text-align: center;
-    font-size: calc((1em + 1vw));
+    font-size: 2em;
     font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'DomoAregato', sans-serif;
 }
 
 .title-label{
@@ -23,6 +23,8 @@
     padding: .8em;
     margin: .8em;
     border: 10px;
+    display: block;
+    align-content: center;
 
 }
 
@@ -82,3 +84,4 @@
     width: 75%;
     object-position: bottom;
  }
+
