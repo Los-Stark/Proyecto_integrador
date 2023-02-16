@@ -36,5 +36,6 @@ function validateForm() {
 
 // Enviar formulario
 
-return document.getElementById("registration").setAttribute("onsubmit", "retun true"); 
+return document.getElementById("registration").setAttribute("onsubmit", "retun true"),
+alert("El formulario se envio correctamente."); 
 }
