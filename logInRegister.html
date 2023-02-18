@@ -64,18 +64,51 @@
                         placeholder="Contraseña" required>
                     <button>Inicia sesion</button>
                 </form>
-                <form action="" class="form-register">
+                <form action="" class="form-register" id="form-register">
                     <h2>REGISTRARSE</h2>
-                    <input class="input1" type="text" name="name" id="name" placeholder="Nombre completo" required>
-                    <input class="input1" type="text" name="user" id="user" placeholder="Usuario" required>
-                    <input class="input1" type="number" name="phone" id="phone" placeholder="Numero Telefonico"
-                        required>
-                    <input class="input1" type="email" name="email" id="email" placeholder="Email" required>
-                    <input class="input1" type="password" name="password" id="password" placeholder="Contraseña"
-                        required>
-                    <input class="input1" type="password" name="confirPpassword" id="confirmPassword"
-                        placeholder=" Confirmar Contraseña" required>
-                    <button>Registrate</button>
+                    
+                    <div id="grupo__name" class="formulario__grupo  col-12 wrap-input1">
+                        <label class="formulario__label title-label"> Nombre</label>
+                        <input class="input1" type="text" name="name" id="name" placeholder="Nombre completo">    
+                        <p class="formulario__input-error"><i class="bi bi-bookmark-x-fill"></i>Ingrese su nombre</p>
+                    </div>
+                    
+                    <div id="grupo__user" class="formulario__grupo  col-12 wrap-input1">
+                        <label class="formulario__label title-label"> Usuario</label>
+                        <input class="input1" type="text" name="user" id="user" placeholder="Usuario">        
+                        <p class="formulario__input-error"><i class="bi bi-bookmark-x-fill"></i>Ingrese su usuario</p>
+                    </div>
+
+                    <div  id="grupo__phone" class="formulario__grupo  col-12 wrap-input1">
+                        <label class="formulario__label title-label"> Teléfono </label>
+                        <input class="input1" type="number" name="phone" pattern="[0-9]{10}" id="phone" placeholder="Numero Telefonico">    
+                        <p class="formulario__input-error"><i class="bi bi-bookmark-x-fill"></i>El número debe tener 10 digitos</p>
+                    </div>
+                    
+                    <div  id="grupo__email" class="formulario__grupo  col-12 wrap-input1">
+                        <label class="formulario__label title-label"> Email </label>
+                        <input class="input1" type="email" name="email" id="email" placeholder="Email">    
+                        <p class="formulario__input-error"><i class="bi bi-bookmark-x-fill"></i>Ingrese un email válido</p>
+                    </div>
+
+                    <div id="grupo__password" class="formulario__grupo  col-12 wrap-input1">
+                        <label class="formulario__label title-label"> Constraseña </label>
+                        <input class="input1" type="password" name="password" id="password" placeholder="Contraseña">
+                        <p class="formulario__input-error"><i class="bi bi-bookmark-x-fill"></i>Ingresa una contraseña valida</p>
+                    </div>
+
+                    <div id="grupo__confirmPassword" class="formulario__grupo  col-12 wrap-input1">
+                        <label class="formulario__label title-label"> confirmar constraseña </label>
+                        <input class="input1" type="password" name="confirmPassword" id="confirmPassword" placeholder=" Confirmar Contraseña">
+                        <p class="formulario__input-error"><i class="bi bi-bookmark-x-fill"></i>No coincide con su contraseña</p>
+                    </div>
+
+                    <button type="submit" class=" contact1-form-btn">
+                        <span>Registrate
+                        <i class="fa fa-long-arrow-right" aria-hidden="false"></i>
+                        </span>
+                    </button>
+                    <div class="formulario__mensaje" id="formulario__mensaje"><i class="bi bi-exclamation-diamond-fill"></i>Favor de llenar todos los campos</div>
                 </form>
             </div>
         </div>

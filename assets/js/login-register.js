@@ -62,3 +62,145 @@ function register() {
     }
 
 }
+/********************* Funcion para registrar****************************/
+
+
+//Clase para creacion de objetos y guardarlos en memoria local*****
+
+class Item {
+    //Creacion de id
+    constructor(startId = 1) {
+        this.listUsers = [];
+        this.startId = startId;
+    }
+    //Funcion para instanciar objetos, agregarlos al array y guardarlos
+    addNewUsers(name, user, phone, email, password, confirmPassword) {
+        const users = {
+            id: this.startId++,
+            name: name,
+            user: user,
+            phone: phone,
+            email: email,
+            password: password,
+            confirmPassword: confirmPassword 
+        };
+
+        this.listUsers.push(users);
+
+        localStorage.setItem("listUsers", JSON.stringify(this.listUsers));
+    }
+}
+
+const item = new Item(1);
+
+    
+// Validacion de campos
+
+const formulario = document.getElementById('form-register');
+const inputs= document.querySelectorAll('#form-register input');
+
+const expressions = {
+	name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+    user: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+    phone: /^\d{10}$/, // 7 a 14 numeros.
+	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+	password: /^.{4,12}$/, // 4 a 12 digitos.
+}
+
+const fields ={
+    name:false,
+    user:false,
+    phone:false,
+    email:false,
+    password:false,
+    confirmPassword:false
+}
+
+const validateForm=(e)=>{
+   switch(e.target.name){
+    case "name":
+        validateField(expressions.name,e.target,'name');
+    break
+    case "user":
+        validateField(expressions.user,e.target,'user');
+    break
+    case "phone":
+        validateField(expressions.phone,e.target,'phone');
+    break
+    case "email":
+        validateField(expressions.email,e.target,'email');
+    break
+    case "password":
+        validateField(expressions.password,e.target,'password');
+        validatePassword();
+    break
+    case "confirmPassword":
+        validatePassword();
+    break
+   }
+}
+
+const validateField=(expression,input, field)=>{
+    if(expression.test(input.value)){
+        document.getElementById(`grupo__${field}`).classList.remove('formulario__grupo-incorrecto');
+        document.querySelector(`#grupo__${field} .formulario__input-error`).classList.remove('formulario__input-error-activo');
+        campos[field]=true;
+    }else{
+        document.getElementById(`grupo__${field}`).classList.add('formulario__grupo-incorrecto');
+        document.querySelector(`#grupo__${field} .formulario__input-error`).classList.add('formulario__input-error-activo');
+        campos[field]=false;
+    }
+}
+
+//validar que la contraseña sea correcta
+const validatePassword = () => {
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirmPassword');
+
+    if(password.value !== confirmPassword.value){
+        document.getElementById(`grupo__confirmPassword`).classList.add('formulario__grupo-incorrecto');
+        document.querySelector(`#grupo__confirmPassword .formulario__input-error`).classList.add('formulario__input-error-activo');
+        campos[campo]=false;
+    }else{
+        document.getElementById(`grupo__confirmPassword`).classList.remove('formulario__grupo-incorrecto');
+        document.querySelector(`#grupo__confirmPassword .formulario__input-error`).classList.remove('formulario__input-error-activo');
+        campos[campo]=true;
+    }
+}
+
+inputs.forEach((input)=>{
+    input.addEventListener('keyup',validateForm);
+    input.addEventListener('blur',validateForm);
+});
+
+  formulario.addEventListener('submit',(e)=>{
+    e.preventDefault();
+
+    if(fields.name && fields.user && fields.phone && fields.email && fields.password){
+        alert("Enviado correctamente"),
+        item.addNewUsers(name, user, phone, email, password),
+            document.getElementById("form-register").reset();
+        document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
+    }else if(!name || !user || !phone || !email || !password || !confirmPassword){ 
+        document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo')
+    return false;}
+        
+    
+});
+
+
+/*
+function registrar(){
+
+    let user = document.getElementById("user").value;
+    let phone = document.getElementById("phone").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    if(!user || !phone || !email || !password){
+    return false;
+    }
+
+    return item.addNewUsers(user, phone, email, password),
+            document.getElementById("loginForm").reset();
+}*/
