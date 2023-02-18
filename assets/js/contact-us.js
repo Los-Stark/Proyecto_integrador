@@ -1,112 +1,71 @@
-function validateForm() {
+const formulario = document.getElementById('registration');
+const inputs= document.querySelectorAll('#registration input');
+console.log("Prueba")
 
-    // Obtener valores de los campos de formulario
-
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let phone = document.getElementById("phone").value;
-    let message = document.getElementById("message").value;
-    let emailPattern = /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/;
-
-
-    // Enviar formulario
-
-    /**
-     *      Corregir alerts 
-     * 
-     */
-
-    //código para personalizar el mensaje del required
-
-    let selectname = document.getElementById('name');
-    selectname.addEventListener('change', function (evt) {
-        this.setCustomValidity('');
-    });
-    selectname.addEventListener('invalid', function (evt) {
-        // Required
-        if (this.validity.valueMissing) {
-            this.setCustomValidity('Por favor introduce tu nombre');
-        }
-    });
-
-    // Validar correo electrónico
-
-    /*     if (!email.match(emailPattern)) { */
-    let selectemail = document.getElementById('email');
-    selectemail.addEventListener('change', function (evt) {
-        this.setCustomValidity('');
-    });
-    selectemail.addEventListener('invalid', function (evt) {
-        // Required
-        if (this.validity.valueMissing) {
-            this.setCustomValidity('Introducir un email válido');
-        }
-    });
-    /*         return false;
-        } */
-
-    // Validar telefono
-
-    /*     if (phone.length != 10) { */
-    let selectphone = document.getElementById('phone');
-    selectphone.addEventListener('change', function (evt) {
-        this.setCustomValidity('');
-    });
-    selectphone.addEventListener('invalid', function (evt) {
-        // Required
-        if (this.validity.valueMissing) {
-            this.setCustomValidity('El número debe tener 10 dígitos');
-        }
-    });
-    /*         return false;
-        } */
-
-
-    // Validar mensaje
-    /*     if (message.length <= 20) { */
-    let selectmessage = document.getElementById('message');
-    selectmessage.addEventListener('change', function (evt) {
-        this.setCustomValidity('');
-    });
-    selectmessage.addEventListener('invalid', function (evt) {
-        // Required
-        if (this.validity.valueMissing) {
-            this.setCustomValidity('El mensaje debe contener mínimo 20 caracteres');
-        }
-
-    });
-    /*         return false;
-        }
-     */
-    // Validar tipos de entrada
-
-    if (!name || !email || !phone || !message) {
-        alert("Todos los campos son obligatorios");
-        return false;
-    }
-
-    // Validar correo electrónico
-
-    if (!email.match(emailPattern)) {
-        alert("El correo electrónico no es válido");
-        return false;
-    }
-
-    // Validar telefono
-    if (phone.length != 10) {
-        alert("El numero telefonico debe tener al menos 10 digitos");
-        return false;
-    }
-
-    // Validar mensaje
-    if (message.length <= 20) {
-        alert("El mensaje debe ser mayor a 20 caracteres");
-        return false;
-    }
-
-
-    // Enviar formulario
-
-    return document.getElementById("registration").setAttribute("onsubmit", "retun true"),
-        alert("Enviado correctamente");
+const expresiones = {
+	//usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+	name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+	password: /^.{4,12}$/, // 4 a 12 digitos.
+	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+	phone: /^\d{10}$/, // 7 a 14 numeros.
+    message: /^[a-zA-ZÀ-ÿ\s]{1,1000}$/
 }
+
+const campos ={
+    name:false,
+    email:false,
+    phone:false,
+    message:false,
+}
+
+const validarFormulario=(e)=>{
+   switch(e.target.name){
+    case "name":
+        validarCampo(expresiones.name,e.target,'name');
+    break
+    case "email":
+        validarCampo(expresiones.email,e.target,'email');
+    break
+    case "phone":
+        validarCampo(expresiones.phone,e.target,'phone');
+    break
+    case "message":
+        validarCampo(expresiones.message,e.target,'message');
+    break
+   }
+
+}
+
+const validarCampo=(expresion,input, campo)=>{
+    if(expresion.test(input.value)){
+        document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
+        document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo');
+        campos[campo]=true;
+    }else{
+        document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
+        document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo');
+        campos[campo]=false;
+    }
+}
+
+inputs.forEach((input)=>{
+    input.addEventListener('keyup',validarFormulario);
+    input.addEventListener('blur',validarFormulario);
+});
+
+  formulario.addEventListener('submit',(e)=>{
+    e.preventDefault();
+
+    if(campos.name && campos.email && campos.phone && campos.message){
+        //document.getElementById("registration").setAttribute("onsubmit", "return true")
+        alert("Enviado correctamente");
+        formulario.submit();
+        document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
+    }else if(!name || !email || !phone || !message){ 
+        document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo')
+    return false;}
+        
+    
+});
+
+
