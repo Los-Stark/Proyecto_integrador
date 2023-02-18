@@ -1,0 +1,256 @@
+main {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.contenedor-all {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    position: relative;
+}
+
+.back-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 20px;
+    height: 400px;
+    backdrop-filter: blur(10px);
+    background: rgba(238, 242, 236, 0.15);
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.back-box div {
+    margin: 100px 40px;
+    width: 350px;
+    color: black;
+    transition: all 500ms;
+    text-align: center;
+}
+
+.back-box div img {
+    max-width: 80%;
+
+    border-radius: 10px;
+    place-content: center;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.back-box div p,
+.back-box div button {
+    margin-top: 10px;
+}
+
+.back-box div h3 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'DomoAregato', sans-serif;
+}
+
+/* Estilos de botones */
+.back-box button {
+    padding: 10px 20px;
+    margin: 1px;
+    font-size: 14px;
+    background: #6F6CB8;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    transition: all 300ms;
+}
+
+.back-box button:hover {
+    background-color: #E61050;
+    color: white;
+}
+
+.contenedor-login-register {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+    position: relative;
+    top: -200px;
+    transition: left 1000ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
+}
+
+.contenedor-login-register form {
+    width: 100%;
+    padding: 30px 30px 50px 30px;
+    background-color: #F2CAC8;
+    position: absolute;
+    height: 400px;
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+
+    box-sizing: border-box;
+}
+
+.contenedor-login-register form h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+    font-family: 'DomoAregato', sans-serif;
+
+}
+
+.contenedor-login-register form input {
+    font-family: 'Montserrat-VariableFont_wght.ttf', sans-serif;
+    font-size: 110%;
+    color: #1b262c;
+
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px 5px 5px 10px;
+    background: white;
+    font-size: 10px;
+    height: 30px;
+    box-sizing: border-box;
+
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+}
+
+.contenedor-login-register form input::placeholder {
+    font-family: 'Montserrat-VariableFont_wght.ttf', sans-serif;
+    color: gray;
+    font-size: small;
+}
+
+.contenedor-login-register form button {
+    font-family: 'Montserrat-VariableFont_wght.ttf', sans-serif;
+    padding: auto;
+    border: none;
+    font-size: 100%;
+    background-color: #dfcdc3;
+    color: #1b262c;
+    border-radius: 3px 3px 3px 3px;
+    margin-top: 15px;
+    width: 100%;
+    height: 40px;
+
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+}
+
+.contenedor-login-register form button:hover {
+    background-color: #E61050;
+    color: white;
+}
+
+.form-login {
+    opacity: 1;
+    display: block;
+}
+
+.form-register {
+    display: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/*Responsive disign*/
+@media screen and (max-width: 768px) {
+
+    main {
+        margin-top: 50px
+    }
+
+    .back-box {
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .back-box div {
+        margin: 0px;
+        position: absolute;
+    }
+
+    .contenedor-login-register {
+        top: 0px;
+        margin: auto
+    }
+
+    .contenedor-login-register form {
+        position: relative;
+    }
+
+    .back-box div img {
+        max-width: 50%;
+    }
+}
+
+/* Aqui termina el codigo de css de esta pagina */
+
+#login label {
+    display: block;
+    font-family: 'Montserrat-VariableFont_wght.ttf', sans-serif;
+    font-size: 120%;
+    color: #3c4245;
+
+    margin-top: 15px;
+}
+
+/* validaciones*/
+
+.formulario__input-error {
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;
+}
+
+.formulario__input-error-activo {
+    display: block;
+}
+
+.formulario__mensaje {
+    height: 45px;
+    line-height: 45px;
+    background: #f66060;
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none;
+}
+
+.formulario__mensaje-activo {
+    display: block;
+}
+
+/* estilos para validacion */
+.formulario__grupo-incorrecto .formulario__label {
+    color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+    border: 3px solid #bb2929;
+}
