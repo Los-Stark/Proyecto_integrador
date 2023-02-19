@@ -62,3 +62,8 @@ function register() {
     }
 
 }
+
+function abrirTeclado() {
+    document.documentElement.style.scrollBehavior = "smooth"; // Animación
+    document.documentElement.scrollTop = 0; // Desplazamiento
+  }
