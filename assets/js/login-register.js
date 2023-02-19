@@ -8,11 +8,12 @@ const formLogin = document.querySelector(".form-login");
 const formRegister = document.querySelector(".form-register");
 const backBoxLogin = document.querySelector(".back-box-login");
 const backBoxRegister = document.querySelector(".back-box-register");
-
+var pressKey = 0;
 function pageWidth() {
     if (window.innerWidth > 768) {
         backBoxLogin.style.display = "block";
         backBoxRegister.style.display = "block";
+        pressKey = 0
     }
     else if(pressKey!=1){
         backBoxRegister.style.display = "block";
@@ -66,5 +67,5 @@ function register() {
 function abrirTeclado() {
     document.documentElement.style.scrollBehavior = "smooth"; // Animación
     document.documentElement.scrollTop = 0; // Desplazamiento
-    var pressKey = 1;
+    pressKey = 1;
   }
