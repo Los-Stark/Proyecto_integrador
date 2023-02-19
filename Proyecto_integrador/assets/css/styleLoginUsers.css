@@ -1,0 +1,80 @@
+.login-title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'DomoAregato', sans-serif;
+}
+
+.title-label{/* 
+    font-size: calc((.48em + .48vw)); */
+    font-family: 'Montserrat', sans-serif;
+} 
+
+.input1 {
+    text-align: left;
+    font-size: calc((.48em + .48vw));
+    background: #f2caf2;
+    font-family: 'Montserrat', sans-serif;
+    height: 40%;
+    width: 35%;
+    border-radius: 5px;
+    padding: .8em;
+    margin: .8em;
+    border: 10px;
+    display: block;
+    align-content: center;
+
+}
+
+.wrap-input1{
+    margin-top: 0px;
+
+}
+
+.container-login {
+    background: #eef2f6;
+    border-radius: 15px;
+    overflow: hidden;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    margin:  60px 45px 60px 45px; 
+}
+
+.container-login-form-btn {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.login-form-btn {
+    font-family: 'Montserrat', sans-serif;
+    background: #E61050;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 1em;
+    height: 50px;
+    width: 110px;
+
+}
+
+ .img-login {
+    border-radius: 25px;
+    place-content: center;
+    margin: 30px;
+    width: 75%;
+    height: 90%;
+    object-position: bottom;
+ }
+
+ input[type=number]::-webkit-inner-spin-button, 
+ input[type=number]::-webkit-outer-spin-button { 
+   -webkit-appearance: none; 
+   margin: 0; 
+ }
+
+ 

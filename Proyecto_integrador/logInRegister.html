@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./assets/images/cara-anime.jpg">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/icomoon.css">
+    <link rel="stylesheet" href="./assets/css/logInRegister.css">
+    <title>About us</title>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md ">
+            <div class="container-fluid">
+                <button onclick="hideShoppingCart ()" class="navbar-toggler btn" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarScroll" aria-controls="navbarScroll" id="buttonMenu">
+                    <img src="assets//images/menu-icon.png" alt="menu">
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img class="img-fluid logo" src="./assets/images/logo lateral.png" alt="Logo tienda anime odyssey">
+                </a>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
+                    <!-- El codigo que va dentro de este div se encuentra en changeHeader.js -->
+                </div>
+                <a class="nav-link" href="shopping-cart.html" id="shoppingCart">
+                    <button class="btn ">
+                        <img src="assets/images/cart2.svg" alt="carro-de-la-compra">
+                    </button>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contenedor-all">
+            <!--Estas dos son las cajas que cubriran cada uno de los formularios  -->
+            <div class="back-box">
+                <div class="back-box-login">
+                    <img src="./assets/images/formanime.jpeg" alt="Personaje de anime registrandose">
+                    <h3>¿YA TIENES CUENTA?</h3>
+                    <p>Iniciar sesion en la pagina</p>
+                    <button id="btn-login">Iniciar sesion</button>
+                </div>
+                <div class="back-box-register">
+                    <img src="./assets/images/loginUsers.jpg" alt="Personaje de anime riendose">
+                    <h3>¿AUN NO TIENES TU CUENTA?</h3>
+                    <p>Regístrate para que puedas iniciar sesion en la pagina</p>
+                    <button id="btn-register">Regístrate</button>
+                </div>
+            </div>
+            <!-- Este contenedor que contienen los input de los dos form de inputs-->
+            <div class="contenedor-login-register">
+                <form action="" class="form-login">
+                    <h2>ENTRAR</h2>
+                    <input class="input1" type="text" name="user-login" id="user-login" placeholder="Usuario" required>
+                    <input class="input1" type="password" name="password-login" id="password-login"
+                        placeholder="Contraseña" required>
+                    <button>Inicia sesion</button>
+                </form>
+                <form action="" class="form-register">
+                    <h2>REGISTRARSE</h2>
+                    <input class="input1" type="text" name="name" id="name" placeholder="Nombre completo" required>
+                    <input class="input1" type="text" name="user" id="user" placeholder="Usuario" required>
+                    <input class="input1" type="number" name="phone" id="phone" placeholder="Numero Telefonico"
+                        required>
+                    <input class="input1" type="email" name="email" id="email" placeholder="Email" required>
+                    <input class="input1" type="password" name="password" id="password" placeholder="Contraseña"
+                        required>
+                    <input class="input1" type="password" name="confirPpassword" id="confirmPassword"
+                        placeholder=" Confirmar Contraseña" required>
+                    <button>Registrate</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="rrss">
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+
+            <p>© 2023 All rights reserved |
+                Privacity Policy Los Stark</p>
+        </div>
+    </footer>
+    <script src="/assets/js/changeHeader.js"></script>
+    <script src="./assets/js/login-register.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

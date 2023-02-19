@@ -1,0 +1,90 @@
+.col{
+    background: #F2CAC8;
+    width: 230px;
+    height: 416px;
+    left: 383px;
+    top: 607px;
+    margin: 2px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    
+
+}
+
+#containerBestSellers .align-items-left{
+background: black;
+font-size: 23px;
+color: white;
+border: 1px solid white;  
+border-radius: 15px;
+transition: 0.5s;  
+
+}
+
+#containerBestSellers .col-6{
+    background-color: #F2CAC8;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+
+#containerBestSellers .align-items-left:active{
+    transform: scale(0.8);
+}
+
+#containerBestSellers p, .col-8{
+    font-size: 15px;
+    font-weight: bold;
+}
+#precioMasVendido1{
+    border-radius: 5px;
+    color:black;
+    justify-content: right !important;
+}
+
+.productsImage{
+    max-height: 230px;
+    max-width: auto;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+ }
+
+ .productsImage:hover{
+    scale: 97%;
+    border: solid 2px black;
+    
+ }
+
+ .bestSellers,#section{
+    padding: 0px;
+    border: 0px;
+ }
+ #masVendido1{
+    padding: 0%;
+    border-radius: 10px;
+    max-width: 190px;
+    box-shadow: 2px 5px 5px;
+ }
+ .add-to-cart{
+    background-color: #6f6cb8;
+    border-radius: 5px;
+    width: 10rem;
+    height: 3rem;
+    color: white;
+    transition-duration: 200ms;
+    border-color: #6f6cb800;
+    font-family: url(/assets/css/fonts/Montserrat-Italic-VariableFont_wght.ttf);
+    font-size: 14px;
+    margin-top: 1rem;
+}
+
+.add-to-cart:hover{
+    background-color :#e61050 ;
+}
+
+#precioMasVendido1{
+    border-radius: 5px;
+    background-color:#eef2f6;
+    color: #6F6CB8;
+    text-align: center;
+    font-size: 15px;
+}
