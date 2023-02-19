@@ -14,7 +14,7 @@ function pageWidth() {
         backBoxLogin.style.display = "block";
         backBoxRegister.style.display = "block";
     }
-    else {
+    else if(pressKey!=1){
         backBoxRegister.style.display = "block";
         backBoxRegister.style.opacity = "1";
         backBoxLogin.style.display = "none";
@@ -66,4 +66,5 @@ function register() {
 function abrirTeclado() {
     document.documentElement.style.scrollBehavior = "smooth"; // Animación
     document.documentElement.scrollTop = 0; // Desplazamiento
+    var pressKey = 1;
   }
