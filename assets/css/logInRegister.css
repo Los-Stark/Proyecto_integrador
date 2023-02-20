@@ -92,7 +92,7 @@ main {
 
 .contenedor-login-register form {
     width: 100%;
-    padding: 30px 30px 50px 30px;
+    padding: 30px 30px 20px 30px;
     background-color: #F2CAC8;
     position: absolute;
     min-height: 400px;
@@ -115,21 +115,22 @@ main {
 
 }
 
+input{
+    border:none;
+}
+
 .contenedor-login-register form input {
     font-family: 'Montserrat-VariableFont_wght.ttf', sans-serif;
-    font-size: 110%;
+    font-size: 100%;
     color: #1b262c;
-
     width: 100%;
     margin-top: 5px;
     margin-bottom: 5px;
-    padding: 5px 5px 5px 10px;
+    padding: 5px 5px 5px 5px;
     background: white;
     font-size: 10px;
     height: 30px;
     box-sizing: border-box;
-
-    border: none;
     border-radius: 3px 3px 3px 3px;
     -moz-border-radius: 3px 3px 3px 3px;
     -webkit-border-radius: 3px 3px 3px 3px;
@@ -231,6 +232,9 @@ input[type=number]::-webkit-outer-spin-button {
 
 .formulario__input-error-activo {
     display: block;
+    margin: none;
+    font-size: 9px;
+    color: #bb2929;
 }
 
 .formulario__mensaje {
@@ -252,5 +256,5 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .formulario__grupo-incorrecto .formulario__input {
-    border: 3px solid #bb2929;
+    border: 2px solid #bb2929;
 }

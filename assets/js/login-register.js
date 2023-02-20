@@ -96,8 +96,10 @@ const item = new Item(1);
     
 // Validacion de campos
 
-const formulario = document.getElementById('form-register');
-const inputs= document.querySelectorAll('#form-register input');
+const formAddUser = document.getElementById('form-register');
+const inputsAddUser= document.querySelectorAll('#form-register input');
+const formLoginUser = document.getElementById('form-login')
+const inputsLoginUser= document.querySelectorAll('#form-login input');
 
 const expressions = {
 	name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -108,12 +110,11 @@ const expressions = {
 }
 
 const fields ={
-    name:false,
-    user:false,
-    phone:false,
-    email:false,
-    password:false,
-    confirmPassword:false
+    name: false,
+    user: false,
+    phone: false,
+    email: false,
+    password: false
 }
 
 const validateForm=(e)=>{
@@ -131,8 +132,8 @@ const validateForm=(e)=>{
         validateField(expressions.email,e.target,'email');
     break
     case "password":
+        validatePassword()    
         validateField(expressions.password,e.target,'password');
-        validatePassword();
     break
     case "confirmPassword":
         validatePassword();
@@ -144,11 +145,11 @@ const validateField=(expression,input, field)=>{
     if(expression.test(input.value)){
         document.getElementById(`grupo__${field}`).classList.remove('formulario__grupo-incorrecto');
         document.querySelector(`#grupo__${field} .formulario__input-error`).classList.remove('formulario__input-error-activo');
-        campos[field]=true;
+        fields[field]=true;
     }else{
         document.getElementById(`grupo__${field}`).classList.add('formulario__grupo-incorrecto');
         document.querySelector(`#grupo__${field} .formulario__input-error`).classList.add('formulario__input-error-activo');
-        campos[field]=false;
+        fields[field]=false;
     }
 }
 
@@ -160,47 +161,59 @@ const validatePassword = () => {
     if(password.value !== confirmPassword.value){
         document.getElementById(`grupo__confirmPassword`).classList.add('formulario__grupo-incorrecto');
         document.querySelector(`#grupo__confirmPassword .formulario__input-error`).classList.add('formulario__input-error-activo');
-        campos[campo]=false;
+        fields['password'] = false;
     }else{
         document.getElementById(`grupo__confirmPassword`).classList.remove('formulario__grupo-incorrecto');
         document.querySelector(`#grupo__confirmPassword .formulario__input-error`).classList.remove('formulario__input-error-activo');
-        campos[campo]=true;
+        fields['password'] = true;
     }
+
 }
 
-inputs.forEach((input)=>{
+inputsAddUser.forEach((input)=>{
     input.addEventListener('keyup',validateForm);
     input.addEventListener('blur',validateForm);
 });
 
-  formulario.addEventListener('submit',(e)=>{
+  formAddUser.addEventListener('submit',(e)=>{
     e.preventDefault();
 
     if(fields.name && fields.user && fields.phone && fields.email && fields.password){
-        alert("Enviado correctamente"),
-        item.addNewUsers(name, user, phone, email, password),
-            document.getElementById("form-register").reset();
-        document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
-    }else if(!name || !user || !phone || !email || !password || !confirmPassword){ 
+            item.addNewUsers(formAddUser.name.value, formAddUser.user.value, formAddUser.phone.value, formAddUser.email.value, formAddUser.password.value),
+            formAddUser.reset();
+            alert("Registrado correctamente");
+            document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
+    }else{ 
         document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo')
-    return false;}
-        
-    
+        return false;}    
 });
 
+//formulario iniciar sesion
 
-/*
-function registrar(){
+formLoginUser.addEventListener('submit',(e)=>{
+    e.preventDefault();
 
-    let user = document.getElementById("user").value;
-    let phone = document.getElementById("phone").value;
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
-
-    if(!user || !phone || !email || !password){
-    return false;
+// Obtener los valores de los campos de entrada
+  let username = document.getElementById('user-login').value;
+    console.log(username);
+  let password = document.getElementById('password-login').value;
+    console.log(password);
+// Verificar si el objeto del usuario existe en el almacenamiento local
+  let userObj = JSON.parse(localStorage.getItem('listUsers'));
+  console.log(userObj);
+    
+  let error=true;
+  for (let index = 0; index < userObj.length; index++) {
+    console.log(userObj[index].password);
+    if (userObj[index].user == username && userObj[index].password == password) {
+        error = false;
+        alert(`Bienvenido ${username}`);
+        break;
     }
+  }
+  if (error) {
+    alert('Nombre de usuario o contraseña incorrectos. Inténtalo de nuevo.');
+}
+  
+});
 
-    return item.addNewUsers(user, phone, email, password),
-            document.getElementById("loginForm").reset();
-}*/
