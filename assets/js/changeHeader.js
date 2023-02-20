@@ -5,9 +5,8 @@ const changeDropdown = () => {
     const buttonstyle = `                        
     <a class="nav-link active" href="/AddProduct.html"><button class="btn">Inicio</button></a>
     <div class="nav-item dropdown" id="Dropdowncategories">
-        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+        <button class="btn dropdown-toggle categories" type="button" data-bs-toggle="dropdown"
             aria-expanded="false">
-            <!-- <img src="assets//images/microsoft.svg" alt="ventana"> -->
             Categorias
         </button>
         <ul class="dropdown-menu">

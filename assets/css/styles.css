@@ -2,16 +2,17 @@
     font-family: 'DomoAregato';
     src: url('./fonts/DOMOAI__.ttf') format('truetype');
 }
-    
+
 * {
     font-family: 'Montserrat', sans-serif;
 }
-h1{
+
+h1 {
     font-family: 'DomoAregato';
 }
 
 html {
-    background:none;
+    background: none;
 }
 
 header {
@@ -37,31 +38,37 @@ body {
 
 .btn {
     margin: 1px;
-    background: #E61050;
+    background: #6F6CB8;
     border-radius: 5px;
     transition: 0.5s;
     color: white;
 }
 
-.btn:hover{
-    background-color: rgb(211, 38, 185);
+.btn:hover {
+    background-color: #E61050;
     color: white;
 }
 
 .dropdown-menu,
 .dropdown-toggle {
-    background-color: #E61050;
+    background-color: #6F6CB8;
 }
+
 .dropdown-item {
     color: white;
+}
+#Dropdowncategories{
+    color: white;
+    border: none;
 }
 
 .dropdown-item:hover {
     background-color: #E61050;
+    color: white;
 }
 
-.liststyle{
-    color:white;
+.liststyle {
+    color: white;
 }
 
 .avatars {
@@ -71,7 +78,8 @@ body {
     height: 150px;
     border-radius: 50%;
 }
-.description{
+
+.description {
     border-radius: 8px;
 }
 

@@ -104,6 +104,10 @@
     margin-top: 15px;
 }
 
+input {
+    border:none;
+}
+
 #login input {
     font-family: 'Montserrat-VariableFont_wght.ttf', sans-serif;
     font-size: 110%;
@@ -117,8 +121,7 @@
     padding: 5px 5px 5px 10px;
     
     box-sizing: border-box;
-    
-    border: none;
+
     border-radius: 3px 3px 3px 3px;
     -moz-border-radius: 3px 3px 3px 3px;
     -webkit-border-radius: 3px 3px 3px 3px;
@@ -175,6 +178,7 @@
 }
 
 .formulario__input-error-activo{
+    color: #bb2929;
     display: block;
 }
 
@@ -197,5 +201,5 @@
 }
 
 .formulario__grupo-incorrecto .formulario__input{
-    border: 3px solid #bb2929;
+    border: 2px solid #bb2929;
 }
