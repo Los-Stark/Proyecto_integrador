@@ -1,3 +1,19 @@
+//Clase para agregar productos a la memoria local y ser leidos por el html de carrito
+
+class CartClass {
+  constructor() {
+    this.listCartProducts = []
+  }
+  addProductToCart(title, price, image) {
+    const productCart = {
+      title: title,
+      price: price,
+      image: image
+    };
+    this.listCartProducts.push(productCart);
+    localStorage.setItem("ProductsToCart", JSON.stringify(this.listCartProducts))
+  }
+}
 
 // Obtiene todos los botones "Agregar al carrito"
 const addToCartButtons = document.querySelectorAll('.add-to-cart');
@@ -8,39 +24,16 @@ addToCartButtons.forEach(button => {
 });
 
 // Función que se ejecuta cuando se hace clic en el botón "Agregar al carrito"
+const itemsToCart = new CartClass();
 function addToCartClicked(event) {
   const button = event.target;
   const item = button.parentNode.parentNode; // Obtén el elemento padre del botón
   const itemTitle = item.querySelector('p').textContent;
-  const itemPrice = item.querySelector('div').textContent;
+  const itemPrice = item.querySelector('#precioMasVendido1').textContent;
   const itemImage = item.querySelector('img').src;
-  addItemToCart(itemTitle, itemPrice, itemImage);
+  console.log(itemImage + " " + itemPrice + " " + itemTitle)
+  itemsToCart.addProductToCart(itemTitle, itemPrice, itemImage);
+
+  /* addItemToCart(itemTitle, itemPrice, itemImage); */
 }
 
-function addItemToCart(title, price, image) {
-  // Crea un elemento de carrito
-  const cartItem = document.createElement('div');
-  cartItem.classList.add('cart-item');
-  const cartContents = `
-    <img src="${image}" alt="${title}">
-    <div>
-      <h3>${title}</h3>
-      <h4>${price}</h4>
-    </div>
-    <button class="remove-item">Eliminar</button>
-  `;
-  cartItem.innerHTML = cartContents;
-  // Se agrega el elemento al contenedor del carrito
-  const cartItems = document.getElementById('cart-items');
-  cartItems.appendChild(cartItem);
-  // Se agrega un controlador de eventos para el botón "Eliminar"
-  const removeButtons = document.querySelectorAll('.remove-item');
-  removeButtons.forEach(button => {
-    button.addEventListener('click', removeItem);
-  });
-}
-
-function removeItem(event) {
-  const buttonClicked = event.target;
-  buttonClicked.parentNode.remove();
-}
