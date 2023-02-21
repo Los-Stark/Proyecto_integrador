@@ -6,6 +6,7 @@ function addItem(item) {
     <p id="nombreMasVendido1">${item.name}</p>
     <div class="row align-items-center d-flex justify-content-center">
     <div id="precioMasVendido1"class=" col-8 col-md-4 p-2  ">$${item.price}</div>
+    <button class="add-to-cart">Agregar al carrito</button>
         </div>
       </div>
     `;

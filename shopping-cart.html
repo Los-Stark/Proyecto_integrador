@@ -1,0 +1,102 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./assets/images/cara-anime.jpg">
+    <link rel="stylesheet" href="assets/css/style-HomePage.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/icomoon.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/css/shopping-cart.css">
+
+    
+    <title>Shopping Cart</title>
+</head>
+<header>
+    <nav class="navbar navbar-expand-md ">
+        <div class="container-fluid">
+            <button onclick="hideShoppingCart()" class="navbar-toggler btn" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarScroll" aria-controls="navbarScroll" id="buttonMenu">
+                <img src="assets//images/menu-icon.png" alt="menu">
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img class="img-fluid logo" src="./assets/images/logo lateral.png" alt="Logo tienda anime odyssey">
+            </a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
+                <!-- El codigo que va dentro de este div se encuentra en changeHeader.js -->
+            </div>
+            <a class="nav-link" href="shopping-cart.html" id="shoppingCart"></a>
+                <button class="btn" id = "shoppingCartBtn">
+                    <img src="assets/images/cart2.svg" alt="carro-de-la-compra">
+                </button>
+            </a>
+        </div>
+    </nav>
+</header>
+<body>
+  <h1>CARRITO DE COMPRAS</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Precio unitario</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Aquí se agregarían las filas de los productos -->
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3" class="text-right"><strong>Subtotal:</strong></td>
+        <td class="text-right">$0.00</td>
+      </tr>
+      <tr>
+        <td colspan="3" class="text-right"><strong>Envío:</strong></td>
+        <td class="text-right">$0.00</td>
+      </tr>
+      <tr>
+        <td colspan="3" class="text-right"><strong>Total:</strong></td>
+        <td class="text-right">$0.00</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <form>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="direccion">Dirección de envío:</label>
+    <textarea id="direccion" name="direccion" required></textarea>
+
+    <button type="submit">Realizar compra</button>
+  </form>
+  <footer>
+    <div class="rrss">
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+
+        <p>© 2023 All rights reserved |
+            Privacity Policy Los Stark</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+<script src="assets/js/changeHeader.js"></script>
+<script src="./assets/js/shopping-cart.js"></script>
+
+</body>
+</html>
