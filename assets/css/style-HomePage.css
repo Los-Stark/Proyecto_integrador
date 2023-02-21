@@ -35,10 +35,13 @@ transition: 0.5s;
     font-size: 15px;
     font-weight: bold;
 }
-#precioMasVendido1{
+
+#CardPrice{
     border-radius: 5px;
-    color:black;
-    justify-content: right !important;
+    background-color:#eef2f6;
+    color: #6F6CB8;
+    text-align: center;
+    font-size: 15px;
 }
 
 .productsImage{
@@ -58,7 +61,7 @@ transition: 0.5s;
     padding: 0px;
     border: 0px;
  }
- #masVendido1{
+ #CardProduct{
     padding: 0%;
     border-radius: 10px;
     max-width: 190px;
@@ -81,13 +84,7 @@ transition: 0.5s;
     background-color :#e61050 ;
 }
 
-#precioMasVendido1{
-    border-radius: 5px;
-    background-color:#eef2f6;
-    color: #6F6CB8;
-    text-align: center;
-    font-size: 15px;
-}
+
 
 
 

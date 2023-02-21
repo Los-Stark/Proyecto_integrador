@@ -29,7 +29,7 @@ function addToCartClicked(event) {
   const button = event.target;
   const item = button.parentNode.parentNode; // Obtén el elemento padre del botón
   const itemTitle = item.querySelector('p').textContent;
-  const itemPrice = item.querySelector('#precioMasVendido1').textContent;
+  const itemPrice = item.querySelector('#CardPrice').textContent;
   const itemImage = item.querySelector('img').src;
   console.log(itemImage + " " + itemPrice + " " + itemTitle)
   itemsToCart.addProductToCart(itemTitle, itemPrice, itemImage);
