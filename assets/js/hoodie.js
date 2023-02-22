@@ -15,33 +15,33 @@ function addItem(item) {
     itemsContainer.innerHTML += itemTemplate;
   }
 
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'All Might',
   'img':'./assets/images/hoodie/deku-sud-gris.png',
   'price':'300'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'All Might',
   'img':'./assets/images/hoodie/deku-sud-neg.png',
   'price':'300'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'Chainsaw man',
   'img':'./assets/images/hoodie/denji-sud-gris.png',
   'price':'300'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'Chainsaw man',
   'img':'./assets/images/hoodie/denji-sud-neg.png',
   'price':'300'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'Eren Yeager',
   'img':'./assets/images/hoodie/eren-sud-neg.png',
   'price':'300'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'Eren Yeager',
   'img':'./assets/images/hoodie/eren-sud-gris.png',
   'price':'300'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'Monkey D. Luffy',
   'img':'./assets/images/hoodie/luffy-sud-gris.png',
   'price':'300'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'Monkey D. Luffy',
   'img':'./assets/images/hoodie/luffy-sud-neg.png',
   'price':'300'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'Tanjiro Kamado',
   'img':'./assets/images/hoodie/tanjiro-sud-neg.png',
   'price':'300'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'Tanjiro Kamado',
   'img':'./assets/images/hoodie/tanjiro-sud-gris.png',
   'price':'300'})

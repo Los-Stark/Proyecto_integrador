@@ -15,33 +15,33 @@ function addItem(item) {
     itemsContainer.innerHTML += itemTemplate;
   }
 
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'All Might',
   'img':'./assets/images/man-t-shirt/deku-pl-gris.png',
   'price':'150'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'All Might',
   'img':'./assets/images/man-t-shirt/deku-pl-neg.png',
   'price':'150'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'Chainsaw man',
   'img':'./assets/images/man-t-shirt/denji-pl-gris.png',
   'price':'150'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'Chainsaw man',
   'img':'./assets/images/man-t-shirt/denji-pl-neg.png',
   'price':'150'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'Eren Yeager',
   'img':'./assets/images/man-t-shirt/eren-pl-neg.png',
   'price':'150'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'Eren Yeager',
   'img':'./assets/images/man-t-shirt/eren-pl-gris.png',
   'price':'150'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'Monkey D. Luffy',
   'img':'./assets/images/man-t-shirt/luffi-pl-neg.png',
   'price':'150'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'Monkey D. Luffy',
   'img':'./assets/images/man-t-shirt/luffy-pl-gris.png',
   'price':'150'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'Tanjiro Kamado',
   'img':'./assets/images/man-t-shirt/tanjiro-pl-neg.png',
   'price':'150'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'Tanjiro Kamado',
   'img':'./assets/images/man-t-shirt/tanjiro-pl-gris.png',
   'price':'150'})
