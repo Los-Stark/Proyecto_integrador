@@ -36,4 +36,3 @@ function addToCartClicked(event) {
 
   /* addItemToCart(itemTitle, itemPrice, itemImage); */
 }
-
