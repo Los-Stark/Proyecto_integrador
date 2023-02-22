@@ -4,15 +4,29 @@ class CartClass {
   constructor() {
     this.listCartProducts = []
   }
+
+  evaluateLocalStorage(){
+    const localData=JSON.parse(localStorage.getItem("ProductsToCart"));
+    if (Object.is(null, localData)){
+      // O se que poner aqui pero en el else si 
+      }
+      else{
+        this.listCartProducts = localData;
+      }
+  }
+
   addProductToCart(title, price, image) {
     const productCart = {
       title: title,
       price: price,
       image: image
     };
+    //Revisa si la memoria local esta vacia
     this.listCartProducts.push(productCart);
     localStorage.setItem("ProductsToCart", JSON.stringify(this.listCartProducts))
   }
+ 
+
 }
 
 // Obtiene todos los botones "Agregar al carrito"
@@ -25,6 +39,7 @@ addToCartButtons.forEach(button => {
 
 // Función que se ejecuta cuando se hace clic en el botón "Agregar al carrito"
 const itemsToCart = new CartClass();
+itemsToCart.evaluateLocalStorage();
 function addToCartClicked(event) {
   const button = event.target;
   const item = button.parentNode.parentNode; // Obtén el elemento padre del botón
