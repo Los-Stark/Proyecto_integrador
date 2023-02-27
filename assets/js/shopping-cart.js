@@ -14,6 +14,17 @@ class CartClass {
       }
   }
 
+  updateCartItems() {
+      const cartItems = document.getElementById('cartItems');
+      const localData = JSON.parse(localStorage.getItem("ProductsToCart"));
+      const numItems = localData ? localData.length :0;
+      if(numItems>0)
+      cartItems.textContent = numItems;
+      else 
+      cartItems.textContent = "";
+    
+  }
+
   addProductToCart(title, price, image) {
     const productCart = {
       order: ++this.currentOrder,
@@ -48,7 +59,15 @@ function addToCartClicked(event) {
   itemsToCart.addProductToCart(itemTitle, itemPrice, itemImage);
 
   console.log( itemPrice );
+  itemsToCart.updateCartItems();
+  
 
   /* addItemToCart(itemTitle, itemPrice, itemImage); */
 }
+itemsToCart.updateCartItems();
 addToCartClicked()
+
+
+
+
+  
