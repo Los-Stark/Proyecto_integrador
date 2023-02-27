@@ -17,17 +17,17 @@ function addItem(item) {
 
     addItem({'name':'Izuku Midoriya',
     'img':'./assets/images/woman-t-shirt/deku-pld-mar.png',
-    'price':'150'})
+    'price':150})
     addItem({'name':'Monkey D. Luffy',
     'img':'./assets/images/man-t-shirt/luffi-pl-neg.png',
-    'price':'150'})
+    'price':150})
     addItem({'name':'Chainsaw man',
     'img':'./assets/images/man-t-shirt/denji-pl-gris.png',
-    'price':'150'})
+    'price':150})
     addItem({'name':'Izuku Midoriya',
     'img':'./assets/images/man-t-shirt/deku-pl-neg.png',
-    'price':'150'})
+    'price':150})
     addItem({'name':'Tanjiro Kamado',
     'img':'./assets/images/woman-t-shirt/tanjiro-pld-mar.png',
-    'price':'150'})
+    'price':150})
   

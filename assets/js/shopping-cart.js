@@ -49,5 +49,8 @@ function addToCartClicked(event) {
   console.log(itemImage + " " + itemPrice + " " + itemTitle)
   itemsToCart.addProductToCart(itemTitle, itemPrice, itemImage);
 
+  console.log( itemPrice );
+
   /* addItemToCart(itemTitle, itemPrice, itemImage); */
 }
+addToCartClicked()
