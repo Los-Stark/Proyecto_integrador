@@ -7,7 +7,7 @@ const changeDropdown = () => {
     <div class="nav-item dropdown" id="Dropdowncategories">
         <button class="btn dropdown-toggle categories" type="button" data-bs-toggle="dropdown"
             aria-expanded="false">
-            Categorias
+            Categorías
         </button>
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/man-t-shirt.html">Playeras Caballero</a></li>
