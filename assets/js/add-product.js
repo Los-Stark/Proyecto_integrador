@@ -54,14 +54,22 @@ function validateForm() {
     }
 
     if (!url || !name || !description || !price || !radioSelected) {
-        alert("No puede haber campos vacios");   
+        swal({
+            title: "No puede haber campos vacios",
+            icon: "warning",
+            button: "Ok",
+          });
         return false
     }
 
     return item.addProduct(name, description, url, price, type),
     document.getElementById("productForm").reset(),
     document.getElementById("preImageProduct"). src="./assets/images/previsual.png",
-    alert("El archivo se subio correctamente.");
+    swal({
+        title: "El producto se registro correctamente",
+        icon: "success",
+        button: "Ok",
+      });
     
 }
 
