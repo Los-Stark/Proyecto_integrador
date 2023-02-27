@@ -51,19 +51,21 @@ function hideShoppingCart() {
     if (showShoppingCar) {
         document.getElementById("shoppingCart").innerHTML = '';
         showShoppingCar = false;
-
     }
-
     else {
         setTimeout(car, 350)
     }
 }
-
+/**
+ * Funcion que muestra el carrito
+ */
 function car() {
     document.getElementById("shoppingCart").innerHTML = shopCart;
     showShoppingCar = true;
 }
-
+/**
+ * Funcion que evalua si hay rotacion de pantalla
+ */
 window.addEventListener("orientationchange", () => {
     let rotation = window.orientation;
     console.log(rotation)

@@ -45,7 +45,6 @@ function addToCartClicked(event) {
   const itemTitle = item.querySelector('p').textContent;
   const itemPrice = item.querySelector('#CardPrice').textContent;
   const itemImage = item.querySelector('img').src;
-  console.log(itemImage + " " + itemPrice + " " + itemTitle)
   itemsToCart.addProductToCart(itemTitle, itemPrice, itemImage);
 
   /* addItemToCart(itemTitle, itemPrice, itemImage); */
