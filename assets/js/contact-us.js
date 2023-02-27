@@ -1,6 +1,5 @@
 const formulario = document.getElementById('registration');
 const inputs= document.querySelectorAll('#registration input');
-console.log("Prueba")
 //Expresiones para formulario
 const expresiones = {
 	//usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
@@ -73,7 +72,11 @@ inputs.forEach((input)=>{
 
     if(campos.name && campos.email && campos.phone && campos.message){
         //document.getElementById("registration").setAttribute("onsubmit", "return true")
-        alert("Enviado correctamente");
+        swal({
+            title: "Enviado correctamente!",
+            icon: "success",
+            button: "Ok",
+          });
         formulario.submit();
         document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
     }else if(!name || !email || !phone || !message){ 
