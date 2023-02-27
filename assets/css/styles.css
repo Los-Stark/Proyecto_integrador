@@ -5,14 +5,16 @@
 
 .container_vision{
     width: 100%;
-    margin: auto;
+   /*  margin: auto; */
+    margin-bottom: 5px; 
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    position: absolute;
-    top: 70%;
+   /*  position: absolute;
+    top: 60%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
 
 }
 .card_vision{
@@ -20,6 +22,7 @@
     height: 30%;
     margin: 10px;
     padding: 20px;
+    padding-bottom: 40px;
     box-shadow: 20px 30px 60px rgba(0, 0, 0, 0.1);
     background: rgba(207, 198, 207, 0.1);
     border-left: 1px solid rgb(184, 180, 180, 0.1);
@@ -36,6 +39,7 @@
     width: 70%;
     height: 190px;
     justify-content: center;
+    text-align: justify;
     
 }
 .imagen{
@@ -65,10 +69,10 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    position: absolute;
-    top: 220%;
+   /*  position: absolute; */
+/*     top: 220%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
 }
 /*tamaño de las tarjetas, color, otros*/
 .card{
