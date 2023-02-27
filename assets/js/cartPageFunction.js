@@ -1,6 +1,5 @@
 let ProductsOfCart = JSON.parse(localStorage.getItem("ProductsToCart"));
 function addItemToCart() {
-  let subtotalPrice=0;
   for (let index = 0; index < ProductsOfCart.length; index++) {
 
     console.log(ProductsOfCart[index].title)
@@ -22,11 +21,8 @@ function addItemToCart() {
     //const cartItems = document.getElementById('cart-items');
     document.querySelector(".panel-products").appendChild(cartItem);
     //Calculando precio total
-    subtotalPrice+=parseInt(ProductsOfCart[index].price);
   }
-  document.querySelector('.subtotal').innerText=`$${subtotalPrice}`;
-  document.querySelector('.shippingPrice').innerText=`$${subtotalPrice*0.05}`;
-  document.querySelector('.total').innerText=`$${subtotalPrice*1.05}`;
+  prices();
   // Se agrega un controlador de eventos para el botón "Eliminar"
   const removeButtons = document.querySelectorAll('.remove-item');
   removeButtons.forEach(button => {
@@ -34,12 +30,27 @@ function addItemToCart() {
   });
 }
 
+const prices = () => {
+  let subtotalPrice=0;
+  for (let index = 0; index < ProductsOfCart.length; index++) {
+    subtotalPrice += parseInt(ProductsOfCart[index].price);
+  }
+  document.querySelector('.subtotal').innerText = `$${subtotalPrice}`;
+  document.querySelector('.shippingPrice').innerText = `$${subtotalPrice * 0.05}`;
+  document.querySelector('.total').innerText = `$${subtotalPrice * 1.05}`;
+}
 
 addItemToCart();
 function removeItem(event) {
   const buttonClicked = event.target;
   const productToDrop = buttonClicked.value;
-  console.log(productToDrop);
+
+  for (const key in ProductsOfCart) {
+    if (ProductsOfCart[key].order == productToDrop) { ProductsOfCart.splice(key, 1) }
+
+  }
+  prices();
+  localStorage.setItem("ProductsToCart", JSON.stringify(ProductsOfCart))
   buttonClicked.parentNode.remove();
 
 }

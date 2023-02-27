@@ -3,9 +3,9 @@
 class CartClass {
   constructor(currentOrder=0) {
     const localData=JSON.parse(localStorage.getItem("ProductsToCart"));
-    if (!Object.is(null, localData)){
+    if (!Object.is(null, localData) && Object.keys(localData).length != 0){
       this.listCartProducts = localData;
-      this.currentOrder=localData.length;
+      this.currentOrder=localData[localData.length-1].order;
       }
       else{
     this.listCartProducts = [];
@@ -16,7 +16,7 @@ class CartClass {
 
   addProductToCart(title, price, image) {
     const productCart = {
-      order: this.currentOrder++,
+      order: ++this.currentOrder,
       title: title,
       price: price,
       image: image
