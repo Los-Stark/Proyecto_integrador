@@ -189,7 +189,11 @@ inputsAddUser.forEach((input)=>{
     if(fields.name && fields.user && fields.phone && fields.email && fields.password){
             item.addNewUsers(formAddUser.name.value, formAddUser.user.value, formAddUser.phone.value, formAddUser.email.value, formAddUser.password.value),
             formAddUser.reset();
-            alert("Registrado correctamente");
+            swal({
+                title: "Registrado correctamente!",
+                icon: "success",
+                button: "Ok",
+              });
             document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
     }else{ 
         (!fields.name && !fields.user && !fields.phone && !fields.email && !fields.password)
@@ -213,12 +217,21 @@ formLoginUser.addEventListener('submit',(e)=>{
     if (userObj[index].user == username && userObj[index].password == password) {
         error = false;
         formLoginUser.reset();
-        alert(`Bienvenido ${username}`);
+        swal({
+            title: `Bienvenido ${username}`,
+            icon: "success",
+            button: "Ok",
+          });
         break;
     }
   }
   if (error) {
-    alert('Nombre de usuario o contraseña incorrectos. Inténtalo de nuevo.');
+    swal({
+        title: "Nombre de usuario o contraseña incorrectos.",
+        icon: "warning",
+        text: "Inténtalo de nuevo.",
+        button: "Ok",
+      });
 }
   
 });
