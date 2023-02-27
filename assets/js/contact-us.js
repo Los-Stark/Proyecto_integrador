@@ -1,7 +1,7 @@
 const formulario = document.getElementById('registration');
 const inputs= document.querySelectorAll('#registration input');
 console.log("Prueba")
-
+//Expresiones para formulario
 const expresiones = {
 	//usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
 	name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -10,7 +10,7 @@ const expresiones = {
 	phone: /^\d{10}$/, // 7 a 14 numeros.
     message: /^[a-zA-ZÀ-ÿ\s]{1,1000}$/
 }
-
+//Incializacion de campos
 const campos ={
     name:false,
     email:false,
@@ -18,6 +18,11 @@ const campos ={
     message:false,
 }
 
+
+/**
+ * 
+ * @param {*} e Funcion que evalua si la expresion coindide con el texto introducido
+ */
 const validarFormulario=(e)=>{
    switch(e.target.name){
     case "name":
@@ -35,7 +40,12 @@ const validarFormulario=(e)=>{
    }
 
 }
-
+/**
+ * 
+ * @param {*} expresion Valores correctos para que el campo sea true
+ * @param {*} input El valor introducido por el usuario
+ * @param {*} campo Valor para poder mostrar en el html el lugar exacto donde tuvo el error
+ */
 const validarCampo=(expresion,input, campo)=>{
     if(expresion.test(input.value)){
         document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
@@ -48,11 +58,16 @@ const validarCampo=(expresion,input, campo)=>{
     }
 }
 
+/**
+ * Evalua cada una de los inputs y llama las funciones de validarformulario
+ */
 inputs.forEach((input)=>{
     input.addEventListener('keyup',validarFormulario);
     input.addEventListener('blur',validarFormulario);
 });
-
+/**
+ * Funcion llamada por el boton de submit, con las disitintas evaluaciones previas
+ */
   formulario.addEventListener('submit',(e)=>{
     e.preventDefault();
 

@@ -3,7 +3,7 @@
  * Clase para creacion de objetos y guardarlos en memoria local
  */
 class Item {
-    //Creacion de id
+    //Creacion de id y arreglo de productos
     constructor(startId = 0) {
         this.products = [];
         this.startId = startId;
@@ -19,21 +19,23 @@ class Item {
             type: type
 
         };
-
+        //Guarda en memoria local
         this.products.push(product);
-
         localStorage.setItem("Products", JSON.stringify(this.products));
     }
 }
 
-//Previsualizacion de imagen
+//Previsualizacion de imagen 
 let urlImage = document.getElementById("url-image");
 urlImage.addEventListener('input', () =>
     document.getElementById("preImageProduct")
         .setAttribute("src", urlImage.value));
 //Constructor
 const item = new Item(0);
-
+/**
+ * 
+ * @returns la validacion de los datos del formulario e agregar productos
+ */
 function validateForm() {
     let url = document.getElementById("url-image").value;
     let name = document.getElementById("name-product").value;

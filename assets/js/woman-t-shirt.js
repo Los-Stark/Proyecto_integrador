@@ -1,3 +1,7 @@
+/**
+ * 
+ * @param {*} item Cada objeto que se puede colocar para vender y su formato
+ */
 function addItem(item) {
 
     const itemTemplate = `

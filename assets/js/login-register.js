@@ -204,16 +204,12 @@ formLoginUser.addEventListener('submit',(e)=>{
 
 // Obtener los valores de los campos de entrada
   let username = document.getElementById('user-login').value;
-    console.log(username);
   let password = document.getElementById('password-login').value;
-    console.log(password);
 // Verificar si el objeto del usuario existe en el almacenamiento local
   let userObj = JSON.parse(localStorage.getItem('listUsers'));
-  console.log(userObj);
     
   let error=true;
   for (let index = 0; index < userObj.length; index++) {
-    console.log(userObj[index].password);
     if (userObj[index].user == username && userObj[index].password == password) {
         error = false;
         formLoginUser.reset();
