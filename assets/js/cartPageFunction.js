@@ -10,12 +10,13 @@ function addItemToCart() {
     const cartItem = document.createElement('div');
     cartItem.classList.add('cart-item');
     const cartContents = `
-      <img src="${ProductsOfCart[index].image}" alt="${ProductsOfCart[index].title}">
-      <div>
-        <h3>${ProductsOfCart[index].title}</h3>
-        <h4>${ProductsOfCart[index].price}</h4>
-      </div>
-      <button class="remove-item" value="${ProductsOfCart[index].order}">Eliminar</button>
+    <div class="row"> <!-- columnas propocionales -->
+    <img id="image-product" class="col image-fluid  col-sm-6 col-md-3 col-lg-3" src="${ProductsOfCart[index].image}" alt="${ProductsOfCart[index].title}">
+    <div class="col product-name col-sm-3 col-md-3 col-lg-3">${ProductsOfCart[index].title}</div>
+    <div class="col product-price  col-sm-1 col-md-2 col-lg-2">${ProductsOfCart[index].price}</div>
+    <div class="col total  col-sm-6 col-md-2 col-lg-2"><strong>150</strong></div>
+    <button class="col remove-item col-sm-2 col-md-6 col-lg-2">Borrar</button>
+  </div>
     `;
     cartItem.innerHTML = cartContents;
     // Se agrega el elemento al contenedor del carrito
