@@ -64,47 +64,32 @@ transition: 0.5s;
     max-width: 190px;
     box-shadow: 2px 5px 5px;
  }
-/* !important; */
-/* Estos estilos no se estan sando */
-/* .prueba h3{
-    font-size: 20px;
-    text-align: center;
-
-}
-
-.prueba{
-    text-align: center;
-   
-   
-
-   
-}
-
-.prueba button{
-    position: relative;
-    right: 100px;
-    background: black;
+ .add-to-cart{
+    background-color: #6f6cb8;
+    border-radius: 5px;
+    width: 10rem;
+    height: 3rem;
     color: white;
-    font-weight: 900;
-    transition: 0.5s all;
-
-
+    transition-duration: 200ms;
+    border-color: #6f6cb800;
+    font-family: url(/assets/css/fonts/Montserrat-Italic-VariableFont_wght.ttf);
+    font-size: 14px;
+    margin-top: 1rem;
 }
 
-.prueba button:hover{
-    transform: scale(1.20);
+.add-to-cart:hover{
+    background-color :#e61050 ;
 }
 
-.prueba img{
-    justify-content: center;
-    margin-top: 5px;
+#precioMasVendido1{
+    border-radius: 5px;
+    background-color:#eef2f6;
+    color: #6F6CB8;
+    text-align: center;
+    font-size: 15px;
 }
 
-.prueba .precio{
-    display: inline-block;
-    position: relative;
-    left: 4em;
-} */
+
 
 
 

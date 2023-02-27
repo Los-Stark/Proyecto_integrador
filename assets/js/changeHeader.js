@@ -16,9 +16,9 @@ const changeDropdown = () => {
         </ul>
     </div>
 
-    <a class="nav-link " href="/logInRegister.html"><button class="btn"> Acceder</button></a>
     <a class="nav-link " href="/contact-us.html"><button class="btn">Contáctanos</button></a>
     <a class="nav-link " href="/about-us.html"><button class="btn">Conócenos</button></a>
+    <a class="nav-link " href="/logInRegister.html"><button class="btn"> Acceder</button></a>
     `;
     /* Estilo de HTML cuando la pantalla es menor de 768 pixelex (Lista) */
     const listStyle = `
@@ -26,9 +26,9 @@ const changeDropdown = () => {
     <a class="nav-link liststyle" href="/man-t-shirt.html">Playeras de Caballero</a>
     <a class="nav-link liststyle" href="/woman-t-shirt.html">Playeras de dama</a>
     <a class="nav-link liststyle" href="/hoodie.html">Sudaderas</a>
-    <a class="nav-link liststyle" href="/logInRegister.html">Acceder</a>
     <a class="nav-link liststyle" href="/contact-us.html">Contáctanos</a>
     <a class="nav-link liststyle" href="/about-us.html">Conócenos</a>
+    <a class="nav-link liststyle" href="/logInRegister.html">Acceder</a>
     `;
     /* Evaluacion de tamaño de pantalla */
     window.innerWidth < 768 ? navstyle.innerHTML = listStyle : navstyle.innerHTML = buttonstyle;
