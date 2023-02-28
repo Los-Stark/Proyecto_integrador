@@ -19,34 +19,34 @@ function addItem(item) {
     itemsContainer.innerHTML += itemTemplate;
   }
 
-    addItem({'name':'Izuku Midoriya',
-    'img':'./assets/images/woman-t-shirt/deku-pld-mar.png',
-    'price':'150'})
-    addItem({'name':'Izuku Midoriya',
-    'img':'./assets/images/woman-t-shirt/deku-pld-neg.png',
-    'price':'150'})
-    addItem({'name':'Izuku Midoriya',
-    'img':'./assets/images/woman-t-shirt/denji-pld-neg.png',
-    'price':'150'})
-    addItem({'name':'Izuku Midoriya',
-    'img':'./assets/images/woman-t-shirt/denji-pld-mar.png',
-    'price':'150'})
-    addItem({'name':'Izuku Midoriya',
-    'img':'./assets/images/woman-t-shirt/eren-pld-mar.png',
-    'price':'150'})
-    addItem({'name':'Izuku Midoriya',
-    'img':'./assets/images/woman-t-shirt/eren-pld-neg.png',
-    'price':'150'})
-    addItem({'name':'Izuku Midoriya',
-    'img':'./assets/images/woman-t-shirt/luffy-pld-neg.png',
-    'price':'150'})
-    addItem({'name':'Izuku Midoriya',
-    'img':'./assets/images/woman-t-shirt/luffy-pld-mar.png',
-    'price':'150'})
-    addItem({'name':'Izuku Midoriya',
-    'img':'./assets/images/woman-t-shirt/tanjiro-pld-neg.png',
-    'price':'150'})
-    addItem({'name':'Izuku Midoriya',
-    'img':'./assets/images/woman-t-shirt/tanjiro-pld-mar.png',
-    'price':'150'})
+  addItem({'name':'Izuku Midoriya',
+  'img':'./assets/images/woman-t-shirt/deku-pld-mar.png',
+  'price':'150'})
+  addItem({'name':'Izuku Midoriya',
+  'img':'./assets/images/woman-t-shirt/deku-pld-neg.png',
+  'price':'150'})
+  addItem({'name':'Denji',
+  'img':'./assets/images/woman-t-shirt/denji-pld-neg.png',
+  'price':'150'})
+  addItem({'name':'Denji',
+  'img':'./assets/images/woman-t-shirt/denji-pld-mar.png',
+  'price':'150'})
+  addItem({'name':'Eren',
+  'img':'./assets/images/woman-t-shirt/eren-pld-mar.png',
+  'price':'150'})
+  addItem({'name':'Eren',
+  'img':'./assets/images/woman-t-shirt/eren-pld-neg.png',
+  'price':'150'})
+  addItem({'name':'Monkey D. Luffy',
+  'img':'./assets/images/woman-t-shirt/luffy-pld-neg.png',
+  'price':'150'})
+  addItem({'name':'Monkey D. Luffy',
+  'img':'./assets/images/woman-t-shirt/luffy-pld-mar.png',
+  'price':'150'})
+  addItem({'name':'Tanjiro Kamado',
+  'img':'./assets/images/woman-t-shirt/tanjiro-pld-neg.png',
+  'price':'150'})
+  addItem({'name':'Tanjiro Kamado',
+  'img':'./assets/images/woman-t-shirt/tanjiro-pld-mar.png',
+  'price':'150'})
   
