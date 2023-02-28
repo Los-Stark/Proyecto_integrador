@@ -35,7 +35,7 @@
         </div>
         <a class="nav-link" href="shopping-cart.html" id="shoppingCart"></a>
         <button class="btn" id="shoppingCartBtn">
-          <img src="assets/images/cart2.svg" alt="carro-de-la-compra"><span id="cartItems"></span>
+          <img src="assets/images/cart2.svg" alt="carro-de-la-compra">
         </button>
         </a>
       </div>
@@ -52,10 +52,10 @@
           <thead>
             <tr class="container-fluid" id="table-product">
               <div class="row">
-                <div class="product col d-lg-block d-none col-lg-3"> <strong>Producto</strong></div>
-                <div class="product col  d-lg-block d-none col-lg-3"> <strong>Descripción</strong></div>
-                <div class="product col  d-lg-block d-none col-lg-2"> <strong>Precio </strong></div>
-                <div class="product col  d-lg-block d-none col-lg-2"> <strong>Total</strong></div>
+                <!-- <div class="product  d-lg-block d-none col-lg-4 col-xl-3"> <strong></strong></div> -->
+                <div class="product   d-lg-block d-none col-lg-3 col-xl-4"> <strong>Producto</strong></div>
+                <div class="product   d-lg-block d-none col-lg-3 col-xl-5"> <strong> Precio </strong></div>
+                <div class="product   d-lg-block d-none col-lg-3 col-xl-3"></div>
               </div>
             </tr>
           </thead>
@@ -64,54 +64,37 @@
               <!-- Aquí se agregarían las filas de los productos -->
             </div>
           </tbody>
-          <tfoot>
-            <tr>
-              <div colspan="3" class="text-right"><strong>Subtotal:</strong></div>
-              <div class="text-right subtotal">$0.00</div>
-            </tr>
-            <tr>
-              <div colspan="3" class="text-right"><strong>Envío:</strong></div>
-              <div class="text-right shippingPrice">$0.00</div>
-            </tr>
-            <tr>
-              <div colspan="3" class="text-right"><strong>Total:</strong></div>
-              <div class="text-right total">$0.00</div>
-            </tr>
-          </tfoot>
         </table>
       </section>
     </div> <!-- termina la primera columna -->
 
-    <!-- Sección para ingresar datos -->
-    <div class="col-md-4">
-      <section id="contenedor" class="conteiner-fluid my-5">
+    <!-- Sección resumen pedido -->
+    <div class="col-md-4"> 
+      <section id="shopping-cart" class="conteiner-fluid my-5">
         <div id="conteiner-fluid" row align-items-center py-4>
-          <div id="shopping">
-            <form class="row g-3" id="shopping-cart">
-              <div id="grupo__name" class="formulario__grupo  col-12 wrap-input1">
-                <label class="formulario__label title-label"> Nombre</label>
-                <input class="input1 formulario__input" type="text" name="name" id="name" placeholder="ej. Juan">
-              </div>
+          <span id="resumen"><strong>Resumen de pedido</strong></span>
+            <br>
+            <div class="row">
+              <div colspan="3" class="col-sm-8 col-md-8 text-right"><strong>Subtotal:</strong></div>
+              <div class="col-sm-4 col-md-4 subtotal">$0.00</div>
+            </div>
 
-              <div id="grupo__email" class="formulario__grupo  col-12 wrap-input1">
-                <label class="formulario__label title-label"> Email </label>
-                <input class="input1 formulario__input" type="text" name="email" id="email"
-                  placeholder="ej. juan@correo.com">
-              </div>
+            <div class="row">
+              <div colspan="3" class="col-sm-8 col-md-8 text-right"><strong>Envío:</strong></div>
+              <div class="col-sm-4 col-md-4 shippingPrice">$0.00</div>
+            </div>
 
-              <div id="grupo__message" class="formulario__grupo col-12 wrap-input1">
-                <label class="formulario__label title-label"> Dirección de envío </label>
-                <textarea class="input1-message formulario__input" name="message" id="message"
-                  placeholder="Mensaje"></textarea>
-              </div>
-
-              <button class="button-buy" type="submit">Realizar compra</button>
-            </form>
-          </div>
-
+            <div class="row">
+              <div colspan="3" class="col-sm-8 col-md-8 text-right"><strong>Total:</strong></div>
+              <div class="col-sm-4 col-md-4 total">$0.00</div> <br>
+              <button class="button-buy" type="submit">Comprar</button>
+              
+            </div>
         </div>
-
       </section>
+      <p id="metodo-pago"><strong>Aceptamos</strong></p>
+      <img src="https://i.ibb.co/h7Cxm5D/metodo-pago.png" alt="metodo-pago" class="image-card img-fluid">
+      
     </div>
   </div>
 
@@ -133,7 +116,6 @@
     crossorigin="anonymous"></script>
   <script src="assets/js/changeHeader.js"></script>
   <script src="./assets/js/cartPageFunction.js"></script>
-  <script src="./assets/js/shopping-cart.js"></script>  
 
 </body>
 
