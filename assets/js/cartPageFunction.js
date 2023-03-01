@@ -12,7 +12,8 @@ function addItemToCart() {
     <img id="image-product" class="col image-fluid  col-sm-6 col-md-3 col-lg-3 col-xl-3" src="${ProductsOfCart[index].image}" alt="${ProductsOfCart[index].title}">
     <div class="col product-name col-sm-3 col-md-3 col-lg-3 col-xl-3">${ProductsOfCart[index].title}</div>
     <div class="col product-price  col-sm-1 col-md-2 col-lg-3 col-xl-3">${ProductsOfCart[index].price}</div>
-    <button class="col remove-item col-sm-2 col-md-6 col-lg-3 col-xl-3" value="${ProductsOfCart[index].order}"><img src="assets/images/icons-waste.png" alt="borrar-producto"></button>
+    <button class="col remove-item col-sm-2 col-md-6 col-lg-3 col-xl-3" value="${ProductsOfCart[index].order}">
+    <img src="assets/images/icons-waste.png" alt="borrar-producto"></button>
     </div>
     `;
     cartItem.innerHTML = cartContents;
@@ -49,14 +50,20 @@ const prices = () => {
  */
 function removeItem(event) {
   const buttonClicked = event.target;
-  const productToDrop = buttonClicked.value;
-  for (const key in ProductsOfCart) {
-    if (ProductsOfCart[key].order == productToDrop) { ProductsOfCart.splice(key, 1) }
+  let position = 0;
+  console.log(buttonClicked.value);
+  for (let index = 0; index < ProductsOfCart.length; index++) {
+    if (ProductsOfCart[index].order == buttonClicked.value) 
+    {
+      position=index;
 
+    }
   }
+  console.log(position);
+  ProductsOfCart.splice(position, 1) 
   prices();
   localStorage.setItem("ProductsToCart", JSON.stringify(ProductsOfCart))
-  buttonClicked.parentNode.remove();
+  buttonClicked.parentNode.parentNode.remove();
 }
 //Llamada de la funcion
 addItemToCart();
