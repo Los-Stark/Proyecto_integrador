@@ -5,17 +5,10 @@
 
 .container_vision{
     width: 100%;
-   /*  margin: auto; */
     margin-bottom: 5px; 
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-   /*  position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
-
 }
 
 .titleAbout{
@@ -142,6 +135,7 @@ body{
     font-weight: 300;
     color: rgb(0, 0, 0);
     letter-spacing: 1px;
+    
 }
 /*etiqueta hr*/
 .card hr{

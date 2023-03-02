@@ -284,3 +284,7 @@ body {
     color: white;
     background-color: #e61050;
 }
+
+.waste-icon {
+    pointer-events: none;
+}
