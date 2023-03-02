@@ -49,9 +49,10 @@ const prices = () => {
  * para mostrarlos
  */
 function removeItem(event) {
-  const buttonClicked = event.target;
+  let buttonClicked = event.target;
   let position = 0;
-  console.log(buttonClicked.value);
+  if(Object.is(null, buttonClicked.getAttribute("value")))
+      buttonClicked = buttonClicked.parentNode;
   for (let index = 0; index < ProductsOfCart.length; index++) {
     if (ProductsOfCart[index].order == buttonClicked.value) 
     {
@@ -59,7 +60,6 @@ function removeItem(event) {
 
     }
   }
-  console.log(position);
   ProductsOfCart.splice(position, 1) 
   prices();
   localStorage.setItem("ProductsToCart", JSON.stringify(ProductsOfCart))
