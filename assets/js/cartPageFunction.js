@@ -12,7 +12,7 @@ function addItemToCart() {
     <img id="image-product" class="col image-fluid  col-sm-6 col-md-3 col-lg-3 col-xl-3" src="${ProductsOfCart[index].image}" alt="${ProductsOfCart[index].title}">
     <div class="col product-name col-sm-3 col-md-3 col-lg-3 col-xl-3">${ProductsOfCart[index].title}</div>
     <div class="col product-price  col-sm-1 col-md-2 col-lg-3 col-xl-3">${ProductsOfCart[index].price}</div>
-    <button class="col remove-item col-sm-2 col-md-6 col-lg-3 col-xl-3" value="${ProductsOfCart[index].order}"><img src="assets/images/icons-waste.png" alt="borrar-producto"></button>
+    <button class="col remove-item col-sm-2 col-md-6 col-lg-3 col-xl-3" value="${ProductsOfCart[index].order}"><img class="waste-icon" src="assets/images/icons-waste.png" alt="borrar-producto"></button>
     </div>
     `;
     cartItem.innerHTML = cartContents;
