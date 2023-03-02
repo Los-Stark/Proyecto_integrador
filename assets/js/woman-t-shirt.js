@@ -10,6 +10,15 @@ function addItem(item) {
     <p id="CardName">${item.name}</p>
     <div class="row align-items-center d-flex justify-content-center">
     <div id="CardPrice"  class=" col-8 col-md-4 p-2"  >$${item.price}</div>
+    <div class="size">
+                        <p>
+                            <label class="col-sm-3"> <input name="typeSize" type="radio" value="1">Ch
+                                </label>
+                            <label class="col-sm-3"> <input name="typeSize" type="radio" value="2">M
+                                </label>
+                            <label class="col-sm-3"> <input name="typeSize" type="radio" value="3">G</label>
+                        </p>
+                    </div>
     <button class="add-to-cart">Agregar al carrito</button>
         </div>
       </div>

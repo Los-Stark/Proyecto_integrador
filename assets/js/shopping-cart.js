@@ -67,6 +67,7 @@ function addToCartClicked(event) {
 itemsToCart.updateCartItems();
 addToCartClicked()
 
+var productCounters = {};
 
 
 
