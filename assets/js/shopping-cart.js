@@ -57,8 +57,6 @@ function addToCartClicked(event) {
   const itemPrice = item.querySelector('#CardPrice').textContent;
   const itemImage = item.querySelector('img').src;
   itemsToCart.addProductToCart(itemTitle, itemPrice, itemImage);
-
-  console.log( itemPrice );
   itemsToCart.updateCartItems();
   
 
@@ -67,5 +65,6 @@ function addToCartClicked(event) {
 itemsToCart.updateCartItems();
 addToCartClicked()
 
+var productCounters = {};
 
 

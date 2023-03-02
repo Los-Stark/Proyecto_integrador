@@ -10,7 +10,16 @@ function addItem(item) {
     <p id="CardName" >${item.name}</p>
     <div class="row align-items-center d-flex justify-content-center">
     <div id="CardPrice"class=" col-8 col-md-4 p-2  ">$${item.price}</div>
-    <button onclick=" masBoton()" class="add-to-cart">Agregar al carrito</button>
+    <div class="size">
+                        <p>
+                            <label class="col-sm-3"> <input name="typeSize" type="radio" value="1">Ch
+                                </label>
+                            <label class="col-sm-3"> <input name="typeSize" type="radio" value="2">M
+                                </label>
+                            <label class="col-sm-3"> <input name="typeSize" type="radio" value="3">Gr</label>
+                        </p>
+                    </div>
+    <button class="add-to-cart">Agregar al carrito</button>
         </div>
       </div>
     `;
@@ -19,33 +28,34 @@ function addItem(item) {
     itemsContainer.innerHTML += itemTemplate;
   }
 
-  addItem({'name':'Izuku Midoriya',
-  'img':'./assets/images/man-t-shirt/deku-pl-gris.png',
-  'price':'150'})
-  addItem({'name':'Izuku Midoriya',
+  addItem ({'name':'Izuku Midoriya',
   'img':'./assets/images/man-t-shirt/deku-pl-neg.png',
   'price':'150'})
   addItem({'name':'Izuku Midoriya',
+  'img':'./assets/images/man-t-shirt/deku-pl-gris.png',
+  'price':'150'})
+  addItem({'name':'Denji',
   'img':'./assets/images/man-t-shirt/denji-pl-gris.png',
   'price':'150'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'Denji',
   'img':'./assets/images/man-t-shirt/denji-pl-neg.png',
   'price':'150'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'Eren',
   'img':'./assets/images/man-t-shirt/eren-pl-neg.png',
   'price':'150'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'Eren',
   'img':'./assets/images/man-t-shirt/eren-pl-gris.png',
   'price':'150'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'Monkey D. Luffy',
   'img':'./assets/images/man-t-shirt/luffi-pl-neg.png',
   'price':'150'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'Monkey D. Luffy',
   'img':'./assets/images/man-t-shirt/luffy-pl-gris.png',
   'price':'150'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'Tanjiro Kamado',
   'img':'./assets/images/man-t-shirt/tanjiro-pl-neg.png',
   'price':'150'})
-  addItem({'name':'Izuku Midoriya',
+  addItem({'name':'Tanjiro Kamado',
   'img':'./assets/images/man-t-shirt/tanjiro-pl-gris.png',
   'price':'150'})
+  
