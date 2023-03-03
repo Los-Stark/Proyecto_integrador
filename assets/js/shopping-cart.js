@@ -63,7 +63,6 @@ function addToCartClicked(event) {
   /* addItemToCart(itemTitle, itemPrice, itemImage); */
 }
 itemsToCart.updateCartItems();
-addToCartClicked()
 
 var productCounters = {};
 

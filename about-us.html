@@ -1,261 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-        <link rel="shortcut icon" href="./assets/images/cara-anime.jpg">
-        <link rel="stylesheet" href="assets/css/styles.css">
-        <link rel="stylesheet" href="./assets/css/icomoon.css">
-        <title>About us</title>
-    
-    </head>
+    <link rel="shortcut icon" href="./assets/images/cara-anime.jpg">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/icomoon.css">
+    <title>About us</title>
+
+</head>
+
 <body>
-<main>
     <header>
-        <nav class="navbar navbar-expand-md ">
+        <nav class="navbar navbar-expand-md">
             <div class="container-fluid">
-                <button onclick="hideShoppingCart ()" class="navbar-toggler btn" type="button" data-bs-toggle="collapse"
+                <button onclick="hideShoppingCart()" class="navbar-toggler btn" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarScroll" aria-controls="navbarScroll" id="buttonMenu">
-                    <img src="assets//images/menu-icon.png" alt="menu">
+                    <img src="assets/images/menu-icon.png" alt="menu">
                 </button>
                 <a class="navbar-brand" href="index.html">
                     <img class="img-fluid logo" src="./assets/images/logo lateral.png" alt="Logo tienda anime odyssey">
                 </a>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
-                     El codigo que va dentro de este div se encuentra en changeHeader.js -->
+                    <!-- El código que va dentro de este div se encuentra en changeHeader.js -->
+
                 </div>
                 <a class="nav-link" href="shopping-cart.html" id="shoppingCart">
-                    <button class="btn ">
-                        <img src="assets/images/cart2.svg" alt="carro-de-la-compra">
+                    <button class="btn">
+                        <img src="assets/images/cart2.svg" alt="carro-de-la-compra"><span id="cartItems"></span>
                     </button>
                 </a>
             </div>
         </nav>
     </header>
 
-<!--Apartado de quienes somos, misión y visión-->
-    <div class="row p-2  container_vision">
-        <h1 class="titleAbout">ACERCA DE NOSOTROS</h1>
-        <div class="  card_vision">
-            <div class= "parrafoConocenos">
-                <h2>¿Quienes somos?</h2>
+    <main>
+        <!--Apartado de quienes somos, misión y visión-->
+        <div class="row p-2  container_vision">
+            <h1 class="titleAbout">ACERCA DE NOSOTROS</h1>
+            <div class="  card_vision">
+                <div class="parrafoConocenos">
+                    <h2>¿Quienes somos?</h2>
                     <p>
-                    Empresa mexicana que busca la calidad integral de nuestros productos,
-                    de acuerdo con las actuales exigencias y tendencias del mercado.
-                    La innovación y creatividad son nuestra prioridad con el fin
-                    de llevar a nuestros clientes los más recientes diseños y colores para lograr distinción
-                    en cada pieza.
+                        Empresa mexicana que busca la calidad integral de nuestros productos,
+                        de acuerdo con las actuales exigencias y tendencias del mercado.
+                        La innovación y creatividad son nuestra prioridad con el fin
+                        de llevar a nuestros clientes los más recientes diseños y colores para lograr distinción
+                        en cada pieza.
                     </p>
-            </div>
+                </div>
                 <!--el iconGit es para pasar las imagenes de avatar asi como el iconode git y linkdin y se comparten-->
-                <img class= "d-none d-md-block imagenConocenos img-fluid" src="https://i.blogs.es/0bbfb2/equipo-avatar-primera-pelicula-animada/1366_2000.jpeg" alt="perfil-Fernanda"/>
-                
-        </div>
+                <img class="d-none d-md-block imagenConocenos img-fluid"
+                    src="https://i.blogs.es/0bbfb2/equipo-avatar-primera-pelicula-animada/1366_2000.jpeg"
+                    alt="perfil-Fernanda" />
 
-        <div class="card_vision">
-            <div class= "parrafoConocenos">
-                <h2>Misión</h2>
+            </div>
+
+            <div class="card_vision">
+                <div class="parrafoConocenos">
+                    <h2>Misión</h2>
                     <p>
-                    Acercamos a la actualidad, la calidad que tenían los productos
-                    del pasado manteniendo un enfoque en el presente, para satisfacer a
-                    aquellos interesados y conocedores del medio a través de la comercialización de productos de
-                    nicho para agrupaciones con gustos específicos.
-                </p>
+                        Acercamos a la actualidad, la calidad que tenían los productos
+                        del pasado manteniendo un enfoque en el presente, para satisfacer a
+                        aquellos interesados y conocedores del medio a través de la comercialización de productos de
+                        nicho para agrupaciones con gustos específicos.
+                    </p>
+                </div>
+                <img class="col d-none d-md-block imagenConocenos img-fluid"
+                    src="https://media.revistagq.com/photos/5f08145242f91a64e56904be/4:3/w_1440,h_1080,c_limit/avatar_aang.jpg"
+                    alt="perfil-Fernanda" />
             </div>
-                <img class= "col d-none d-md-block imagenConocenos img-fluid" src="https://media.revistagq.com/photos/5f08145242f91a64e56904be/4:3/w_1440,h_1080,c_limit/avatar_aang.jpg" alt="perfil-Fernanda"/>    
+
+            <div class="card_vision">
+                <div class="parrafoConocenos">
+                    <h2>Visión</h2>
+                    <p>
+                        Ser una plataforma de ropa referente, original y vanguardista
+                        del anime, para lograr tener un alcance de posicionamiento en la industria
+                        textil y así ofrecer productos de alta calidad.
+                    </p>
+                </div>
+                <img class="col d-none d-md-block imagenConocenos  img-fluid"
+                    src="https://img.wattpad.com/3d0f0ac1385559113fbac2edafb7ce5587c58d90/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f35387353646c46344d636d3971513d3d2d313031333531353330372e313635626461393332636362343635633734313434343737373936342e6a7067?s=fit&w=720&h=720"
+                    alt="perfil-Fernanda" />
+            </div>
         </div>
 
-        <div class="card_vision">
-            <div class= "parrafoConocenos">
-            <h2>Visión</h2>
-                <p>
-                    Ser una plataforma de ropa referente, original y vanguardista
-                    del anime, para lograr tener un alcance de posicionamiento en la industria
-                    textil y así ofrecer productos de alta calidad.
-                </p>
-            </div>
-            <img class= "col d-none d-md-block imagenConocenos  img-fluid" src="https://img.wattpad.com/3d0f0ac1385559113fbac2edafb7ce5587c58d90/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f35387353646c46344d636d3971513d3d2d313031333531353330372e313635626461393332636362343635633734313434343737373936342e6a7067?s=fit&w=720&h=720" alt="perfil-Fernanda"/>   
-        </div>
-    </div>
+        <!--nuestras tarjetas (imagenes, descripción, fecha)-->
+        <h1 class="titleAbout">EQUIPO</h1>
+        <div class="container__cards"><!--Fernanda-->
+            <div class="card">
+                <div class="cover__card">
+                    <img src="https://i.ibb.co/qJRTsGv/foto.jpg" alt="perfil-Fernanda" />
+                </div>
 
-<!--nuestras tarjetas (imagenes, descripción, fecha)-->
-<h1  class="titleAbout">EQUIPO</h1>
-    <div class="container__cards"><!--Fernanda-->
-        <div class="card">
-            <div class="cover__card">
-                <img src="https://i.ibb.co/qJRTsGv/foto.jpg" alt="perfil-Fernanda"/>
-            </div>
-
-            <div class="card_letter">
-                <h2>Fernanda</h2>
-                <p> Soy Fernanda, tengo como objetivo poder desarrollarme en el área de 
-                    programación mediante el aprendizaje de diversos lenguajes.
-                </p>
-            </div>
-            <hr>
-            <div class="footer__card">
-                <i>Febrero 2023</i>
-                <a href="https://github.com/feeross" target="_blank"><img class="img-fluid iconGit" alt="Github-logo"
-                    src="./assets/images/icons8-github-30.png"></a>
-                <a href="https://www.linkedin.com/in/maria-fernanda-rosales" target="_blank"><img
-                    class="img-fluid" alt="Linkedln-logo"
-                    src="./assets/images/icons8-linkedin-circled-30.png"></a>
-            </div>
-        </div>
-        
-
-        <div class="card"><!--Juanito-->
-            <div class="cover__card">
-                <img src="https://i.ibb.co/Mpd3WkX/IMG-20210713-204246-202.jpg" alt="perfil-juan" />
-            </div>
-            <div class="card_letter">
-                <h2>Juan Marcos</h2>
-                <p>Soy Juan Marcos, una persona con mucho interés por aprender y de transmitir a otras personas
-                mi conocimiento.
-                </p>
-            </div>
+                <div class="card_letter">
+                    <h2>Fernanda</h2>
+                    <p> Soy Fernanda, tengo como objetivo poder desarrollarme en el área de
+                        programación mediante el aprendizaje de diversos lenguajes.
+                    </p>
+                </div>
                 <hr>
-            <div class="footer__card">
-                <i>Febrero 2023</i>
-                <a href="https://github.com/juanmgonro" target="_blank"><img class="img-fluid iconGit" alt="Github-logo"
-                    src="./assets/images/icons8-github-30.png"></a>
-                <a href="https://www.linkedin.com/in/juan-marcos-gonzalez-romo-0388091a0" target="_blank"><img
-                    class="img-fluid" alt="Linkedln-logo"
-                    src="./assets/images/icons8-linkedin-circled-30.png"></a>
-                
+                <div class="footer__card">
+                    <i>Febrero 2023</i>
+                    <a href="https://github.com/feeross" target="_blank"><img class="img-fluid iconGit"
+                            alt="Github-logo" src="./assets/images/icons8-github-30.png"></a>
+                    <a href="https://www.linkedin.com/in/maria-fernanda-rosales" target="_blank"><img class="img-fluid"
+                            alt="Linkedln-logo" src="./assets/images/icons8-linkedin-circled-30.png"></a>
+                </div>
             </div>
-        </div>
 
-        <div class="card"><!--Alex-->
-            <div class="cover__card">
-                <img src="https://i.ibb.co/Y0vHzd3/1661913221711.jpg" alt="perfil-Alex">
-            </div>
-            <div class="card_letter">
-                <h2>Alex</h2>
-                <p>Mi nombre es Alejandro Morales, trabajé durante 8 años en el área
-                de tecnologías. Soy amante de la programación y del aprendizaje.
-                </p>
-            </div>
+
+            <div class="card"><!--Juanito-->
+                <div class="cover__card">
+                    <img src="https://i.ibb.co/Mpd3WkX/IMG-20210713-204246-202.jpg" alt="perfil-juan" />
+                </div>
+                <div class="card_letter">
+                    <h2>Juan Marcos</h2>
+                    <p>Soy Juan Marcos, una persona con mucho interés por aprender y de transmitir a otras personas
+                        mi conocimiento.
+                    </p>
+                </div>
                 <hr>
-            <div class="footer__card">
-                <i>Febrero 2023</i>
-                <a href="https://github.com/Alejandromorales27" target="_blank"><img class="img-fluid iconGit"  alt="Github-logo"
-                    src="./assets/images/icons8-github-30.png"></a>
-                <a href="https://www.linkedin.com/in/alejandro-morales-mart%C3%ADnez-ba889424a" target="_blank"><img
-                    class="img-fluid" alt="Linkedln-logo"
-                    src="./assets/images/icons8-linkedin-circled-30.png"></a>
-                
-            </div>
-        </div>
+                <div class="footer__card">
+                    <i>Febrero 2023</i>
+                    <a href="https://github.com/juanmgonro" target="_blank"><img class="img-fluid iconGit"
+                            alt="Github-logo" src="./assets/images/icons8-github-30.png"></a>
+                    <a href="https://www.linkedin.com/in/juan-marcos-gonzalez-romo-0388091a0" target="_blank"><img
+                            class="img-fluid" alt="Linkedln-logo"
+                            src="./assets/images/icons8-linkedin-circled-30.png"></a>
 
-        <div class="card"><!--Fabio-->
-            <div class="cover__card">
-                <img class="pruebaimagen" src=" https://i.ibb.co/L6QVkJC/proyecto-integ-2.jpg" alt="perfil-fabio">
+                </div>
             </div>
-           
-            <div class="card_letter">
-                <h2>Fabio</h2>
-                <p>Hola soy Fabio, proactivo, amigable y perseverante, me apasiona
-                el mundo de la tecnología concretamente la programación, y trasmitirlo de la mejor manera.
-                </p>
-            </div>
+
+            <div class="card"><!--Alex-->
+                <div class="cover__card">
+                    <img src="https://i.ibb.co/Y0vHzd3/1661913221711.jpg" alt="perfil-Alex">
+                </div>
+                <div class="card_letter">
+                    <h2>Alex</h2>
+                    <p>Mi nombre es Alejandro Morales, trabajé durante 8 años en el área
+                        de tecnologías. Soy amante de la programación y del aprendizaje.
+                    </p>
+                </div>
                 <hr>
-            <div class="footer__card">
-                <i>Febrero 2023</i>
-                <a href="https://github.com/Elbuenfabio" target="_blank"><img class="img-fluid iconGit" alt="Github-logo"
-                    src="./assets/images/icons8-github-30.png"></a>
-                <a href="https://www.linkedin.com/in/fabio-caballero-arevalo-507a4097" target="_blank"><img
-                    class="img-fluid" alt="Linkedln-logo"
-                    src="./assets/images/icons8-linkedin-circled-30.png"></a>
+                <div class="footer__card">
+                    <i>Febrero 2023</i>
+                    <a href="https://github.com/Alejandromorales27" target="_blank"><img class="img-fluid iconGit"
+                            alt="Github-logo" src="./assets/images/icons8-github-30.png"></a>
+                    <a href="https://www.linkedin.com/in/alejandro-morales-mart%C3%ADnez-ba889424a" target="_blank"><img
+                            class="img-fluid" alt="Linkedln-logo"
+                            src="./assets/images/icons8-linkedin-circled-30.png"></a>
+
+                </div>
+            </div>
+
+            <div class="card"><!--Fabio-->
+                <div class="cover__card">
+                    <img class="pruebaimagen" src=" https://i.ibb.co/L6QVkJC/proyecto-integ-2.jpg" alt="perfil-fabio">
+                </div>
+
+                <div class="card_letter">
+                    <h2>Fabio</h2>
+                    <p>Hola soy Fabio, proactivo, amigable y perseverante, me apasiona
+                        el mundo de la tecnología concretamente la programación, y trasmitirlo de la mejor manera.
+                    </p>
+                </div>
                 <hr>
+                <div class="footer__card">
+                    <i>Febrero 2023</i>
+                    <a href="https://github.com/Elbuenfabio" target="_blank"><img class="img-fluid iconGit"
+                            alt="Github-logo" src="./assets/images/icons8-github-30.png"></a>
+                    <a href="https://www.linkedin.com/in/fabio-caballero-arevalo-507a4097" target="_blank"><img
+                            class="img-fluid" alt="Linkedln-logo"
+                            src="./assets/images/icons8-linkedin-circled-30.png"></a>
+                    <hr>
+                </div>
             </div>
-        </div>
 
-        <div class="card"><!--Ruben-->
-            <div class="cover__card">
-                <img src="https://i.ibb.co/JqNVnpz/327894166-512044547722137-5456526097255916128-n.jpg" alt="perfil-Ruben">
-                
-            </div>
-            <div class="card_letter">
-                <h2>Ruben</h2>
-                <p> Soy Rubén, una persona dedicada y perseverante, con gusto por
-                nuevos aprendizajes. Durante los últimos 8 meses me he dedicado
-                a aprender programación en cursos para enfocarme en la web.
-                </p>
-            </div>
+            <div class="card"><!--Ruben-->
+                <div class="cover__card">
+                    <img src="https://i.ibb.co/JqNVnpz/327894166-512044547722137-5456526097255916128-n.jpg"
+                        alt="perfil-Ruben">
+
+                </div>
+                <div class="card_letter">
+                    <h2>Ruben</h2>
+                    <p> Soy Rubén, una persona dedicada y perseverante, con gusto por
+                        nuevos aprendizajes. Durante los últimos 8 meses me he dedicado
+                        a aprender programación en cursos para enfocarme en la web.
+                    </p>
+                </div>
                 <hr>
-            <div class="footer__card">
-                <i>Febrero 2023</i>
-                <a href="https://github.com/roubnsz" target="_blank"><img class="img-fluid iconGit" alt="Github-logo"
-                    src="./assets/images/icons8-github-30.png"></a>
-                <a href="https://www.linkedin.com/in/rub%C3%A9n-s%C3%A1nchez-gonz%C3%A1lez-090148258" target="_blank"><img
-                    class="img-fluid" alt="Linkedln-logo"
-                    src="./assets/images/icons8-linkedin-circled-30.png"></a>
-             
-            </div>
-        </div>
+                <div class="footer__card">
+                    <i>Febrero 2023</i>
+                    <a href="https://github.com/roubnsz" target="_blank"><img class="img-fluid iconGit"
+                            alt="Github-logo" src="./assets/images/icons8-github-30.png"></a>
+                    <a href="https://www.linkedin.com/in/rub%C3%A9n-s%C3%A1nchez-gonz%C3%A1lez-090148258"
+                        target="_blank"><img class="img-fluid" alt="Linkedln-logo"
+                            src="./assets/images/icons8-linkedin-circled-30.png"></a>
 
-        <div class="card"><!--Karen-->
-            <div class="cover__card">
-                <img src="https://i.ibb.co/1frLbbw/nueva-karen.png" alt="perfil-karen">
+                </div>
             </div>
-            <div class="card_letter">
-                <h2>Karen</h2>
-                <p>Soy Karen Chavando, una mujer creativa, disciplinada y alegre.
-                Aprender programación me ha dado la oportunidad de desarrollar mi imaginación.
-                </p>
-            </div>
+
+            <div class="card"><!--Karen-->
+                <div class="cover__card">
+                    <img src="https://i.ibb.co/1frLbbw/nueva-karen.png" alt="perfil-karen">
+                </div>
+                <div class="card_letter">
+                    <h2>Karen</h2>
+                    <p>Soy Karen Chavando, una mujer creativa, disciplinada y alegre.
+                        Aprender programación me ha dado la oportunidad de desarrollar mi imaginación.
+                    </p>
+                </div>
                 <hr>
-            <div class="footer__card">
-                <i>Febrero 2023</i>
-                <a href="https://github.com/KarenChavandoP" target="_blank"><img class="img-fluid iconGit" alt="Github-logo"
-                    src="./assets/images/icons8-github-30.png"></a>
-                <a href="https://www.linkedin.com/in/karen-chavando-developer" target="_blank"><img
-                    class="img-fluid" alt="Linkedln-logo"
-                    src="./assets/images/icons8-linkedin-circled-30.png"></a>
+                <div class="footer__card">
+                    <i>Febrero 2023</i>
+                    <a href="https://github.com/KarenChavandoP" target="_blank"><img class="img-fluid iconGit"
+                            alt="Github-logo" src="./assets/images/icons8-github-30.png"></a>
+                    <a href="https://www.linkedin.com/in/karen-chavando-developer" target="_blank"><img
+                            class="img-fluid" alt="Linkedln-logo"
+                            src="./assets/images/icons8-linkedin-circled-30.png"></a>
+                </div>
             </div>
-        </div>
 
-        <div class="card"><!--Rafa-->
-            <div class="cover__card">
-                <img src="https://i.ibb.co/M27ZdQZ/rafael-Raygoza.jpg" alt="perfil-Rafa">
-            </div>
-            <div class="card_letter">
-                <h2>Rafa</h2>
-                <p>Soy Rafael, estoy interesado por la tecnología y por el aprendizaje, 
-                procuro enfocarme en la resolución de los desafíos presentados ante mí
-                durante mi desarrollo.
-                </p>
-            </div>
+            <div class="card"><!--Rafa-->
+                <div class="cover__card">
+                    <img src="https://i.ibb.co/M27ZdQZ/rafael-Raygoza.jpg" alt="perfil-Rafa">
+                </div>
+                <div class="card_letter">
+                    <h2>Rafa</h2>
+                    <p>Soy Rafael, estoy interesado por la tecnología y por el aprendizaje,
+                        procuro enfocarme en la resolución de los desafíos presentados ante mí
+                        durante mi desarrollo.
+                    </p>
+                </div>
                 <hr>
-            <div class="footer__card">
-                <i>Febrero 2023</i>
-                <a href="https://github.com/RaygozaRafael" target="_blank"><img class="img-fluid iconGit" alt="Github-logo"
-                    src="./assets/images/icons8-github-30.png"></a>
-                <a href="https://www.linkedin.com/in/rafael-raygoza-zamudio-60322825a" target="_blank"><img
-                    class="img-fluid" alt="Linkedln-logo"
-                    src="./assets/images/icons8-linkedin-circled-30.png"></a>
-                
+                <div class="footer__card">
+                    <i>Febrero 2023</i>
+                    <a href="https://github.com/RaygozaRafael" target="_blank"><img class="img-fluid iconGit"
+                            alt="Github-logo" src="./assets/images/icons8-github-30.png"></a>
+                    <a href="https://www.linkedin.com/in/rafael-raygoza-zamudio-60322825a" target="_blank"><img
+                            class="img-fluid" alt="Linkedln-logo"
+                            src="./assets/images/icons8-linkedin-circled-30.png"></a>
+
+                </div>
             </div>
+
+        </div><!--cierre del conteiner-->
+    </main>
+    <footer>
+        <div class="rrss">
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+
+            <p>© 2023 All rights reserved |
+                Privacity Policy Los Stark</p>
         </div>
-
-    </div><!--cierre del conteiner-->
-</main>
-<footer>
-    <div class="rrss">
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#"></a>
-
-        <p>© 2023 All rights reserved |
-            Privacity Policy Los Stark</p>
-    </div>
-    <script src="assets/js/changeHeader.js"></script>
-    <script src="./assets/js/shopping-cart.js"></script>
+        <script src="assets/js/changeHeader.js"></script>
+        <script src="./assets/js/shopping-cart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
