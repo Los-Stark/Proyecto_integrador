@@ -13,12 +13,13 @@ function addItem(item) {
     <div id="CardPrice"  class=" col-8 col-md-4 p-2"  >$${item.price}</div>
     <div class="size">
                                 <p>
-                                <label class="col-sm-3"> <input class ="clothesSizes" id="clothesSizesCH" name="typeSize${cont}" type="radio" value="CH">CH
-                                    </label>
-                                <label class="col-sm-3"> <input class ="clothesSizes" id="clothesSizesM" name="typeSize${cont}" type="radio" value="M" checked>M
-                                    </label>
-                                <label class="col-sm-3"> <input class ="clothesSizes" id="clothesSizesG" name="typeSize${cont}" type="radio" value="G">G</label>
-                            </p>
+                                <input class ="clothesSizes clothesSizesCH" id="clothesSizesCH${cont}" name="typeSize${cont}" type="radio" value="CH">
+                                 <label for="clothesSizesCH${cont}" class="col-sm-3">  CH  </label>
+                                 <input class ="clothesSizes clothesSizesM" id="clothesSizesM${cont}" name="typeSize${cont}" type="radio" value="M" checked>
+                                 <label for="clothesSizesM${cont}" class="col-sm-3">  M  </label>
+                                 <input class ="clothesSizes clothesSizesG" id="clothesSizesG${cont}" name="typeSize${cont}" type="radio" value="G">
+                                 <label for="clothesSizesG${cont}" class="col-sm-3">  G  </label>
+                                </p>
                     </div>
     <button class="add-to-cart">Agregar al carrito</button>
         </div>

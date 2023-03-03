@@ -57,9 +57,9 @@ function addToCartClicked(event) {
   const itemTitle = item.querySelector('p').textContent;
   const itemPrice = item.querySelector('#CardPrice').textContent;
   const itemImage = item.querySelector('img').src;
-  const itemSizeCH = item.querySelector("#clothesSizesCH").checked;
-  const itemSizeM = item.querySelector("#clothesSizesM").checked;
-  const itemSizeG = item.querySelector("#clothesSizesG").checked;
+  const itemSizeCH = item.querySelector(".clothesSizesCH").checked;
+  const itemSizeM = item.querySelector(".clothesSizesM").checked;
+  const itemSizeG = item.querySelector(".clothesSizesG").checked;
   let sizeItem;
   if(itemSizeCH) sizeItem="CH";
   else if(itemSizeM) sizeItem="M";

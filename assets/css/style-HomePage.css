@@ -95,3 +95,24 @@ transition: 0.5s;
     margin-bottom: 20px;
     margin-left: 20px;
 }
+
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked){	
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+
+.clothesSizes:not(:checked) + label{
+    background-color: #F2CAC8;
+    border: 2px solid #6F6CB8;
+    border-radius: 10px;
+    
+}
+.clothesSizes:checked + label{
+    background-color: #6F6CB8;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
