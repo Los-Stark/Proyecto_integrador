@@ -25,12 +25,13 @@ class CartClass {
     
   }
 
-  addProductToCart(title, price, image) {
+  addProductToCart(title, price, image,size) {
     const productCart = {
       order: ++this.currentOrder,
       title: title,
       price: price,
-      image: image
+      image: image,
+      size: size
     };
     //Revisa si la memoria local esta vacia
     this.listCartProducts.push(productCart);
@@ -56,7 +57,15 @@ function addToCartClicked(event) {
   const itemTitle = item.querySelector('p').textContent;
   const itemPrice = item.querySelector('#CardPrice').textContent;
   const itemImage = item.querySelector('img').src;
-  itemsToCart.addProductToCart(itemTitle, itemPrice, itemImage);
+  const itemSizeCH = item.querySelector("#clothesSizesCH").checked;
+  const itemSizeM = item.querySelector("#clothesSizesM").checked;
+  const itemSizeG = item.querySelector("#clothesSizesG").checked;
+  let sizeItem;
+  if(itemSizeCH) sizeItem="CH";
+  else if(itemSizeM) sizeItem="M";
+  else if(itemSizeG) sizeItem="G";
+
+  itemsToCart.addProductToCart(itemTitle, itemPrice, itemImage,sizeItem);
   itemsToCart.updateCartItems();
   
 
