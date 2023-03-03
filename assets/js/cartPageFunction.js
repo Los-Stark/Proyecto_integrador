@@ -8,12 +8,12 @@ function addItemToCart() {
     const cartItem = document.createElement('div');
     cartItem.classList.add('cart-item');
     const cartContents = `
-    <div class="row align-items-center"> <!-- columnas propocionales -->
-    <img id="image-product" class="col image-fluid  col-8  col-sm-8 col-lg-3 col-xl-3" src="${ProductsOfCart[index].image}" alt="${ProductsOfCart[index].title}">
-    <div class="col product-name                    col-4  col-sm-4 col-lg-2 col-xl-2">${ProductsOfCart[index].title}</div>
-    <div class="col product-price                   col-4  col-sm-4 col-lg-2 col-xl-2">${ProductsOfCart[index].price}</div>
-    <div class="col product-size                    col-4  col-sm-4 col-lg-2 col-xl-2">${ProductsOfCart[index].size}</div>
-    <button class="col remove-item                  col-4  col-sm-4 col-lg-3 col-xl-3" value="${ProductsOfCart[index].order}">
+    <div class="row align-items-center my-1"> <!-- columnas propocionales -->
+    <img id="image-product" class="col image-fluid  col-8  col-sm-8 col-lg-3 " src="${ProductsOfCart[index].image}" alt="${ProductsOfCart[index].title}">
+    <div class="col product-name                    col-4  col-sm-4 col-lg-2 ">${ProductsOfCart[index].title}</div>
+    <div class="col product-price                   col-4  col-sm-4 col-lg-2 ">${ProductsOfCart[index].price}</div>
+    <div class="col product-size                    col-4  col-sm-4 col-lg-2 ">${ProductsOfCart[index].size}</div>
+    <button class="col remove-item                  col-4  col-sm-4 col-lg-3 " value="${ProductsOfCart[index].order}">
     <img  src="assets/images/icons-waste.png" alt="borrar-producto"></button>
     </div>
     `;
