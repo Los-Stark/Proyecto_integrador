@@ -3,7 +3,7 @@ const changeDropdown = () => {
     /* Estilo de HTML cuando la pantalla es mas grande de 768 pixelex (Botones) */
     const navstyle = document.getElementById("navbarScroll");
     const buttonstyle = `                        
-    <a class="nav-link active" href="/AddProduct.html"><button class="btn">Inicio</button></a>
+    <a class="nav-link active" href="/index.html"><button class="btn">Inicio</button></a>
     <div class="nav-item dropdown" id="Dropdowncategories">
         <button class="btn dropdown-toggle categories" type="button" data-bs-toggle="dropdown"
             aria-expanded="false">
@@ -22,7 +22,7 @@ const changeDropdown = () => {
     `;
     /* Estilo de HTML cuando la pantalla es menor de 768 pixelex (Lista) */
     const listStyle = `
-    <a class="nav-link liststyle" href="/AddProduct.html">Inicio</a>
+    <a class="nav-link liststyle" href="/index.html">Inicio</a>
     <a class="nav-link liststyle" href="/man-t-shirt.html">Playeras de Caballero</a>
     <a class="nav-link liststyle" href="/woman-t-shirt.html">Playeras de dama</a>
     <a class="nav-link liststyle" href="/hoodie.html">Sudaderas</a>
