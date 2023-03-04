@@ -92,8 +92,7 @@ transition: 0.5s;
 .size {
     font-size: 16px;
     color: #000000;
-    margin-bottom: 20px;
-    margin-left: 20px;
+    margin-top: 10px;
 }
 
 
@@ -106,13 +105,21 @@ transition: 0.5s;
 
 .clothesSizes:not(:checked) + label{
     background-color: #F2CAC8;
-    border: 2px solid #6F6CB8;
+    border: 1px solid #6F6CB8;
     border-radius: 10px;
+    transition:1s;
     
 }
 .clothesSizes:checked + label{
-    background-color: #6F6CB8;
-    border: 2px solid black;
+ color:white;
+    background-color: #E61050;
     border-radius: 10px;
 }
 
+.clothesSizes:not(:checked) + label:hover{
+    color:white;
+    background-color: #E61050;
+    border-radius: 10px;
+    scale:1.1;
+    
+}
