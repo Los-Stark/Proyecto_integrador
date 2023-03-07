@@ -4,11 +4,7 @@
  */
 cont = 1;
 function addItem(item) {
-  console.log(typeof(item.imageURL));
-  console.log(typeof(item.name));
-  console.log(typeof(item.price));
-  
-  const itemTemplate = `
+const itemTemplate = `
     <div id="CardProduct"class="col-6 col-md-3 col-sm-4 p-2  mx-2 my-1">
     <img class="productsImage img-fluid" src="${item.imageURL}" alt="image">
     <p id="CardName" >${item.name}</p>
@@ -34,25 +30,23 @@ function addItem(item) {
   cont++;
 }
 
-const getProducts = () => {
+async function getProducts() {
   const url = `https://backendproyecto-production.up.railway.app/api/products`;
 
-  fetch(url)
+  await fetch(url)
     .then(response => {
       console.log("Status: " + response.status);
       return response.json();
     })
     .then(products => {
-      console.log(products);
-      console.log(products.length);
       for (let index = 0; index < products.length; index++) {
-        console.log(products[index].category);
         if(products[index].category == 2){
             addItem(products[index]);
         }
       }
     })
     .catch(error => console.log("Error " + error));
+    getAllButtons();
 }
 getProducts();
 /* addItem({
@@ -106,3 +100,4 @@ addItem({
   'price': '150'
 })
  */
+

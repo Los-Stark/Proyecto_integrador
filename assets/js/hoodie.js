@@ -32,10 +32,10 @@ function addItem(item) {
 }
 
 
-const getProducts = () => {
+async function getProducts() {
   const url = `https://backendproyecto-production.up.railway.app/api/products`;
 
-  fetch(url)
+  await fetch(url)
     .then(response => {
       console.log("Status: " + response.status);
       return response.json();
@@ -45,11 +45,10 @@ const getProducts = () => {
         if(products[index].category == 3){
             addItem(products[index]);
         }
-
       }
-
     })
     .catch(error => console.log("Error " + error));
+    getAllButtons();
 }
 getProducts();
  /*  addItem({'name':'Izuku Midoriya',
