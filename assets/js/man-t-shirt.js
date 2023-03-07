@@ -35,7 +35,6 @@ async function getProducts() {
 
   await fetch(url)
     .then(response => {
-      console.log("Status: " + response.status);
       return response.json();
     })
     .then(products => {

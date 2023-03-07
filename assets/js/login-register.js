@@ -65,8 +65,8 @@ function register() {
 }
 
 function abrirTeclado() {
-    document.documentElement.style.scrollBehavior = "smooth"; // Animación
-    document.documentElement.scrollTop = 0; // Desplazamiento
+    //document.documentElement.style.scrollBehavior = "smooth"; // Animación
+    //document.documentElement.scrollTop = 0; // Desplazamiento
     pressKey = 1;
 }
 
@@ -74,7 +74,7 @@ function abrirTeclado() {
 
 
 //Clase para creacion de objetos y guardarlos en memoria local*****
-
+/* 
 class Item {
     //Creacion de id
     constructor(startId = 1) {
@@ -99,7 +99,7 @@ class Item {
     }
 }
 
-const item = new Item(1);
+const item = new Item(1); */
 
 
 // Validacion de campos
@@ -187,14 +187,23 @@ formAddUser.addEventListener('submit', (e) => {
     e.preventDefault();
 
     if (fields.name && fields.user && fields.phone && fields.email && fields.password) {
-        item.addNewUsers(formAddUser.name.value, formAddUser.user.value, formAddUser.phone.value, formAddUser.email.value, formAddUser.password.value),
-            formAddUser.reset();
+/*         item.addNewUsers(formAddUser.name.value, formAddUser.user.value, formAddUser.phone.value, formAddUser.email.value, formAddUser.password.value),
+            formAddUser.reset(); */
         swal({
             title: "Registrado correctamente!",
             icon: "success",
             button: "Ok",
         });
         document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
+        const data = {
+            name: formAddUser.name.value,
+            userName: formAddUser.user.value,
+            phone: formAddUser.phone.value,
+            email: formAddUser.email.value,
+            password: formAddUser.password.value
+        };
+        saveNewUsers(data);
+        formAddUser.reset(); 
     } else {
         (!fields.name && !fields.user && !fields.phone && !fields.email && !fields.password)
         document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo')
@@ -206,72 +215,50 @@ formAddUser.addEventListener('submit', (e) => {
 
 formLoginUser.addEventListener('submit', (e) => {
     e.preventDefault();
-
     // Obtener los valores de los campos de entrada
     let username = document.getElementById('user-login').value;
     let password = document.getElementById('password-login').value;
-    // Verificar si el objeto del usuario existe en el almacenamiento local
-    let userObj = JSON.parse(localStorage.getItem('listUsers'));
-
     let error = true;
-    for (let index = 0; index < userObj.length; index++) {
-        if (userObj[index].user == username && userObj[index].password == password) {
-            error = false;
-            formLoginUser.reset();
-            swal({
-                title: `Bienvenido ${username}`,
-                icon: "success",
-                button: "Ok",
-            });
-            break;
-        }
+    function getUsers() {
+        const url = `https://backendproyecto-production.up.railway.app/api/users`;
+    
+        fetch(url)
+            .then(response => {
+                return response.json();
+            })
+            .then(userObj => {
+                for (let index = 0; index < userObj.length; index++) {
+                    if (userObj[index].userName == username && userObj[index].password == password) {
+                        error = false;
+                        formLoginUser.reset();
+                        swal({
+                            title: `Bienvenido ${username}`,
+                            icon: "success",
+                            button: "Ok",
+                        });
+                        break;
+                    }
+                }
+                if (error) {
+                    swal({
+                        title: "Nombre de usuario o contraseña incorrectos.",
+                        icon: "warning",
+                        text: "Inténtalo de nuevo.",
+                        button: "Ok",
+                    });
+                }
+    
+            })
+            .catch(error => console.log("Error " + error));
     }
-    if (error) {
-        swal({
-            title: "Nombre de usuario o contraseña incorrectos.",
-            icon: "warning",
-            text: "Inténtalo de nuevo.",
-            button: "Ok",
-        });
-    }
+    getUsers(); 
 
 });
 
 
-/* console.log("JS07 Fetch API");
-const getProducts = () => {
-    const url = `https://backendproyecto-production.up.railway.app/api/users`;
 
-    fetch(url)
-        .then(response => {
-            console.log("Status: " + response.status);
-            return response.json();
-        })
-        .then(products => {
-            console.log(products);
-            //for ( let product of products.JSON)
-            //  console.log(`${product.idProducts} - ${product.name}`);            
-
-        })
-        .catch(error => console.log("Error " + error));
-}
-getProducts(); */
-
-/*
-const btnFetchApiPost = document.getElementById("fetch-api-post");
-btnFetchApiPost.addEventListener('click', () => {
-
-    const url = 'https://reqres.in/api/users';
-    const data = {
-        name: "Aurelio",
-        job: "Obrero"
-    };
-
-    /**
-     * Por default, el fetch api te realiza una solicutud get, para otras
-     * solicitudes hay que especificarle el  tipo de solicitud en un  objeto
-     * de configuración como parámetro, después de especificar la URL.
-     *
+function saveNewUsers(data){
+    const url = 'https://backendproyecto-production.up.railway.app/api/users';
     fetch(url, {
         method: 'POST', // or 'PUT'
         body: JSON.stringify(data), // data can be `string` or {object}!
@@ -279,7 +266,7 @@ btnFetchApiPost.addEventListener('click', () => {
             'Content-Type': 'application/json'
         }
     }).then(res => res.json())
-        .then(response => console.log('Success:', response))
+        .then(response => console.log())
         .catch(error => console.error('Error:', error));
 
-});*/
+}; 
