@@ -111,5 +111,8 @@ function buying() {
   productsToRemove = document.querySelectorAll('.cart-item');
   productsToRemove.forEach(productRemove => {productRemove.remove();});
   localStorage.removeItem('ProductsToCart');
+  document.querySelector('.subtotal').innerText = "";
+  document.querySelector('.shippingPrice').innerText = "";
+  document.querySelector('.total').innerText = "";
   }
 }
