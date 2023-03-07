@@ -66,3 +66,10 @@ function removeItem(event) {
 }
 //Llamada de la funcion
 addItemToCart();
+
+function buying(){                       
+   swal({
+    title: `Compra realizada`,
+    icon: "success",
+    button: "Ok",
+});}
