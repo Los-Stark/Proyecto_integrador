@@ -36,7 +36,7 @@ function addItemToCart() {
 const prices = () => {
   let subtotalPrice = 0;
   for (let index = 0; index < ProductsOfCart.length; index++) {
-    subtotalPrice += parseInt(ProductsOfCart[index].price.replace('$',""));
+    subtotalPrice += parseInt(ProductsOfCart[index].price.replace('$', ""));
   }
   document.querySelector('.subtotal').innerText = `$${subtotalPrice}`;
   document.querySelector('.shippingPrice').innerText = `$${subtotalPrice * 0.05}`;
@@ -51,12 +51,11 @@ const prices = () => {
  */
 function removeItem(event) {
   let buttonClicked = event.target;
-  if(Object.is(null, buttonClicked.getAttribute("value")))
-      buttonClicked = buttonClicked.parentNode;
+  if (Object.is(null, buttonClicked.getAttribute("value")))
+    buttonClicked = buttonClicked.parentNode;
   for (let index = 0; index < ProductsOfCart.length; index++) {
-    if (ProductsOfCart[index].order == buttonClicked.value) 
-    {
-      ProductsOfCart.splice(index, 1) ;
+    if (ProductsOfCart[index].order == buttonClicked.value) {
+      ProductsOfCart.splice(index, 1);
     }
   }
   prices();
@@ -67,36 +66,50 @@ function removeItem(event) {
 //Llamada de la funcion
 addItemToCart();
 
-function buying(){       
-dataProducts=JSON.parse(localStorage.getItem("ProductsToCart"));
-dataUserActive= JSON.parse(localStorage.getItem("userActive"));  
-
-   swal({
+function buying() {
+  dataProducts = JSON.parse(localStorage.getItem("ProductsToCart"));
+  dataUserActive = JSON.parse(localStorage.getItem("userActive"));
+  
+  if (Object.is(null, dataUserActive)){
+    swal({
+      title: `Regístrate!!!`,
+      text: "Regístrate para comprar!!",
+      icon: "warning",
+      button: "Ok",
+    });
+  }
+  else if(!Object.is(null, dataUserActive)){
+  swal({
     title: `Compra realizada`,
     text: dataUserActive.username,
     icon: "success",
     button: "Ok",
-});
-console.log(dataProducts);
+  });
 
-savingCartDataBase = {
-        "name": dataProducts[1].title,
-        "price": parseInt(dataProducts[1].price.replace('$',"")),
-        "imageURL": dataProducts[1].image,
-        "talla": dataProducts[1].size,
-        "fkIdUser": { "idUsuario":dataUserActive.iduser
-        }
-}
- console.log(savingCartDataBase);
-const url = 'https://backendproyecto-production.up.railway.app/api/shoppingcart';
-fetch(url, {
-    method: 'POST', // or 'PUT'
-    body: JSON.stringify(savingCartDataBase), // data can be `string` or {object}!
-    headers: {
-        'Content-Type': 'application/json'
+  const url = 'https://backendproyecto-production.up.railway.app/api/shoppingcart';
+  for (let index = 0; index < dataProducts.length; index++) {
+    savingCartDataBase = {
+      "name": dataProducts[index].title,
+      "price": parseInt(dataProducts[index].price.replace('$', "")),
+      "imageURL": dataProducts[index].image,
+      "talla": dataProducts[index].size,
+      "fkIdUser": {
+        "idUsuario": dataUserActive.iduser
+      }
     }
-}).then(res => res.json())
-    .then(response => console.log())
-    .catch(error => console.error('Error:', error));
-  
+    fetch(url, {
+      method: 'POST', // or 'PUT'
+      body: JSON.stringify(savingCartDataBase), // data can be `string` or {object}!
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(res => res.json())
+      .then(response => console.log())
+      .catch(error => console.error('Error:', error));
+
+  }
+  productsToRemove = document.querySelectorAll('.cart-item');
+  productsToRemove.forEach(productRemove => {productRemove.remove();});
+  localStorage.removeItem('ProductsToCart');
+  }
 }
