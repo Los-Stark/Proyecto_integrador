@@ -15,7 +15,7 @@ function pageWidth() {
         backBoxRegister.style.display = "block";
         pressKey = 0
     }
-    else if(pressKey!=1){
+    else if (pressKey != 1) {
         backBoxRegister.style.display = "block";
         backBoxRegister.style.opacity = "1";
         backBoxLogin.style.display = "none";
@@ -68,9 +68,9 @@ function abrirTeclado() {
     document.documentElement.style.scrollBehavior = "smooth"; // Animación
     document.documentElement.scrollTop = 0; // Desplazamiento
     pressKey = 1;
-  }
+}
 
-  /********************* Funcion para registrar****************************/
+/********************* Funcion para registrar****************************/
 
 
 //Clase para creacion de objetos y guardarlos en memoria local*****
@@ -90,7 +90,7 @@ class Item {
             phone: phone,
             email: email,
             password: password,
-            confirmPassword: confirmPassword 
+            confirmPassword: confirmPassword
         };
 
         this.listUsers.push(users);
@@ -101,23 +101,23 @@ class Item {
 
 const item = new Item(1);
 
-    
+
 // Validacion de campos
 
 const formAddUser = document.getElementById('form-register');
-const inputsAddUser= document.querySelectorAll('#form-register input');
+const inputsAddUser = document.querySelectorAll('#form-register input');
 const formLoginUser = document.getElementById('form-login')
-const inputsLoginUser= document.querySelectorAll('#form-login input');
+const inputsLoginUser = document.querySelectorAll('#form-login input');
 
 const expressions = {
-	name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+    name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
     user: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
     phone: /^\d{10}$/, // 7 a 14 numeros.
-	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	password: /^.{4,12}$/, // 4 a 12 digitos.
+    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    password: /^.{4,12}$/, // 4 a 12 digitos.
 }
 
-const fields ={
+const fields = {
     name: false,
     user: false,
     phone: false,
@@ -125,39 +125,39 @@ const fields ={
     password: false
 }
 
-const validateForm=(e)=>{
-   switch(e.target.name){
-    case "name":
-        validateField(expressions.name,e.target,'name');
-    break
-    case "user":
-        validateField(expressions.user,e.target,'user');
-    break
-    case "phone":
-        validateField(expressions.phone,e.target,'phone');
-    break
-    case "email":
-        validateField(expressions.email,e.target,'email');
-    break
-    case "password":
-        validatePassword()    
-        validateField(expressions.password,e.target,'password');
-    break
-    case "confirmPassword":
-        validatePassword();
-    break
-   }
+const validateForm = (e) => {
+    switch (e.target.name) {
+        case "name":
+            validateField(expressions.name, e.target, 'name');
+            break
+        case "user":
+            validateField(expressions.user, e.target, 'user');
+            break
+        case "phone":
+            validateField(expressions.phone, e.target, 'phone');
+            break
+        case "email":
+            validateField(expressions.email, e.target, 'email');
+            break
+        case "password":
+            validatePassword()
+            validateField(expressions.password, e.target, 'password');
+            break
+        case "confirmPassword":
+            validatePassword();
+            break
+    }
 }
 
-const validateField=(expression,input, field)=>{
-    if(expression.test(input.value)){
+const validateField = (expression, input, field) => {
+    if (expression.test(input.value)) {
         document.getElementById(`grupo__${field}`).classList.remove('formulario__grupo-incorrecto');
         document.querySelector(`#grupo__${field} .formulario__input-error`).classList.remove('formulario__input-error-activo');
-        fields[field]=true;
-    }else{
+        fields[field] = true;
+    } else {
         document.getElementById(`grupo__${field}`).classList.add('formulario__grupo-incorrecto');
         document.querySelector(`#grupo__${field} .formulario__input-error`).classList.add('formulario__input-error-activo');
-        fields[field]=false;
+        fields[field] = false;
     }
 }
 
@@ -166,11 +166,11 @@ const validatePassword = () => {
     const password = document.getElementById('password');
     const confirmPassword = document.getElementById('confirmPassword');
 
-    if(password.value !== confirmPassword.value){
+    if (password.value !== confirmPassword.value) {
         document.getElementById(`grupo__confirmPassword`).classList.add('formulario__grupo-incorrecto');
         document.querySelector(`#grupo__confirmPassword .formulario__input-error`).classList.add('formulario__input-error-activo');
         fields['password'] = false;
-    }else{
+    } else {
         document.getElementById(`grupo__confirmPassword`).classList.remove('formulario__grupo-incorrecto');
         document.querySelector(`#grupo__confirmPassword .formulario__input-error`).classList.remove('formulario__input-error-activo');
         fields['password'] = true;
@@ -178,60 +178,108 @@ const validatePassword = () => {
 
 }
 
-inputsAddUser.forEach((input)=>{
-    input.addEventListener('keyup',validateForm);
-    input.addEventListener('blur',validateForm);
+inputsAddUser.forEach((input) => {
+    input.addEventListener('keyup', validateForm);
+    input.addEventListener('blur', validateForm);
 });
 
-  formAddUser.addEventListener('submit',(e)=>{
+formAddUser.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    if(fields.name && fields.user && fields.phone && fields.email && fields.password){
-            item.addNewUsers(formAddUser.name.value, formAddUser.user.value, formAddUser.phone.value, formAddUser.email.value, formAddUser.password.value),
+    if (fields.name && fields.user && fields.phone && fields.email && fields.password) {
+        item.addNewUsers(formAddUser.name.value, formAddUser.user.value, formAddUser.phone.value, formAddUser.email.value, formAddUser.password.value),
             formAddUser.reset();
-            swal({
-                title: "Registrado correctamente!",
-                icon: "success",
-                button: "Ok",
-              });
-            document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
-    }else{ 
+        swal({
+            title: "Registrado correctamente!",
+            icon: "success",
+            button: "Ok",
+        });
+        document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
+    } else {
         (!fields.name && !fields.user && !fields.phone && !fields.email && !fields.password)
         document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo')
-        return false;}    
+        return false;
+    }
 });
 
 //formulario iniciar sesion
 
-formLoginUser.addEventListener('submit',(e)=>{
+formLoginUser.addEventListener('submit', (e) => {
     e.preventDefault();
 
-// Obtener los valores de los campos de entrada
-  let username = document.getElementById('user-login').value;
-  let password = document.getElementById('password-login').value;
-// Verificar si el objeto del usuario existe en el almacenamiento local
-  let userObj = JSON.parse(localStorage.getItem('listUsers'));
-    
-  let error=true;
-  for (let index = 0; index < userObj.length; index++) {
-    if (userObj[index].user == username && userObj[index].password == password) {
-        error = false;
-        formLoginUser.reset();
-        swal({
-            title: `Bienvenido ${username}`,
-            icon: "success",
-            button: "Ok",
-          });
-        break;
+    // Obtener los valores de los campos de entrada
+    let username = document.getElementById('user-login').value;
+    let password = document.getElementById('password-login').value;
+    // Verificar si el objeto del usuario existe en el almacenamiento local
+    let userObj = JSON.parse(localStorage.getItem('listUsers'));
+
+    let error = true;
+    for (let index = 0; index < userObj.length; index++) {
+        if (userObj[index].user == username && userObj[index].password == password) {
+            error = false;
+            formLoginUser.reset();
+            swal({
+                title: `Bienvenido ${username}`,
+                icon: "success",
+                button: "Ok",
+            });
+            break;
+        }
     }
-  }
-  if (error) {
-    swal({
-        title: "Nombre de usuario o contraseña incorrectos.",
-        icon: "warning",
-        text: "Inténtalo de nuevo.",
-        button: "Ok",
-      });
-}
-  
+    if (error) {
+        swal({
+            title: "Nombre de usuario o contraseña incorrectos.",
+            icon: "warning",
+            text: "Inténtalo de nuevo.",
+            button: "Ok",
+        });
+    }
+
 });
+
+
+/* console.log("JS07 Fetch API");
+const getProducts = () => {
+    const url = `https://backendproyecto-production.up.railway.app/api/users`;
+
+    fetch(url)
+        .then(response => {
+            console.log("Status: " + response.status);
+            return response.json();
+        })
+        .then(products => {
+            console.log(products);
+            //for ( let product of products.JSON)
+            //  console.log(`${product.idProducts} - ${product.name}`);            
+
+        })
+        .catch(error => console.log("Error " + error));
+}
+getProducts(); */
+
+/*
+const btnFetchApiPost = document.getElementById("fetch-api-post");
+btnFetchApiPost.addEventListener('click', () => {
+
+    const url = 'https://reqres.in/api/users';
+    const data = {
+        name: "Aurelio",
+        job: "Obrero"
+    };
+
+    /**
+     * Por default, el fetch api te realiza una solicutud get, para otras
+     * solicitudes hay que especificarle el  tipo de solicitud en un  objeto
+     * de configuración como parámetro, después de especificar la URL.
+     *
+    fetch(url, {
+        method: 'POST', // or 'PUT'
+        body: JSON.stringify(data), // data can be `string` or {object}!
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(res => res.json())
+        .then(response => console.log('Success:', response))
+        .catch(error => console.error('Error:', error));
+
+});*/
