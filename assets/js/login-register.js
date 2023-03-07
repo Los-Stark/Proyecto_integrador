@@ -236,6 +236,11 @@ formLoginUser.addEventListener('submit', (e) => {
                             icon: "success",
                             button: "Ok",
                         });
+                        const userActive = {
+                            iduser: userObj[index].idUsuario,
+                            username: userObj[index].userName
+                        };
+                        localStorage.setItem("userActive", JSON.stringify(userActive));
                         break;
                     }
                 }

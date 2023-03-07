@@ -67,9 +67,36 @@ function removeItem(event) {
 //Llamada de la funcion
 addItemToCart();
 
-function buying(){                       
+function buying(){       
+dataProducts=JSON.parse(localStorage.getItem("ProductsToCart"));
+dataUserActive= JSON.parse(localStorage.getItem("userActive"));  
+
    swal({
     title: `Compra realizada`,
+    text: dataUserActive.username,
     icon: "success",
     button: "Ok",
-});}
+});
+console.log(dataProducts);
+
+savingCartDataBase = {
+        "name": dataProducts[1].title,
+        "price": parseInt(dataProducts[1].price.replace('$',"")),
+        "imageURL": dataProducts[1].image,
+        "talla": dataProducts[1].size,
+        "fkIdUser": { "idUsuario":dataUserActive.iduser
+        }
+}
+ console.log(savingCartDataBase);
+const url = 'https://backendproyecto-production.up.railway.app/api/shoppingcart';
+fetch(url, {
+    method: 'POST', // or 'PUT'
+    body: JSON.stringify(savingCartDataBase), // data can be `string` or {object}!
+    headers: {
+        'Content-Type': 'application/json'
+    }
+}).then(res => res.json())
+    .then(response => console.log())
+    .catch(error => console.error('Error:', error));
+  
+}
