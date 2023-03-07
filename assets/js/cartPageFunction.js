@@ -73,12 +73,12 @@ function buying() {
   if (Object.is(null, dataUserActive)){
     swal({
       title: `Regístrate!!!`,
-      text: "Regístrate para comprar!!",
+      text: "Regístrate para comprar",
       icon: "warning",
       button: "Ok",
     });
   }
-  else if(!Object.is(null, dataUserActive)){
+  else if(!Object.is(null, dataUserActive) && !Object.is(null, dataProducts) ){
   swal({
     title: `Compra realizada`,
     text: dataUserActive.username,
@@ -115,4 +115,14 @@ function buying() {
   document.querySelector('.shippingPrice').innerText = "";
   document.querySelector('.total').innerText = "";
   }
+
+  else if(Object.is(null, dataUserActive) && !Object.is(null, dataProducts) ){
+    swal({
+      title: `Carrito vacio`,
+      text: "Agrega productos a tu carrito!",
+      icon: "warning",
+      button: "Ok",
+    });
+
+}
 }
