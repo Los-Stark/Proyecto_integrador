@@ -3,6 +3,7 @@ let ProductsOfCart = JSON.parse(localStorage.getItem("ProductsToCart"));
  * Funcion para mostrar productos en el carrito
  */
 function addItemToCart() {
+  if (!Object.is(null, ProductsOfCart)){
   for (let index = 0; index < ProductsOfCart.length; index++) {
     // Crea un elemento de carrito
     const cartItem = document.createElement('div');
@@ -23,6 +24,7 @@ function addItemToCart() {
   }
   //Calculando precio total ymostrarlo
   prices();
+}
   // Se agrega un controlador de eventos para el botón "Eliminar"
   const removeButtons = document.querySelectorAll('.remove-item');
   removeButtons.forEach(button => {
@@ -70,7 +72,15 @@ function buying() {
   dataProducts = JSON.parse(localStorage.getItem("ProductsToCart"));
   dataUserActive = JSON.parse(localStorage.getItem("userActive"));
   
-  if (Object.is(null, dataUserActive)){
+  if (Object.is(null, dataProducts)){
+    swal({
+      title: `Carrito vacio`,
+      text: "Agrega productos a tu carrito!",
+      icon: "warning",
+      button: "Ok",
+    });
+  }
+  else if (Object.is(null, dataUserActive) && (Object.keys(dataProducts).length > 0)){
     swal({
       title: `Regístrate!!!`,
       text: "Regístrate para comprar",
@@ -78,13 +88,31 @@ function buying() {
       button: "Ok",
     });
   }
-  else if(!Object.is(null, dataUserActive) && !Object.is(null, dataProducts) ){
+  else if (Object.is(null, dataUserActive) && (Object.keys(dataProducts).length == 0 )){
+    swal({
+      title: `No estas registrado y no tienes productos!!!`,
+      text: "Regístrate y agrega productos para comprar",
+      icon: "warning",
+      button: "Ok",
+    });
+  }
+  else if(!Object.is(null, dataProducts) && (Object.keys(dataProducts).length == 0)){
+    swal({
+      title: `Carrito vacio`,
+      text: "Agrega productos a tu carrito!",
+      icon: "warning",
+      button: "Ok",
+    });
+
+}
+  else if(!Object.is(null, dataUserActive) && (Object.keys(dataProducts).length > 0)){
   swal({
     title: `Compra realizada`,
     text: dataUserActive.username,
     icon: "success",
     button: "Ok",
   });
+
 
   const url = 'https://backendproyecto-production.up.railway.app/api/shoppingcart';
   for (let index = 0; index < dataProducts.length; index++) {
@@ -116,13 +144,4 @@ function buying() {
   document.querySelector('.total').innerText = "";
   }
 
-  else if(Object.is(null, dataUserActive) && !Object.is(null, dataProducts) ){
-    swal({
-      title: `Carrito vacio`,
-      text: "Agrega productos a tu carrito!",
-      icon: "warning",
-      button: "Ok",
-    });
-
-}
 }
